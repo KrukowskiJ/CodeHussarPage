@@ -69,18 +69,18 @@ export default NavBar
 
 // styles
 const Background = styled.div`
-position: absolute;
-height: 100%; 
-width: 100%; 
-top: 0px;
+/* position: absolute; */
+/* height: 100%;  */
+/* width: 100%;  */
+/* top: 0px; */
 
 
 `
 const BackImg = styled.img`
-position: relative;
+position: absolute;
+z-index: -5;
 height: auto; 
 width: 100%;
-z-index: -5;
 `
 
 const Logo = styled.img`
