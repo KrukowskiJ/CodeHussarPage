@@ -29,11 +29,11 @@ var projectAwardList = [
 
 const TeamBackground = styled.div`
     width: 100%; 
-    height:1000vw;
+    height: 100%;
     margin: 0;
     padding:0;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-image:url(${TeamBack});
     padding-top:13vw;
 `

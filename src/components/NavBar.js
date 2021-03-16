@@ -78,7 +78,7 @@ position: absolute;
 z-index: -1;
 flex: 1;
 height: 10vh;
-
+max-width:100%
 `
 
 const Logo = styled.img`
@@ -108,7 +108,7 @@ const Nav = styled.nav`
   position: sticky;
   top:0;
   height: 10vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   text-transform: uppercase;
