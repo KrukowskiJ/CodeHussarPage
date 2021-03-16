@@ -3,6 +3,7 @@ import * as React from "react"
 import NavBar from "../components/NavBar"
 import Team from "../components/Team"
 import OurExpertise from "../components/OurExpertise"
+import AboutUS from "../components/AboutUS"
 import "../styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,6 +16,8 @@ const IndexPage = () => {
       <NavBar />
       <OurExpertise />
       <Team />
+      <AboutUS />
+
     </>
   )
 }

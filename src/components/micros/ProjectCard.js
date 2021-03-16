@@ -1,20 +1,19 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 const ProjectCardBack = styled.div`
-    align-self:center;
     flex:1;
-    justify-content: "center";
+    height: 20vh;
+    width: 20vw;
+    margin: auto;
+   
     `
 
 const Project = styled.img`
-    height: 20vw;
-    background-repeat: no-repeat;
-    background-size: contain;
+    height: 100%;
+    width: auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 
 `
 

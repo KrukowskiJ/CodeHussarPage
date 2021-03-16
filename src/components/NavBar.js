@@ -9,20 +9,23 @@ import NavbarLinks from "./NavbarLinks"
 
 const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
+  const [navbarHide, setNavbarHide] = useState(false)
 
 
   return (
     <>
+
       <BackImg
         alt="CodeHussarLogo"
         src={BackNav}
       />
 
       <Nav >
-        <BackImg2
-          alt="CodeHussarLogo"
-          src={BackNav2}
-        />
+        {navbarHide ? null :
+          <BackImg2
+            alt="CodeHussarLogo"
+            src={BackNav2}
+          />}
         <Logo
           alt="CodeHussarLogo"
           src={Logo_pic}
@@ -67,7 +70,6 @@ export default NavBar
 
 // styles
 const BackImg = styled.img`
-display: flex;
 position: absolute;
 height: auto; 
 width: 100%;
@@ -78,7 +80,6 @@ position: absolute;
 z-index: -1;
 flex: 1;
 height: 10vh;
-max-width:100%
 `
 
 const Logo = styled.img`
