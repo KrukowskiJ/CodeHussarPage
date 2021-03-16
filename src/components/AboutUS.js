@@ -1,143 +1,138 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
-import BackLeft from "../images/oe1.png"
-import BackRight from "../images/oe2.png"
-import WebDevRed from "../images/svg/OurExpertise/WebDevRed.svg"
-import { Title } from "../components/micros/index"
+import Slider from "react-slick";
+import Pulse from '../images/articles/wat.png'
+import ReadyDonate from '../images/articles/ic 21.png'
+import Uninetwork from '../images/articles/kokon.png'
+import ProjectCard from '../components/micros/ProjectCard.js'
 
+var projectNameList = ["Pulse", "Uninetwork", "ReadyDonate"];
+var projectPictureList = [Pulse, Uninetwork, ReadyDonate];
+var projectLinkList = [
+    "https://www.w3schools.com",
+    "https://www.w3schools.com",
+    "https://www.chess.com/home"
+]
 
 const AboutUS = () => {
-    console.log('dupaaaa');
-    return (<Wrapper>
-       
-        <Title id="about">Our Expertise</Title>
-        <BgRight
-            alt="backgoundImg"
-            src={BackRight} />
-        <LeftText>
-            Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit
-            
-            </LeftText>
-        <BgLeft
-            alt="backgoundImg"
-            src={BackLeft} />
 
-        <IconsWraper>
-            <ExpertiseIcon style={{
-                left:"65%",
-                top:"10%;"
-            }}>
-                    <RedIcon
-                    style={{
-                        width:"104px",
-                        height:"86px"
-                    }} src={WebDevRed} />
-                    Web Dev
-            </ExpertiseIcon>
-            <ExpertiseIcon style={{
-                left:"80%",
-                top:"-30px"
-            }}>
-                    <RedIcon
-                    style={{
-                        width:"104px",
-                        height:"86px"
-                    }} src={WebDevRed} />
-                    Web Dev
-            </ExpertiseIcon>
-            <ExpertiseIcon style={{
-                left:"65%",
-                top:"-60px"
-            }}>
-                    <RedIcon
-                    style={{
-                        width:"104px",
-                        height:"86px"
-                    }} src={WebDevRed} />
-                    Web Dev
-            </ExpertiseIcon>
-            <ExpertiseIcon style={{
-                left:"80%",
-                top:"-90px"
-            }}>
-                    <RedIcon
-                    style={{
-                        width:"104px",
-                        height:"86px"
-                    }} src={WebDevRed} />
-                    Web Dev
-            </ExpertiseIcon>
-        
-        </IconsWraper>
 
-    
+    const [projectName, setProjectName] = useState(projectNameList[0]);
+    const [projectLink, setProjectLink] = useState(projectLinkList[0]);
+    const [projectPicture, setProjectPicture] = useState(projectPictureList[0]);
 
-    </Wrapper>)
+
+
+
+    const settings = {
+        cssEase: "linear",
+        autoplay: false,
+        speed: 2000,
+        autoplaySpeed: 2000,
+        infinite: true,
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    };
+
+    const setProjectInfo = (prjNumber) => {
+        setProjectName(projectNameList[prjNumber - 1]);
+        setProjectLink(projectLinkList[prjNumber - 1]);
+        setProjectPicture(projectPictureList[prjNumber - 1]);
+        window.open(projectLinkList[prjNumber - 1], '_blank');
+    }
+    const setProject = (prjNumber) => {
+        console.log(projectPictureList[prjNumber - 1]);
+        return (<>
+
+            <ProjectCard img={projectPictureList[prjNumber - 1]} />
+            <ProjectName style={{ marginTop: "30px" }}>{projectNameList[prjNumber - 1]}</ProjectName>
+        </>
+        );
+    }
+
+
+    return (<About>
+
+        <HeaderTitle>
+            About Us
+        </HeaderTitle>
+
+
+        <Slider {...settings}>
+
+            <div onClick={() => { setProjectInfo(1) }}>
+                {setProject(1)}
+            </div>
+
+            <div onClick={() => { setProjectInfo(2) }}>
+                {setProject(2)}
+            </div>
+
+            <div onClick={() => { setProjectInfo(3) }}>
+                {setProject(3)}
+            </div>
+            <div onClick={() => { setProjectInfo(1) }}>
+                {setProject(1)}
+            </div>
+
+            <div onClick={() => { setProjectInfo(2) }}>
+                {setProject(2)}
+            </div>
+
+            <div onClick={() => { setProjectInfo(3) }}>
+                {setProject(3)}
+            </div>
+
+        </Slider>
+
+
+    </About>)
 
 }
 
-const IconsWraper = styled.div`
- position: relative; 
-margin-top:-35%;
+
+const About = styled.div`
+    margin-top: 30vh;
+    margin-bottom: 30vh;
 `
 
-const Wrapper = styled.div`
-    margin-top:20em;
-    margin-bottom:5em;
+const HeaderTitle = styled.h1`
+    text-align:center;
+    color:black;
+    margin: 100px;
+    font-size: 3em;
 `
 
-const LeftText = styled.div`
-    top:10em;
-
-    position:relative;
-    font-family: IBM Plex Mono;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 47px;
-    color:#fff;
-
+const ProjectName = styled.h1`
+    font-size: 1em;
+    margin: auto;
+    text-align: center;
+    color:black;
+    
 `
 
 
-const BgLeft = styled.img`
-    position: relative;
-    width: 40%;
-    z-index: -5;
-    left:0px;
-    /* top:3em; */
-`
-const BgRight = styled.img`
-    position: relative;
-    width: 40%;
-    float:right;
-    z-index: -5;
-    top:-10em;
-`
 
-const RedIcon = styled.img`
-margin:auto;
-display:block;
-`
 
-const ExpertiseIcon = styled.div`
-    position:relative;
-    left:400px;
-    padding:40px;
-
-    width: 177px;
-    height: 179px;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 45px;
-
-    font-family: IBM Plex Mono;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 23px;
-    text-align: center;    
-`
 
 
 export default AboutUS
