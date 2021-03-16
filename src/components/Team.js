@@ -36,6 +36,7 @@ const TeamBackground = styled.div`
     background-size: cover;
     background-image:url(${TeamBack});
     padding-top:13vw;
+    padding-bottom:35vw;
 `
 
 const HeaderTitle = styled.h1`
