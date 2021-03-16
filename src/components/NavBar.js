@@ -3,11 +3,9 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import Team_pic from "../images/team1.svg"
 import Logo_pic from "../images/Logo.png"
-import BackNav from "../images/navbackground.png"
+import BackNav from "../images/navbackground.svg"
+import BackNav2 from "../images/navbackground2.svg"
 import NavbarLinks from "./NavbarLinks"
-
-
-
 
 const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -19,48 +17,48 @@ const NavBar = () => {
         alt="CodeHussarLogo"
         src={BackNav}
       />
-      <Background>
 
-        <Nav>
-          <Logo
-            alt="CodeHussarLogo"
-            src={Logo_pic}
-            width="73px"
-            height="82px"
-          />
-          <LogoText><Col>
-            <LogoText1>Code</LogoText1>
-            <LogoText2>HussAR</LogoText2>
-          </Col>
-          </LogoText>
-          <Toggle
-            navbarOpen={navbarOpen}
-            onClick={() => setNavbarOpen(!navbarOpen)}
-          >
-            {navbarOpen ? <Hamburger open /> : <Hamburger />}
-          </Toggle>
-          {navbarOpen ? (
-            <Navbox>
-              <NavbarLinks />
-            </Navbox>
-          ) : (
-            <Navbox open>
-              <NavbarLinks />
-            </Navbox>
-          )}
+      <Nav >
+        <BackImg2
+          alt="CodeHussarLogo"
+          src={BackNav2}
+        />
+        <Logo
+          alt="CodeHussarLogo"
+          src={Logo_pic}
+          width="73px"
+          height="82px"
+        />
 
-        </Nav>
-        <Row>
-          <Team1
-            alt="CodeHussar"
-            src={Team_pic}
-          />
-          <QuoteText>
-            <BigText>WORKING FOR A <b>BETTER</b> TOMMOROW</BigText>
-            <SmallText>Lorem ipsum dolor sit amet, consectetur adipiscing elit</SmallText>
-          </QuoteText>
-        </Row>
-      </Background>
+
+        <Toggle
+          navbarOpen={navbarOpen}
+          onClick={() => setNavbarOpen(!navbarOpen)}
+        >
+          {navbarOpen ? <Hamburger open /> : <Hamburger />}
+        </Toggle>
+        {navbarOpen ? (
+          <Navbox>
+            <NavbarLinks />
+          </Navbox>
+        ) : (
+          <Navbox open>
+            <NavbarLinks />
+          </Navbox>
+        )}
+
+
+      </Nav>
+      <Row>
+        <Team1
+          alt="CodeHussar"
+          src={Team_pic}
+        />
+        <QuoteText>
+          <BigText>WORKING FOR A <b>BETTER</b> TOMMOROW</BigText>
+          <SmallText>Lorem ipsum dolor sit amet, consectetur adipiscing elit</SmallText>
+        </QuoteText>
+      </Row>
     </>
   )
 }
@@ -68,28 +66,28 @@ const NavBar = () => {
 export default NavBar
 
 // styles
-const Background = styled.div`
-/* position: absolute; */
-/* height: 100%;  */
-/* width: 100%;  */
-/* top: 0px; */
-
-
-`
 const BackImg = styled.img`
+display: flex;
 position: absolute;
-z-index: -5;
 height: auto; 
 width: 100%;
 `
+const BackImg2 = styled.img`
+top:0;
+position: absolute;
+z-index: -1;
+flex: 1;
+height: 10vh;
+
+`
 
 const Logo = styled.img`
-display: flex;
-justify-content:flex-end; 
-height: auto; 
+height: 80%; 
 width: auto; 
-max-width: 73px; 
-max-height: 82px;
+max-width: 209px; 
+max-height: 90px;
+margin: auto;
+z-index: 5;
 `
 
 const Team1 = styled.img`
@@ -105,34 +103,22 @@ width: 37%;  //735/1980*100
   margin-top: 0%;
 }
 `
-const LogoText = styled.text`
-display: flex;
-  height: 100%;
-  align-items: center;
-  color: white;
-`
-const LogoText1 = styled.text`
-
-`
-const LogoText2 = styled.text`
-`
 const Nav = styled.nav`
-  position: relative;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
   top:0;
   height: 10vh;
+  width: 100vw;
   display: flex;
- 
-  justify-content: space-between;
+  justify-content: space-around;
   text-transform: uppercase;
   margin: 0 ;
-  z-index: 2;
+  z-index: 1;
 
   @media (max-width: 768px) {
     position: sticky;
     height: 8vh;
     top: 0;
-    left: 0;
-    right: 0;
     left: 0;
   }
 `
@@ -143,14 +129,13 @@ const Toggle = styled.div`
   cursor: pointer;
   padding: 0 10vw;
 
+
   @media (max-width: 768px) {
     display: flex;
   }
 `
 const Navbox = styled.div`
   display: flex;
-  height: 100%;
-  justify-content: flex-end;
   align-items: center;
 
   @media (max-width: 768px) {
@@ -167,7 +152,7 @@ const Navbox = styled.div`
   }
 `
 const Hamburger = styled.div`
-  background-color: #111;
+  background-color: white;
   width: 30px;
   height: 3px;
   transition: all .3s linear;
@@ -179,19 +164,20 @@ const Hamburger = styled.div`
   ::after {
     width: 30px;
     height: 3px;
-    background-color: #111;
     content: "";
     position: absolute;
     transition: all 0.3s linear;
   }
 
   ::before {
+  background-color: white;
     transform: ${props =>
     props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
   }
 
   ::after {
+  background-color: white;
     opacity: ${props => (props.open ? "0" : "1")};
     transform: ${props => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
     top: 10px;
@@ -202,11 +188,10 @@ display: flex;
 flex-direction: column;
 color: white;
 margin: 10%;
-
+white-space: nowrap;
 `
 const BigText = styled.text`
 font-size: 2rem;
-
 @media (max-width: 768px) {
     font-size: 1.5rem;
   }

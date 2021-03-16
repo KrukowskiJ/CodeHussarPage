@@ -6,10 +6,11 @@ import WebDevRed from "../images/svg/OurExpertise/WebDevRed.svg"
 import { Title } from "../components/micros/index"
 
 
-const OurExpertise = () => {
-
+const AboutUS = () => {
+    console.log('dupaaaa');
     return (<Wrapper>
-        <Title id="expertise">Our Expertise</Title>
+       
+        <Title id="about">Our Expertise</Title>
         <BgRight
             alt="backgoundImg"
             src={BackRight} />
@@ -77,7 +78,7 @@ const OurExpertise = () => {
 }
 
 const IconsWraper = styled.div`
-/* position: relative; */
+ position: relative; 
 margin-top:-35%;
 `
 
@@ -139,4 +140,4 @@ const ExpertiseIcon = styled.div`
 `
 
 
-export default OurExpertise
+export default AboutUS

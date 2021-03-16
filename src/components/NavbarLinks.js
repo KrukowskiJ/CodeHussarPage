@@ -10,12 +10,12 @@ const NavLink = styled(Link)`
   margin: 0 2vw;
   transition: all 0.2s ease-in;
   position: relative;
+  
 
   :after {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
     width: 0%;
     content: ".";
     color: transparent;
@@ -25,6 +25,7 @@ const NavLink = styled(Link)`
   }
 
   :hover {
+    text-decoration: none;
     color: goldenrod;
     ::after {
       width: 100%;
@@ -42,11 +43,11 @@ const NavbarLinks = () => {
   return (
     <>
       <NavLink to="/">HOME</NavLink>
-      <NavLink to="/404">ABOUT US</NavLink>
-      <NavLink to="/">EXPERTISE</NavLink>
-      <NavLink to="/404">PROJECTS</NavLink>
-      <NavLink to="/">CONTACT</NavLink>
-      <NavLink to="/404">GALLERY</NavLink>
+      <NavLink to="/#about">ABOUT US</NavLink>
+      <NavLink to="/#expertise">EXPERTISE</NavLink>
+      <NavLink to="#projects">PROJECTS</NavLink>
+      <NavLink to="/#contact">CONTACT</NavLink>
+      <NavLink to="/#gallery">GALLERY</NavLink>
     </>
   )
 }
