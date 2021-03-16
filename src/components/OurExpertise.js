@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import BackLeft from "../images/oe1.png"
 import BackRight from "../images/oe2.png"
-import WebDevRed from "../images/svg/OurExpertise/WebDevRed.svg"
+import WebDevRed from "../images/svg/OurExpertise/webDevRed.svg"
 import { Title } from "../components/micros/index"
 
 

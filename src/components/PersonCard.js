@@ -11,23 +11,31 @@ const CardBackground=styled.div`
     border-radius: 45px;
     padding:2vw;
     margin:4vw;
+    margin-bottom:0vw;
 `
 
 const PersonPhoto=styled.img`
-
+    height:10vw;
 `
 
 const PersonName=styled.h4`
     text-align:center;
+    font-size:2vw;
 `
 
 const Title = styled.h5`
     color: #C03535;
     text-align:center;
+    font-size:2vw;
 `
 
 const Linkedin=styled.img`
+`
 
+const LinkedinBack=styled.div`
+    display:flex;
+    align-items:center;
+    justify-content:center;
 `
 
 function PersonCard(){
@@ -40,8 +48,9 @@ function PersonCard(){
             <Title>
                 Mentor
             </Title>
-            <Linkedin src={LinkedinIcon}>
-            </Linkedin>
+            <LinkedinBack>
+                <Linkedin src={LinkedinIcon}/>
+            </LinkedinBack>
         </CardBackground>
     );
 }
