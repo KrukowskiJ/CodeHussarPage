@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const ProjectCardBack = styled.div`
     flex:1;
-    height: 20vh;
+    height: 30vh;
     width: 20vw;
     margin: auto;
    

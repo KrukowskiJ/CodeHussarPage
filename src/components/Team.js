@@ -79,6 +79,7 @@ const Award = styled.img`
     height:100%;
 `
 const TitleBar = styled.div`
+    margin-top:2vw;
     align-self:center;
     flex:1;
     justify-content: "center";
@@ -91,6 +92,7 @@ const AwardName = styled.h6`
 `
 
 const AwardField = styled.div`
+    margin-top:2vw;
     padding:2vw;
 `
 
