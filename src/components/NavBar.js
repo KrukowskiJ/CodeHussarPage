@@ -72,14 +72,15 @@ export default NavBar
 const BackImg = styled.img`
 position: absolute;
 height: auto; 
+z-index:-10;
 width: 100%;
 `
 const BackImg2 = styled.img`
 top:0;
 position: absolute;
 z-index: -1;
-flex: 1;
 height: 10vh;
+width:100%;
 `
 
 const Logo = styled.img`
@@ -188,22 +189,30 @@ const QuoteText = styled.div`
 display: flex;
 flex-direction: column;
 color: white;
-margin: 10%;
-white-space: nowrap;
+padding: 0px 20px;
+
+@media (max-width: 768px) {
+    padding: 0px 20px;
+  }
+
 `
+
 const BigText = styled.text`
 font-size: 2rem;
 @media (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   `
+
 const SmallText = styled.text`
 font-size: 1.5rem;
-margin: 5%;
+/* margin: 5%; */
 @media (max-width: 768px) {
     font-size: 1rem;
   }
 `
+
+
 const Row = styled.div`
 display: flex;
 flex-direction: row;
