@@ -6,10 +6,8 @@ import BackgroundRed from '../images/svg/stopka.svg'
 import Linkedin from '../images/linkedin.png'
 import Fb from '../images/fb.png'
 const Background = styled.div`
-    width: 100%; 
-    height:45vw;
     margin: 0;
-    padding-top: 25vw;
+    padding: 10vw;
     background-repeat: no-repeat;
     background-size: cover;
     background-image:url(${BackgroundRed});

@@ -39,44 +39,52 @@ const styles = {
     }
 };
 
+const PhotoContainer=styled.div`
+    margin-right: 5vw;
+    margin-left: 5vw;
+`
+
 export default ()=>{
     return(
         <>
-            <Container>
-                <Row>
-                    <Col md="7">
+            <Container fluid>
+                    <PhotoContainer>
+                       <Row>
+                        <Col md="7">
+                            <Row>
+                                <Col md="6" style={styles.col}>
+                                <ImagePhotoFull src={Image5} />
+                                </Col>
+                                <Col md="6" style={styles.col}>
+                                <ImagePhotoFull src={Image1} />                    
+                                </Col>
+                            </Row>
+                            <Row>
+                                <ImagePhotoFull src={Image7} />                       
+                            </Row>
+                        </Col>
+                        <Col md="5">
+                            <Row>
+                                <ImagePhotoFull src={Image4} />
+                            </Row>
+                            <Row>
+                                <ImagePhotoFull src={Image6} />                       
+                            </Row>
+                        </Col>
+                        </Row>
                         <Row>
-                            <Col md="6" style={styles.col}>
-                               <ImagePhotoFull src={Image5} />
+                            <Col md="4" style={styles.col}>
+                            <ImagePhotoFull src={Image8} />   
                             </Col>
-                            <Col md="6" style={styles.col}>
-                               <ImagePhotoFull src={Image1} />                    
+                            <Col md="4" style={styles.col}>
+                            <ImagePhotoFull src={Image2} />                           
+                            </Col>
+                            <Col md="4" style={styles.col}>
+                            <ImagePhotoFull src={Image3} />                        
                             </Col>
                         </Row>
-                        <Row>
-                            <ImagePhotoFull src={Image7} />                       
-                        </Row>
-                    </Col>
-                    <Col md="5">
-                        <Row>
-                            <ImagePhotoFull src={Image4} />
-                        </Row>
-                        <Row>
-                            <ImagePhotoFull src={Image6} />                       
-                        </Row>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md="4" style={styles.col}>
-                       <ImagePhotoFull src={Image8} />   
-                    </Col>
-                    <Col md="4" style={styles.col}>
-                       <ImagePhotoFull src={Image2} />                           
-                    </Col>
-                    <Col md="4" style={styles.col}>
-                       <ImagePhotoFull src={Image3} />                        
-                    </Col>
-                </Row>
+                    </PhotoContainer>
+
             </Container>
         </>
     );
