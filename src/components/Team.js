@@ -15,6 +15,8 @@ import Prj4 from '../images/projects/pulse.png'
 import Prj5 from '../images/projects/pulse.png'
 import Prj6 from '../images/projects/pulse.png'
 import Photo from "../images/photo.png"
+import "./slick.css";
+
 
 var projectNameList = ["Pulse", "Uninetwork", "ReadyDonate"];
 var projectDescList = [
@@ -135,6 +137,8 @@ const Team = () => {
     }
 
     const settings = {
+        centerPadding: 0,
+        centerMode: true,
         dots: true,
         infinite: true,
         speed: 500,
@@ -157,7 +161,7 @@ const Team = () => {
           justify-content:center;
       `
 
-    const ProjectDescriptionCard=styled.div`
+    const ProjectDescriptionCard = styled.div`
         height:10vw;
     `
 
@@ -249,16 +253,16 @@ const Team = () => {
                 </HeaderTitleBack>
                 <Persons>
                     <Row>
-                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo}/>
-                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo}/>
-                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo}/>
+                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo} />
+                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo} />
+                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo} />
                     </Row>
                 </Persons>
                 <Persons>
                     <Row>
-                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo}/>
-                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo}/>
-                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo}/>
+                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo} />
+                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo} />
+                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo} />
                     </Row>
                 </Persons>
 

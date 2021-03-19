@@ -1,0 +1,6 @@
+.slick-slide.slick-center img {
+    transform: scale(1.2);
+}
+.slick-dots li button:before {
+    color: rgb(206, 62, 62) !important;
+  }

@@ -5,6 +5,7 @@ import Pulse from '../images/articles/wat.png'
 import ReadyDonate from '../images/articles/ic 21.png'
 import Uninetwork from '../images/articles/kokon.png'
 import ProjectCard from '../components/micros/ProjectCard.js'
+import "./slick.css";
 
 var projectNameList = ["Pulse", "Uninetwork", "ReadyDonate"];
 var projectPictureList = [Pulse, Uninetwork, ReadyDonate];
@@ -25,6 +26,8 @@ const AboutUS = () => {
 
 
     const settings = {
+        centerPadding: 0,
+        centerMode: true,
         cssEase: "linear",
         autoplay: false,
         speed: 2000,
