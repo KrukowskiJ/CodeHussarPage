@@ -22,10 +22,7 @@ const NavBar = () => {
 
       <Nav >
         {navbarHide ? null :
-          <BackImg2
-            alt="CodeHussarLogo"
-            src={BackNav2}
-          />}
+          <BackImg2 />}
         <Logo
           alt="CodeHussarLogo"
           src={Logo_pic}
@@ -75,7 +72,9 @@ height: auto;
 z-index:-10;
 width: 100%;
 `
-const BackImg2 = styled.img`
+const BackImg2 = styled.div`
+background: rgb(83,9,22);
+background: linear-gradient(173deg, rgba(83,9,22,1) 0%, rgba(173,34,33,1) 45%, rgba(254,68,83,1) 100%);
 top:0;
 position: absolute;
 z-index: -1;

@@ -8,9 +8,10 @@ const NavLink = styled(Link)`
   display: inline-block;
   white-space: nowrap;
   margin: 0 2vw;
+  padding-right: 5px;
   transition: all 0.2s ease-in;
   position: relative;
-  
+  font-size: 1.5em;
 
   :after {
     position: absolute;
@@ -35,7 +36,7 @@ const NavLink = styled(Link)`
   @media (max-width: 768px) {
     color: black;
     padding: 20px 0;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     z-index: 6;
   }
 `
