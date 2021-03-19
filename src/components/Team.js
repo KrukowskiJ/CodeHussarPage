@@ -15,8 +15,13 @@ import Prj4 from '../images/projects/pulse.png'
 import Prj5 from '../images/projects/pulse.png'
 import Prj6 from '../images/projects/pulse.png'
 import Photo from "../images/photo.png"
+<<<<<<< HEAD
 import "./slick.css";
 
+=======
+import PrevArrowImg from "../images/prevarrow.png"
+import NextArrowImg from "../images/nextarrow.png"
+>>>>>>> 9444f15ac846592d947cb20dc929c0c9510698e0
 
 var projectNameList = ["Pulse", "Uninetwork", "ReadyDonate"];
 var projectDescList = [
@@ -111,6 +116,32 @@ const CenterAwardName = styled.div`
     justify-content: "center";
 `
 
+const ArrowBox = styled.img`
+    margin:10px;
+`
+function PrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        onClick={onClick}
+      >
+          <ArrowBox src={PrevArrowImg} />
+      </div>
+    );
+  }
+
+  function NextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        onClick={onClick}
+      >
+        <ArrowBox src={NextArrowImg} />
+      </div>  
+    );
+  }
 
 const Team = () => {
 
@@ -143,7 +174,9 @@ const Team = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        prevArrow: <PrevArrow />,
+        nextArrow: <NextArrow />
     };
 
 
