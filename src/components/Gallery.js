@@ -15,6 +15,14 @@ const ImagePhotoFull=styled.img`
     width:100%; 
     height:100%; 
     padding:0.5vw;
+    -webkit-transition: 0.3s ease-in-out, -webkit-transform: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
+    transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+    &: hover
+    {
+        transform:scale(1.03);
+    }
 `
 const styles = {
     grid: {

@@ -14,6 +14,7 @@ import ProjectCard from '../components/micros/ProjectCard.js'
 import Prj4 from '../images/projects/pulse.png'
 import Prj5 from '../images/projects/pulse.png'
 import Prj6 from '../images/projects/pulse.png'
+import Photo from "../images/photo.png"
 
 var projectNameList = ["Pulse", "Uninetwork", "ReadyDonate"];
 var projectDescList = [
@@ -33,7 +34,7 @@ const TeamBackground = styled.div`
     margin: 0;
     padding:0;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-image:url(${TeamBack});
     padding-top:13vw;
     padding-bottom:35vw;
@@ -42,23 +43,27 @@ const TeamBackground = styled.div`
 const HeaderTitle = styled.h1`
     text-align:center;
     color:white;
+    font-family: IBM Plex Mono;
 `
 
 const HeaderTitleBack = styled.div`
     align-self:center;
     flex:1;
+    font-family: IBM Plex Mono;
     justify-content: "center";
 `
 
 const ProjectTitle = styled.h1`
     color:white;
     text-align:center;
+    font-family: IBM Plex Mono;
     font-size:3vw;
 `
 
 const ProjectDescription = styled.h5`
     text-align:center;
     color:white;
+    font-family: IBM Plex Mono;
     font-size:1.7vw;
 `
 
@@ -88,12 +93,14 @@ const AwardName = styled.h6`
     margin-top:1vw;
     color:white;
     text-align:center;
+    font-family: IBM Plex Mono;
     font-size:1.5vw;
 `
 
 const AwardField = styled.div`
     margin-top:2vw;
     padding:2vw;
+    max-height:10vw;
 `
 
 const CenterAwardName = styled.div`
@@ -150,6 +157,10 @@ const Team = () => {
           justify-content:center;
       `
 
+    const ProjectDescriptionCard=styled.div`
+        height:10vw;
+    `
+
     return (
         <>
             <HeaderTitleBack>
@@ -203,9 +214,11 @@ const Team = () => {
                                 </TitleBar>
                             </Row>
                             <Row>
-                                <ProjectDescription>
-                                    {projectDesc}
-                                </ProjectDescription>
+                                <ProjectDescriptionCard>
+                                    <ProjectDescription>
+                                        {projectDesc}
+                                    </ProjectDescription>
+                                </ProjectDescriptionCard>
                             </Row>
                         </Col>
                         <Col md="2">
@@ -236,16 +249,16 @@ const Team = () => {
                 </HeaderTitleBack>
                 <Persons>
                     <Row>
-                        <PersonCard />
-                        <PersonCard />
-                        <PersonCard />
+                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo}/>
+                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo}/>
+                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo}/>
                     </Row>
                 </Persons>
                 <Persons>
                     <Row>
-                        <PersonCard />
-                        <PersonCard />
-                        <PersonCard />
+                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo}/>
+                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo}/>
+                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo}/>
                     </Row>
                 </Persons>
 
