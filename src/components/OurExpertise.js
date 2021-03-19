@@ -28,9 +28,9 @@ const OurExpertise = () => {
                 top:"10%;"
             }}>
                     <RedIcon
-                    style={{
-                        width:"104px",
-                        height:"86px"
+                    size={{
+                        width:104,
+                        height:86
                     }} src={WebDevRed} />
                     Web Dev
             </ExpertiseIcon>
@@ -39,9 +39,9 @@ const OurExpertise = () => {
                 top:"-30px"
             }}>
                     <RedIcon
-                    style={{
-                        width:"104px",
-                        height:"86px"
+                    size={{
+                        width:104,
+                        height:86
                     }} src={WebDevRed} />
                     Web Dev
             </ExpertiseIcon>
@@ -50,9 +50,9 @@ const OurExpertise = () => {
                 top:"-60px"
             }}>
                     <RedIcon
-                    style={{
-                        width:"104px",
-                        height:"86px"
+                    size={{
+                        width:104,
+                        height:86
                     }} src={WebDevRed} />
                     Web Dev
             </ExpertiseIcon>
@@ -61,9 +61,9 @@ const OurExpertise = () => {
                 top:"-90px"
             }}>
                     <RedIcon
-                    style={{
-                        width:"104px",
-                        height:"86px"
+                    size={{
+                        width:104,
+                        height:86
                     }} src={WebDevRed} />
                     Web Dev
             </ExpertiseIcon>
@@ -88,14 +88,23 @@ const Wrapper = styled.div`
 
 const LeftText = styled.div`
     top:10em;
-
+    width:40%;
+    padding: 0px 20px;
     position:relative;
     font-family: IBM Plex Mono;
     font-style: normal;
     font-weight: 600;
-    font-size: 36px;
-    line-height: 47px;
     color:#fff;
+
+    font-size: 36px;
+
+    @media (max-width: 1324px) {
+    font-size:24px;
+    }
+
+    @media (max-width: 830px) {
+    font-size:12px;
+    }
 
 `
 
@@ -118,6 +127,18 @@ const BgRight = styled.img`
 const RedIcon = styled.img`
 margin:auto;
 display:block;
+width:${props => props.size.width}px;
+height:${props => props.size.height}px;
+
+@media (max-width: 1324px) {
+    width:${props => props.size.width/2}px;
+    height:${props => props.size.height/2}px; 
+    }
+
+    @media (max-width: 830px) {
+        width:${props => props.size.width/4}px;
+        height:${props => props.size.height/4}px; 
+    }
 `
 
 const ExpertiseIcon = styled.div`
@@ -136,6 +157,24 @@ const ExpertiseIcon = styled.div`
     font-size: 18px;
     line-height: 23px;
     text-align: center;    
+
+    
+    @media (max-width: 1324px) {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+        padding:20px;
+        font-size:14px;
+    }
+
+    @media (max-width: 830px) {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        padding:10px;
+        font-size:12px;
+    }
+
 `
 
 
