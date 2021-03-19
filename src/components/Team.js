@@ -15,13 +15,10 @@ import Prj4 from '../images/projects/pulse.png'
 import Prj5 from '../images/projects/pulse.png'
 import Prj6 from '../images/projects/pulse.png'
 import Photo from "../images/photo.png"
-<<<<<<< HEAD
 import "./slick.css";
 
-=======
 import PrevArrowImg from "../images/prevarrow.png"
 import NextArrowImg from "../images/nextarrow.png"
->>>>>>> 9444f15ac846592d947cb20dc929c0c9510698e0
 
 var projectNameList = ["Pulse", "Uninetwork", "ReadyDonate"];
 var projectDescList = [
@@ -122,26 +119,26 @@ const ArrowBox = styled.img`
 function PrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        onClick={onClick}
-      >
-          <ArrowBox src={PrevArrowImg} />
-      </div>
+        <div
+            className={className}
+            onClick={onClick}
+        >
+            <ArrowBox src={PrevArrowImg} />
+        </div>
     );
-  }
+}
 
-  function NextArrow(props) {
+function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        onClick={onClick}
-      >
-        <ArrowBox src={NextArrowImg} />
-      </div>  
+        <div
+            className={className}
+            onClick={onClick}
+        >
+            <ArrowBox src={NextArrowImg} />
+        </div>
     );
-  }
+}
 
 const Team = () => {
 
