@@ -4,32 +4,59 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import TeamBack from '../images/svg/teambackground.svg'
 import Slider from "react-slick";
-import Pulse from '../images/projects/pulse.png'
-import ReadyDonate from '../images/projects/readydonate.png'
-import Uninetwork from '../images/projects/uniconnect.png'
 import { Container, Row, Col } from "react-bootstrap";
-import Cup from '../images/svg/cup.svg'
 import PersonCard from '../components/PersonCard'
 import ProjectCard from '../components/micros/ProjectCard.js'
-import Prj4 from '../images/projects/pulse.png'
-import Prj5 from '../images/projects/pulse.png'
-import Prj6 from '../images/projects/pulse.png'
+
+import Pulse from '../images/projects/pulse.jpg'
+import ReadyDonate from '../images/projects/readydonate.png'
+import Uninetwork from '../images/projects/uniconnect.png'
+import EduMatch from '../images/projects/edumatch.jpg'
+import HealthPoint from '../images/projects/healthpoint.jpg'
+import InTouch from '../images/projects/intouch.png'
+import Teddy from '../images/projects/teddy.jpg'
+import Vuer from '../images/projects/vuer.jpg'
+
 import Photo from "../images/photo.png"
 import "./slick.css";
-
+import Cup1 from '../images/awards/firstcup.png'
+import Cup2 from '../images/awards/secondcup.png'
+import SpecialAward from '../images/awards/specialaward.png'
+import Top5 from '../images/awards/top5.png'
 import PrevArrowImg from "../images/prevarrow.png"
 import NextArrowImg from "../images/nextarrow.png"
 
-var projectNameList = ["Pulse", "Uninetwork", "ReadyDonate"];
+var projectNameList = ["Health Point","Vuer","Teddy","Pulse","EduMatch","Ready?Donate!","InTouch","UniNetwork"];
 var projectDescList = [
-    "The Pulse project was presented during the Katowice hackathon. It is a response to the growing demand for the involvement of new technologies in the treatment process. The application monitors the patient's condition by recording life parameters and specialized surveys. Then these data are correlated so that the doctor can tailor the medication to the patient",
+    "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
+    "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
+    "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
+    "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
+    "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
+    "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
     "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
     "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space"
 ]
 var projectAwardList = [
+    "Microsoft Imagine Hack",
+    "Hackathon + 2018",
+    "nMedycyna 2018",
     "HackOne 2019",
-    "eduHack 2020",
-    "Hacking Carrots 2019"
+    "Best Hacking League 2019",
+    "Hacking Carrots",
+    "HackYeah 2020",
+    "eduHack 2021"
+]
+
+var projectAwardIcon=[
+    Cup1,
+    Cup2,
+    Cup1,
+    Cup1,
+    Cup1,
+    SpecialAward,
+    Top5,
+    Cup1
 ]
 
 const TeamBackground = styled.div`
@@ -48,6 +75,7 @@ const HeaderTitle = styled.h1`
     text-align:center;
     color:white;
     font-family: IBM Plex Mono;
+    font-size:3vw;
 `
 
 const HeaderTitleBack = styled.div`
@@ -102,7 +130,7 @@ const AwardName = styled.h6`
 `
 
 const AwardField = styled.div`
-    margin-top:2vw;
+    margin-top:1vw;
     padding:2vw;
     max-height:10vw;
 `
@@ -146,22 +174,13 @@ const Team = () => {
     const [projectName, setProjectName] = useState(projectNameList[0]);
     const [projectDesc, setProjectDesc] = useState(projectDescList[0]);
     const [projectAward, setProjectAward] = useState(projectAwardList[0]);
-
+    const [projectAwardCup, setProjectAwardCup] = useState(Cup1)
+    
     const setProjectInfo = (prjNumber) => {
-        console.log(projectDescList[2]);
-        if (prjNumber == "1") {
-            setProjectName(projectNameList[0]);
-            setProjectDesc(projectDescList[0]);
-            setProjectAward(projectAwardList[0])
-        } else if (prjNumber == "2") {
-            setProjectName(projectNameList[1]);
-            setProjectDesc(projectDescList[1]);
-            setProjectAward(projectAwardList[1])
-        } else if (prjNumber == "3") {
-            setProjectName(projectNameList[2]);
-            setProjectDesc(projectDescList[2]);
-            setProjectAward(projectAwardList[2])
-        }
+            setProjectName(projectNameList[prjNumber-1]);
+            setProjectDesc(projectDescList[prjNumber-1]);
+            setProjectAward(projectAwardList[prjNumber-1])
+            setProjectAwardCup(projectAwardIcon[prjNumber-1])      
     }
 
     const settings = {
@@ -206,28 +225,36 @@ const Team = () => {
             <CaruselBack>
                 <Slider {...settings}>
 
-                    <div onClick={() => { setProjectInfo("1") }}>
+                    <div onClick={() => { setProjectInfo(1) }}>
+                        <ProjectCard img={HealthPoint} />
+                    </div>
+
+                    <div onClick={() => { setProjectInfo(2) }}>
+                        <ProjectCard img={Vuer} />
+                    </div>
+
+                    <div onClick={() => { setProjectInfo(3) }}>
+                        <ProjectCard img={Teddy} />
+                    </div>
+
+                    <div onClick={() => { setProjectInfo(4) }}>
                         <ProjectCard img={Pulse} />
                     </div>
 
-                    <div onClick={() => { setProjectInfo("2") }}>
+                    <div onClick={() => { setProjectInfo(5) }}>
+                        <ProjectCard img={EduMatch} />
+                    </div>
+
+                    <div onClick={() => { setProjectInfo(6) }}>
                         <ProjectCard img={ReadyDonate} />
                     </div>
 
-                    <div onClick={() => { setProjectInfo("3") }}>
+                    <div onClick={() => { setProjectInfo(7) }}>
+                        <ProjectCard img={InTouch} />
+                    </div>
+
+                    <div onClick={() => { setProjectInfo(8) }}>
                         <ProjectCard img={Uninetwork} />
-                    </div>
-
-                    <div onClick={() => { setProjectInfo("1") }}>
-                        <ProjectCard img={Prj4} />
-                    </div>
-
-                    <div onClick={() => { setProjectInfo("2") }}>
-                        <ProjectCard img={Prj5} />
-                    </div>
-
-                    <div onClick={() => { setProjectInfo("3") }}>
-                        <ProjectCard img={Prj6} />
                     </div>
 
                 </Slider>
@@ -259,7 +286,7 @@ const Team = () => {
                             <AwardField>
                                 <Row>
                                     <CenterAwardName>
-                                        <Award src={Cup} />
+                                        <Award src={projectAwardCup} />
                                     </CenterAwardName>
                                 </Row>
                                 <Row>

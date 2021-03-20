@@ -7,7 +7,7 @@ import Linkedin from '../images/linkedin.png'
 import Fb from '../images/fb.png'
 const Background = styled.div`
     margin: 0;
-    padding: 10vw;
+    padding: 6vw;
     background-repeat: no-repeat;
     background-size: cover;
     background-image:url(${BackgroundRed});
@@ -18,37 +18,35 @@ const ContactText = styled.h3`
     font-style: normal;
     font-size: 2vw;
     color:#fff;
+    text-align:center;
 `
 const ImagePortal = styled.img`
-    margin:20px;
-    height:50px;
+    margin:2vw;
+    height:4vw;
 `
 
 const Logo = styled.div`
-    display: block;
-    margin-left: auto;
-    margin-right: auto ;
+`
+const ContactBox = styled.div`
+    padding-top:4vw;
+    display: flex;
+	justify-content: center;
+	align-items: center;
 `
 
 export default () => {
     return (
         <Background>
-            <Container>
-                <Row>
-                    <Col md="7"></Col>
-                    <Col md="4">
-                        <Row>
-                            <Logo>
-                                <ImagePortal src={Fb} />
-                                <ImagePortal src={Linkedin} />
-                            </Logo>
-                        </Row>
-                        <ContactText>
-                            contact@codehussar.com
-                        </ContactText>
-                    </Col>
-                </Row>
-            </Container>
+            <ContactBox>
+                <Logo>
+                    <ImagePortal src={Fb} />
+                    <ImagePortal src={Linkedin} />
+                </Logo>
+            </ContactBox>
+                <ContactText>
+                    contact@codehussar.com
+                </ContactText>
+
         </Background>
     );
 }
