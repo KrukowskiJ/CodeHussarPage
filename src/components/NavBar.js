@@ -6,6 +6,8 @@ import Logo_pic from "../images/Logo.png"
 import BackNav from "../images/navbackground.svg"
 import BackNav2 from "../images/navbackground2.svg"
 import NavbarLinks from "./NavbarLinks"
+import Fade from 'react-reveal/Flip';
+
 
 const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -54,10 +56,12 @@ const NavBar = () => {
           alt="CodeHussar"
           src={Team_pic}
         />
-        <QuoteText>
-          <BigText>WORKING FOR A <b>BETTER</b> TOMMOROW</BigText>
-          <SmallText>Lorem ipsum dolor sit amet, consectetur adipiscing elit</SmallText>
-        </QuoteText>
+        <Fade left>
+          <QuoteText>
+            <BigText>WORKING FOR A <b>BETTER</b> TOMMOROW</BigText>
+            <SmallText>Lorem ipsum dolor sit amet, consectetur adipiscing elit</SmallText>
+          </QuoteText>
+        </Fade>
       </Row>
     </>
   )

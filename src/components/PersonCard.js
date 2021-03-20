@@ -3,6 +3,8 @@ import ImageBackground from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import LinkedinIcon from "../images/li.png"
+import Flip from 'react-reveal/Flip';
+
 
 const CardBackground=styled.div`
     background: #FFFFFF;
@@ -56,6 +58,7 @@ const LinkedinBack=styled.div`
 
 function PersonCard(props){
     return(
+        <Flip left cascade>
         <CardBackground>
             <PersonPhoto src={props.photo} />
             <PersonName>
@@ -71,6 +74,7 @@ function PersonCard(props){
                 <Linkedin src={LinkedinIcon}/>
             </LinkedinBack>
         </CardBackground>
+        </Flip>
     );
 }
 

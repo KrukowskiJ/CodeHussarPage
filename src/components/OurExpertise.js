@@ -3,75 +3,82 @@ import styled from "styled-components"
 import BackLeft from "../images/oe1.png"
 import BackRight from "../images/oe2.png"
 import WebDevRed from "../images/svg/OurExpertise/webDevRed.svg"
+import Cyber from "../images/svg/OurExpertise/cyber.svg"
+import Ai from "../images/svg/OurExpertise/ai.svg"
+import Mobile from "../images/svg/OurExpertise/mobile.svg"
 import { Title } from "../components/micros/index"
-
+import Fade from 'react-reveal/Fade';
 
 const OurExpertise = () => {
 
     return (<Wrapper>
         <Title id="expertise">Our Expertise</Title>
-        <BgRight
-            alt="backgoundImg"
-            src={BackRight} />
-        <LeftText>
-            Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit
-            
-            </LeftText>
-        <BgLeft
-            alt="backgoundImg"
-            src={BackLeft} />
+            <Fade right>
+                <BgRight
+                    alt="backgoundImg"
+                    src={BackRight} />
+            </Fade>
+            <Fade left>
+                <>
+                   <LeftText>
+                       We are a team of programming enthusiasts. The goal of which is to create projects that will change the world around us
+                    </LeftText>
 
-        <IconsWraper>
-            <ExpertiseIcon style={{
-                left:"65%",
-                top:"10%;"
-            }}>
-                    <RedIcon
-                    size={{
-                        width:104,
-                        height:86
-                    }} src={WebDevRed} />
-                    Web Dev
-            </ExpertiseIcon>
-            <ExpertiseIcon style={{
-                left:"80%",
-                top:"-30px"
-            }}>
-                    <RedIcon
-                    size={{
-                        width:104,
-                        height:86
-                    }} src={WebDevRed} />
-                    Web Dev
-            </ExpertiseIcon>
-            <ExpertiseIcon style={{
-                left:"65%",
-                top:"-60px"
-            }}>
-                    <RedIcon
-                    size={{
-                        width:104,
-                        height:86
-                    }} src={WebDevRed} />
-                    Web Dev
-            </ExpertiseIcon>
-            <ExpertiseIcon style={{
-                left:"80%",
-                top:"-90px"
-            }}>
-                    <RedIcon
-                    size={{
-                        width:104,
-                        height:86
-                    }} src={WebDevRed} />
-                    Web Dev
-            </ExpertiseIcon>
-        
-        </IconsWraper>
+                    <BgLeft
+                        alt="backgoundImg"
+                        src={BackLeft} />
+                </>
+            </Fade>
 
-    
-
+            <Fade right>
+                <IconsWraper>
+                    <ExpertiseIcon style={{
+                        left:"65%",
+                        top:"10%;"
+                    }}>
+                            <RedIcon
+                            size={{
+                                width:104,
+                                height:86
+                            }} src={WebDevRed} />
+                            Web Dev
+                    </ExpertiseIcon>
+                    <ExpertiseIcon style={{
+                        left:"80%",
+                        top:"-30px"
+                    }}>
+                            <RedIcon
+                            size={{
+                                width:104,
+                                height:86
+                            }} src={Cyber} />
+                            Cybersecurity
+                    </ExpertiseIcon>
+                    <ExpertiseIcon style={{
+                        left:"65%",
+                        top:"-60px"
+                    }}>
+                            <RedIcon
+                            size={{
+                                width:104,
+                                height:86
+                            }} src={Mobile} />
+                            Mobile Dev
+                    </ExpertiseIcon>
+                    <ExpertiseIcon style={{
+                        left:"80%",
+                        top:"-90px"
+                    }}>
+                            <RedIcon
+                            size={{
+                                width:104,
+                                height:86
+                            }} src={Ai} />
+                            Aritifical Intelligence
+                    </ExpertiseIcon>
+                
+                </IconsWraper>
+            </Fade>
     </Wrapper>)
 
 }
@@ -87,7 +94,7 @@ const Wrapper = styled.div`
 `
 
 const LeftText = styled.div`
-    top:10em;
+    top:12em;
     width:40%;
     padding: 0px 20px;
     position:relative;
@@ -96,10 +103,10 @@ const LeftText = styled.div`
     font-weight: 600;
     color:#fff;
 
-    font-size: 36px;
+    font-size: 35px;
 
     @media (max-width: 1324px) {
-    font-size:24px;
+    font-size:16px;
     }
 
     @media (max-width: 830px) {

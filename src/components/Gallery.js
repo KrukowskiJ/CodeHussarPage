@@ -10,6 +10,8 @@ import Image5 from '../images/imaginecup.jpg';
 import Image6 from '../images/imaginehack.jpg';
 import Image7 from '../images/pekao.jpg';
 import Image8 from '../images/bhl.jpg';
+import Zoom from 'react-reveal/Zoom';
+
 
 const ImagePhotoFull=styled.img`
     width:100%; 
@@ -53,38 +55,53 @@ export default ()=>{
                         <Col md="7">
                             <Row>
                                 <Col md="6" style={styles.col}>
-                                <ImagePhotoFull src={Image5} />
+                                    <Zoom>
+                                         <ImagePhotoFull src={Image5} />
+                                    </Zoom>
                                 </Col>
                                 <Col md="6" style={styles.col}>
-                                <ImagePhotoFull src={Image1} />                    
+                                    <Zoom>
+                                         <ImagePhotoFull src={Image1} />
+                                    </Zoom>         
                                 </Col>
                             </Row>
                             <Row>
-                                <ImagePhotoFull src={Image7} />                       
+                                 <Zoom>
+                                     <ImagePhotoFull src={Image7} />
+                                </Zoom>                      
                             </Row>
                         </Col>
                         <Col md="5">
                             <Row>
-                                <ImagePhotoFull src={Image4} />
+                                <Zoom>
+                                     <ImagePhotoFull src={Image4} />
+                                </Zoom>    
                             </Row>
                             <Row>
-                                <ImagePhotoFull src={Image6} />                       
+                                <Zoom>
+                                     <ImagePhotoFull src={Image6} />
+                                </Zoom>                        
                             </Row>
                         </Col>
                         </Row>
                         <Row>
                             <Col md="4" style={styles.col}>
-                            <ImagePhotoFull src={Image8} />   
+                                <Zoom>
+                                     <ImagePhotoFull src={Image8} />
+                                </Zoom>    
                             </Col>
                             <Col md="4" style={styles.col}>
-                            <ImagePhotoFull src={Image2} />                           
+                                <Zoom>
+                                     <ImagePhotoFull src={Image2} />
+                                </Zoom>                               
                             </Col>
                             <Col md="4" style={styles.col}>
-                            <ImagePhotoFull src={Image3} />                        
+                                <Zoom>
+                                     <ImagePhotoFull src={Image3} />
+                                </Zoom>                           
                             </Col>
                         </Row>
                     </PhotoContainer>
-
             </Container>
         </>
     );

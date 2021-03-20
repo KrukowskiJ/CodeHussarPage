@@ -25,6 +25,7 @@ import SpecialAward from '../images/awards/specialaward.png'
 import Top5 from '../images/awards/top5.png'
 import PrevArrowImg from "../images/prevarrow.png"
 import NextArrowImg from "../images/nextarrow.png"
+import Fade from 'react-reveal/Fade';
 
 var projectNameList = ["Health Point","Vuer","Teddy","Pulse","EduMatch","Ready?Donate!","InTouch","UniNetwork"];
 var projectDescList = [
