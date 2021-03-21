@@ -23,6 +23,13 @@ const ContactText = styled.h3`
 const ImagePortal = styled.img`
     margin:2vw;
     height:4vw;
+
+    
+:hover{
+
+    transform: scale(1.3);
+
+}
 `
 
 const Logo = styled.div`
@@ -34,17 +41,20 @@ const ContactBox = styled.div`
 	align-items: center;
 `
 
+
+
+
 export default () => {
     return (
         <Background>
             <ContactBox>
                 <Logo>
-                    <ImagePortal src={Fb} />
-                    <ImagePortal src={Linkedin} />
+                    <ImagePortal src={Fb} onClick={() => window.open('https://www.facebook.com/codehussar/', '_blank')} />
+                    <ImagePortal src={Linkedin} onClick={() => window.open('https://pl.linkedin.com/company/code-hussar-wat', '_blank')} />
                 </Logo>
             </ContactBox>
-                <ContactText>
-                    contact@codehussar.com
+            <ContactText>
+                contact@codehussar.com
                 </ContactText>
 
         </Background>
