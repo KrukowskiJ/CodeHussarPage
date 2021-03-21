@@ -11,7 +11,7 @@ const NavLink = styled(Link)`
   padding-right: 5px;
   transition: all 0.2s ease-in;
   position: relative;
-  font-size: 1.5em;
+  font-size: 1.05em;
 
   :after {
     position: absolute;
