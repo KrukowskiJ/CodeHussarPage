@@ -27,7 +27,8 @@ import PrevArrowImg from "../images/prevarrow.png"
 import NextArrowImg from "../images/nextarrow.png"
 import Fade from 'react-reveal/Fade';
 
-var projectNameList = ["Health Point","Vuer","Teddy","Pulse","EduMatch","Ready?Donate!","InTouch","UniNetwork"];
+var projectNameList = ["Health Point", "Vuer", "Teddy", "Pulse", "EduMatch", "Ready?Donate!", "InTouch", "UniNetwork"];
+var projectPictureList = [HealthPoint, Vuer, Teddy, Pulse, EduMatch, ReadyDonate, InTouch, Uninetwork];
 var projectDescList = [
     "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
     "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
@@ -49,7 +50,7 @@ var projectAwardList = [
     "eduHack 2021"
 ]
 
-var projectAwardIcon=[
+var projectAwardIcon = [
     Cup1,
     Cup2,
     Cup1,
@@ -176,12 +177,13 @@ const Team = () => {
     const [projectDesc, setProjectDesc] = useState(projectDescList[0]);
     const [projectAward, setProjectAward] = useState(projectAwardList[0]);
     const [projectAwardCup, setProjectAwardCup] = useState(Cup1)
-    
+
     const setProjectInfo = (prjNumber) => {
-            setProjectName(projectNameList[prjNumber-1]);
-            setProjectDesc(projectDescList[prjNumber-1]);
-            setProjectAward(projectAwardList[prjNumber-1])
-            setProjectAwardCup(projectAwardIcon[prjNumber-1])      
+        console.log(prjNumber);
+        setProjectName(projectNameList[prjNumber - 1]);
+        setProjectDesc(projectDescList[prjNumber - 1]);
+        setProjectAward(projectAwardList[prjNumber - 1])
+        setProjectAwardCup(projectAwardIcon[prjNumber - 1])
     }
 
     const settings = {
@@ -198,7 +200,10 @@ const Team = () => {
 
 
     const CaruselBack = styled.div`
-        margin: 30px;
+    margin:auto;
+        width: 90%;
+        justify-content:center;
+        align-items: center;
     `
 
     const EmptySpace = styled.div`
@@ -214,6 +219,11 @@ const Team = () => {
     const ProjectDescriptionCard = styled.div`
         height:10vw;
     `
+    const setProject = (prjNumber) => {
+        return (
+            <ProjectCard img={projectPictureList[prjNumber - 1]} />
+        );
+    }
 
     return (
         <>
@@ -227,35 +237,35 @@ const Team = () => {
                 <Slider {...settings}>
 
                     <div onClick={() => { setProjectInfo(1) }}>
-                        <ProjectCard img={HealthPoint} />
+                        {setProject(1)}
                     </div>
 
                     <div onClick={() => { setProjectInfo(2) }}>
-                        <ProjectCard img={Vuer} />
+                        {setProject(2)}
                     </div>
 
                     <div onClick={() => { setProjectInfo(3) }}>
-                        <ProjectCard img={Teddy} />
+                        {setProject(3)}
                     </div>
 
                     <div onClick={() => { setProjectInfo(4) }}>
-                        <ProjectCard img={Pulse} />
+                        {setProject(4)}
                     </div>
 
                     <div onClick={() => { setProjectInfo(5) }}>
-                        <ProjectCard img={EduMatch} />
+                        {setProject(5)}
                     </div>
 
                     <div onClick={() => { setProjectInfo(6) }}>
-                        <ProjectCard img={ReadyDonate} />
+                        {setProject(6)}
                     </div>
 
                     <div onClick={() => { setProjectInfo(7) }}>
-                        <ProjectCard img={InTouch} />
+                        {setProject(7)}
                     </div>
 
                     <div onClick={() => { setProjectInfo(8) }}>
-                        <ProjectCard img={Uninetwork} />
+                        {setProject(8)}
                     </div>
 
                 </Slider>

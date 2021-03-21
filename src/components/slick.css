@@ -3,6 +3,6 @@
 }
 
 .slick-dots li button:before {
-    margin:70px;
-    color: rgb(206, 62, 62) !important;
+    margin-top:70px;
+    color: #A72727 !important;
   }

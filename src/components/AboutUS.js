@@ -90,7 +90,7 @@ const AboutUS = () => {
         return (<>
             <CARD>
                 <ProjectCard img={projectPictureList[prjNumber - 1]} />
-                <ProjectName style={{ marginTop: "30px" }}>{projectNameList[prjNumber - 1]}</ProjectName>
+                <ProjectName style={{ marginTop: "0px" }}>{projectNameList[prjNumber - 1]}</ProjectName>
             </CARD></>
         );
     }
@@ -159,7 +159,7 @@ const HeaderTitle = styled.h1`
 `
 
 const ProjectName = styled.h1`
-    font-size: 1em;
+    font-size: 0.8em;
     margin: auto;
     text-align: center;
     color:black;
@@ -170,7 +170,8 @@ justify-content:center;
 align-items: center;
 `
 const CaruselBack = styled.div`
-margin: 80px;
+margin:auto;
+width: 90%;
 `
 const ArrowBox = styled.img`
 margin:0px;

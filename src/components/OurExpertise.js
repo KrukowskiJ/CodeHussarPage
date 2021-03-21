@@ -13,72 +13,72 @@ const OurExpertise = () => {
 
     return (<Wrapper>
         <Title id="expertise">Our Expertise</Title>
-            <Fade right>
-                <BgRight
-                    alt="backgoundImg"
-                    src={BackRight} />
-            </Fade>
-            <Fade left>
-                <>
-                   <LeftText>
-                       We are a team of programming enthusiasts. The goal of which is to create projects that will change the world around us
+        <Fade right>
+            <BgRight
+                alt="backgoundImg"
+                src={BackRight} />
+        </Fade>
+        <Fade left>
+            <>
+                <LeftText>
+                    We are a team of programming enthusiasts. The goal of which is to create projects that will change the world around us
                     </LeftText>
 
-                    <BgLeft
-                        alt="backgoundImg"
-                        src={BackLeft} />
-                </>
-            </Fade>
+                <BgLeft
+                    alt="backgoundImg"
+                    src={BackLeft} />
+            </>
+        </Fade>
 
-            <Fade right>
-                <IconsWraper>
-                    <ExpertiseIcon style={{
-                        left:"65%",
-                        top:"10%;"
-                    }}>
-                            <RedIcon
-                            size={{
-                                width:104,
-                                height:86
-                            }} src={WebDevRed} />
+        <Fade right>
+            <IconsWraper>
+                <ExpertiseIcon style={{
+                    left: "65%",
+                    top: "10%;"
+                }}>
+                    <RedIcon
+                        size={{
+                            width: 104,
+                            height: 86
+                        }} src={WebDevRed} />
                             Web Dev
                     </ExpertiseIcon>
-                    <ExpertiseIcon style={{
-                        left:"80%",
-                        top:"-30px"
-                    }}>
-                            <RedIcon
-                            size={{
-                                width:104,
-                                height:86
-                            }} src={Cyber} />
+                <ExpertiseIcon style={{
+                    left: "80%",
+                    top: "-30px"
+                }}>
+                    <RedIcon
+                        size={{
+                            width: 104,
+                            height: 86
+                        }} src={Cyber} />
                             Cybersecurity
                     </ExpertiseIcon>
-                    <ExpertiseIcon style={{
-                        left:"65%",
-                        top:"-60px"
-                    }}>
-                            <RedIcon
-                            size={{
-                                width:104,
-                                height:86
-                            }} src={Mobile} />
+                <ExpertiseIcon style={{
+                    left: "65%",
+                    top: "-60px"
+                }}>
+                    <RedIcon
+                        size={{
+                            width: 104,
+                            height: 86
+                        }} src={Mobile} />
                             Mobile Dev
                     </ExpertiseIcon>
-                    <ExpertiseIcon style={{
-                        left:"80%",
-                        top:"-90px"
-                    }}>
-                            <RedIcon
-                            size={{
-                                width:104,
-                                height:86
-                            }} src={Ai} />
+                <ExpertiseIcon style={{
+                    left: "80%",
+                    top: "-90px"
+                }}>
+                    <RedIcon
+                        size={{
+                            width: 104,
+                            height: 86
+                        }} src={Ai} />
                             Aritifical Intelligence
                     </ExpertiseIcon>
-                
-                </IconsWraper>
-            </Fade>
+
+            </IconsWraper>
+        </Fade>
     </Wrapper>)
 
 }
@@ -94,24 +94,24 @@ const Wrapper = styled.div`
 `
 
 const LeftText = styled.div`
-    top:12em;
-    width:40%;
-    padding: 0px 20px;
+    top:15em;
+    width:35%;
+    padding: 0px 40px;
     position:relative;
     font-family: IBM Plex Mono;
     font-style: normal;
     font-weight: 600;
     color:#fff;
 
-    font-size: 35px;
+    font-size: 1.5vw;
 
-    @media (max-width: 1324px) {
-    font-size:16px;
+    @media (max-width: 949px) {
+        top:16em;
+    }
+    @media (max-width: 700px) {
+        top:17em;
     }
 
-    @media (max-width: 830px) {
-    font-size:12px;
-    }
 
 `
 
@@ -138,13 +138,13 @@ width:${props => props.size.width}px;
 height:${props => props.size.height}px;
 
 @media (max-width: 1324px) {
-    width:${props => props.size.width/2}px;
-    height:${props => props.size.height/2}px; 
+    width:${props => props.size.width / 2}px;
+    height:${props => props.size.height / 2}px; 
     }
 
     @media (max-width: 830px) {
-        width:${props => props.size.width/4}px;
-        height:${props => props.size.height/4}px; 
+        width:${props => props.size.width / 4}px;
+        height:${props => props.size.height / 4}px; 
     }
 `
 
