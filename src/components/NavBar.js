@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import Team_pic from "../images/team1.svg"
 import Logo_pic from "../images/Logo.png"
@@ -14,6 +14,26 @@ const NavBar = () => {
   const [navbarHide, setNavbarHide] = useState(false)
 
 
+  const [NavbarStatus, changeNavbarStatus] = useState('top')
+  const navRef = React.useRef()
+
+  navRef.current = NavbarStatus
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > window.innerHeight * 0.5
+      if (show)
+        changeNavbarStatus('not')
+      else
+        changeNavbarStatus('top')
+    }
+    document.addEventListener('scroll', handleScroll)
+    console.log(window.scrollY)
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+
+  })
+
   return (
     <>
 
@@ -23,7 +43,7 @@ const NavBar = () => {
       />
 
       <Nav >
-        {navbarHide ? null :
+        {NavbarStatus === 'top' ? <BackImgTransparent /> :
           <BackImg2 />}
         <Logo
           alt="CodeHussarLogo"
@@ -79,6 +99,15 @@ width: 100%;
 const BackImg2 = styled.div`
 background: rgb(83,9,22);
 background: linear-gradient(173deg, rgba(83,9,22,1) 0%, rgba(173,34,33,1) 45%, rgba(254,68,83,1) 100%);
+top:0;
+position: absolute;
+z-index: -1;
+height: 10vh;
+width:100%;
+`
+
+const BackImgTransparent = styled.div`
+background: transparent;
 top:0;
 position: absolute;
 z-index: -1;
