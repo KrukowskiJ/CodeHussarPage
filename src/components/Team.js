@@ -144,7 +144,7 @@ const CenterAwardName = styled.div`
 `
 
 const ArrowBox = styled.img`
-    margin:10px;
+    margin:0px;
 `
 function PrevArrow(props) {
     const { className, style, onClick } = props;
