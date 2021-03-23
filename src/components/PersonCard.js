@@ -75,7 +75,7 @@ function PersonCard(props){
                     {props.role}
                 </Title>
                 <LinkedinBack>
-                    <Linkedin src={LinkedinIcon}/>
+                    <Linkedin src={LinkedinIcon} onClick={() => window.open(props.url, '_blank')}/>
                 </LinkedinBack>
             </CardBackground>
         </Flip>

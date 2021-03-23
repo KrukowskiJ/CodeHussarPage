@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 
 const ProjectCardBack = styled.div`
-    height:25vh;
-    padding:1vw;
+    height:30vh;
+    padding:2vw;
     justify-content:center;
     `
 

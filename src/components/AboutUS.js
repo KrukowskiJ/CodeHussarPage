@@ -7,23 +7,27 @@ import Kokon from '../images/articles/kokon.png'
 import ProjectCard from '../components/micros/ArticleCard.js'
 import Ic from "../images/ic20.png"
 import PZ from "../images/pz.jpg"
+import PW from "../images/pw.jpg"
 import "./slick.css";
 import PrevArrowImg from "../images/prevarrow.png"
 import NextArrowImg from "../images/nextarrow.png"
+import Czworka from "../images/czworka.jpg"
 
 var projectNameList = ["Microsoft Imagine Cup 2020", 
 "Best IT Project Poland 2018", "Microsoft Imagine Cup 2018",
 "Microsoft Imagine Hack", "Hackathon+ MIiR.GOV 2018",
-"Best Hacking League 2019 CZIiTT PW"
+"Best Hacking League 2019 CZIiTT PW",
+"EduHack 2021"
 ];
-var projectPictureList = [Ic, Kokon, Ic21,PZ, WAT,PZ];
+var projectPictureList = [Ic, Kokon, Ic21,PW, WAT,PZ,Czworka];
 var projectLinkList = [
     "https://www.youtube.com/watch?v=l9aqH1sXtks",
     "https://www.wat.edu.pl/aktualnosci/sukces-projektu-health-point-w-konkursie-kol-naukowych-kokon/",
     "https://www.youtube.com/watch?v=xqpJttzJ9fc&t=16s",
     "http://polska-zbrojna.pl/home/articleshow/28269?title=Programisci-z-WAT-zwyciezcami-Best-Hacking-League&fbclid=IwAR3ozcbCVuGH8D3f2kKe5seKrl2S7Q0TxxkLtNIqpz5PMJu7MDRouJPDibY",
     "https://www.wat.edu.pl/aktualnosci/drugie-miejsce-dla-programistow-z-wat-w-hackatonie/?fbclid=IwAR0_Rppv37Fqd5ClarPS5oQQjFCLGRUKaXeWM1K1VM5Bw_wJIjmo6AakF-8",
-    "http://polska-zbrojna.pl/home/articleshow/28269?title=Programisci-z-WAT-zwyciezcami-Best-Hacking-League&fbclid=IwAR3ozcbCVuGH8D3f2kKe5seKrl2S7Q0TxxkLtNIqpz5PMJu7MDRouJPDibY"
+    "http://polska-zbrojna.pl/home/articleshow/28269?title=Programisci-z-WAT-zwyciezcami-Best-Hacking-League&fbclid=IwAR3ozcbCVuGH8D3f2kKe5seKrl2S7Q0TxxkLtNIqpz5PMJu7MDRouJPDibY",
+    "https://www.polskieradio.pl/10/5566/Artykul/2666982,Sukcesy-polskich-studentow-i-aplikacje-ulawiajace-zycie?fbclid=IwAR1zdK39mYdtddwDOQN3N7HPu536hj6OwQus9UpGriHV6LQmUuwTggp8hu0"
 ]
 
 const AboutUS = () => {
@@ -61,11 +65,10 @@ const AboutUS = () => {
     const settings = {
         centerPadding: 0,
         centerMode: true,
-        cssEase: 'cubic-bezier(0,.67,1,.34)',
-        speed: 2000,
+        speed: 600,
         infinite: true,
         dots: true,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         prevArrow: <PrevArrow />,
         nextArrow: <NextArrow />,
@@ -134,6 +137,10 @@ const AboutUS = () => {
                 <div onClick={() => { setProjectInfo(6) }}>
                     {setProject(6)}
                 </div>
+
+                <div onClick={() => { setProjectInfo(7) }}>
+                    {setProject(7)}
+                </div>
             </Slider>
             <RedLine></RedLine>
         </ CaruselBack>
@@ -144,7 +151,7 @@ const AboutUS = () => {
 
 
 const About = styled.div`
-    margin-bottom: 10vh;
+    margin-bottom: 20vh;
 `
 
 const HeaderTitle = styled.h1`
@@ -157,6 +164,7 @@ const HeaderTitle = styled.h1`
 
 const ProjectName = styled.h1`
     font-size: 1em;
+    padding:10px;
     margin: auto;
     text-align: center;
     color:black;
@@ -174,11 +182,6 @@ width: 90%;
 const ArrowBox = styled.img`
 margin:0px;
 
-:hover{
-
-    transform: scale(1.2);
-
-}
 `
 
 const RedLine = styled.div`

@@ -79,7 +79,7 @@ const NavBar = () => {
         <Fade left>
           <QuoteText>
             <BigText>WORKING FOR A <b>BETTER</b> TOMMOROW</BigText>
-            <SmallText>Lorem ipsum dolor sit amet, consectetur adipiscing elit</SmallText>
+            <SmallText>SOFTWARE DEVELOPMENT TEAM</SmallText>
           </QuoteText>
         </Fade>
       </Row>

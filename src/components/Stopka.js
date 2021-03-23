@@ -27,7 +27,7 @@ const ImagePortal = styled.img`
     
 :hover{
 
-    transform: scale(1.3);
+    transform: scale(1.05);
 
 }
 `

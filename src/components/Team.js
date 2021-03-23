@@ -21,6 +21,7 @@ import Photo from "../images/photo.png"
 import "./slick.css";
 import Cup1 from '../images/awards/firstcup.png'
 import Cup2 from '../images/awards/secondcup.png'
+import MultiCup from '../images/awards/firstcuphp.png'
 import SpecialAward from '../images/awards/specialaward.png'
 import Top5 from '../images/awards/top5.png'
 import PrevArrowImg from "../images/prevarrow.png"
@@ -57,7 +58,7 @@ var projectAwardList = [
 ]
 
 var projectAwardIcon = [
-    Cup1,
+    MultiCup,
     Cup2,
     Cup1,
     Cup1,
@@ -76,7 +77,7 @@ const TeamBackground = styled.div`
     background-size: contain;
     background-image:url(${TeamBack});
     padding-top:13vw;
-    padding-bottom:35vw;
+    padding-bottom:30vw;
 `
 
 const HeaderTitle = styled.h1`
@@ -334,14 +335,14 @@ const Team = () => {
                 </HeaderTitleBack>
                 <Persons>
                     <Row>
-                        <PersonCard name="Patryk" surname="Ostrowski" role="Software Engineer" photo={Patryk} />
-                        <PersonCard name="Sebastian" surname="Szczepański" role="CMO " photo={Sebastian} />
-                        <PersonCard name="Piotr" surname="Filochowski" role="Software Engineer" photo={Piotrek} />
+                        <PersonCard name="Patryk" surname="Ostrowski" role="Software Engineer" photo={Patryk} url="https://www.linkedin.com/in/patryk-ostrowski/" />
+                        <PersonCard name="Sebastian" surname="Szczepański" role="CMO " photo={Sebastian} url="https://www.linkedin.com/in/sebastian-piotr-szczepanski/"/>
+                        <PersonCard name="Piotr" surname="Filochowski" role="Software Engineer" photo={Piotrek} url="https://www.linkedin.com/in/piotr-filochowski/" />
                     </Row>
                 </Persons>
                 <Persons>
                     <Row>
-                        <PersonCard name="Jakub" surname="Krukowski" role="Frontend Developer" photo={Kuba} />
+                        <PersonCard name="Jakub" surname="Krukowski" role="Frontend Developer" photo={Kuba} url="https://www.linkedin.com/in/jakub-krukowski-b4a066187/" />
                         <PersonCard name="Agnieszka" surname="Pawełek" role="UX Designer" photo={Aga} />
                     </Row>
                 </Persons>
