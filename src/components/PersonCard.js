@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import ImageBackground from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import LinkedinIcon from "../images/li.png"
+import LinkedinIcon from "../images/linkedin.png"
 import Flip from 'react-reveal/Flip';
 
 
@@ -13,14 +13,6 @@ const CardBackground=styled.div`
     padding:2vw;
     margin:4vw;
     margin-bottom:0vw;
-    -webkit-transition: 0.3s ease-in-out, -webkit-transform: 0.3s ease-in-out;
-    -moz-transition: 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
-    transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
-
-    &: hover
-    {
-        transform:scale(1.05);
-    }
 
 `
 
@@ -42,7 +34,7 @@ const Title = styled.h5`
     margin-top:10px;
     color: #C03535;
     text-align:center;
-    font-size:1.5vw;
+    font-size:1.2vw;
     font-family: IBM Plex Mono;
 `
 
@@ -55,26 +47,39 @@ const LinkedinBack=styled.div`
     align-items:center;
     justify-content:center;
 `
+const AnimationDiv = styled.div`
+    -webkit-transition: 0.3s ease-in-out, -webkit-transform: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
+    transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+    :hover
+    {
+        transform:scale(1.05);
+    }
+
+`
 
 function PersonCard(props){
     return(
+        <AnimationDiv>
         <Flip left cascade>
-        <CardBackground>
-            <PersonPhoto src={props.photo} />
-            <PersonName>
-                {props.name}
-            </PersonName>
-            <PersonName>
-                {props.surname}
-            </PersonName>
-            <Title>
-                {props.role}
-            </Title>
-            <LinkedinBack>
-                <Linkedin src={LinkedinIcon}/>
-            </LinkedinBack>
-        </CardBackground>
+            <CardBackground>
+                <PersonPhoto src={props.photo} />
+                <PersonName>
+                    {props.name}
+                </PersonName>
+                <PersonName>
+                    {props.surname}
+                </PersonName>
+                <Title>
+                    {props.role}
+                </Title>
+                <LinkedinBack>
+                    <Linkedin src={LinkedinIcon}/>
+                </LinkedinBack>
+            </CardBackground>
         </Flip>
+        </AnimationDiv>
     );
 }
 

@@ -20,8 +20,8 @@ const ImagePhotoFull = styled.img`
     -webkit-transition: 0.3s ease-in-out, -webkit-transform: 0.3s ease-in-out;
     -moz-transition: 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
     transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
-    filter: blur(0px) grayscale(0.1) opacity(0.8);
-    &: hover
+    filter: blur(0px) grayscale(0.05) opacity(0.8);
+    :hover
     {
         filter: blur(0px) grayscale(0) opacity(1);
         transform:scale(1.03);

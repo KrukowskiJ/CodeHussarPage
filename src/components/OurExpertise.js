@@ -132,6 +132,7 @@ const BgRight = styled.img`
 `
 
 const RedIcon = styled.img`
+margin-bottom:10px;
 margin:auto;
 display:block;
 width:${props => props.size.width}px;
@@ -167,19 +168,19 @@ const ExpertiseIcon = styled.div`
 
     
     @media (max-width: 1324px) {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
         border-radius: 20px;
         padding:20px;
-        font-size:14px;
+        font-size:12px;
     }
 
     @media (max-width: 830px) {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
         border-radius: 10px;
         padding:10px;
-        font-size:12px;
+        font-size:10px;
     }
 
 `

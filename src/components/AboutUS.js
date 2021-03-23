@@ -1,20 +1,29 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import Slider from "react-slick";
-import Pulse from '../images/articles/wat.png'
-import ReadyDonate from '../images/articles/ic 21.png'
-import Uninetwork from '../images/articles/kokon.png'
+import WAT from '../images/articles/wat.png'
+import Ic21 from '../images/articles/ic 21.png'
+import Kokon from '../images/articles/kokon.png'
 import ProjectCard from '../components/micros/ArticleCard.js'
+import Ic from "../images/ic20.png"
+import PZ from "../images/pz.jpg"
 import "./slick.css";
 import PrevArrowImg from "../images/prevarrow.png"
 import NextArrowImg from "../images/nextarrow.png"
 
-var projectNameList = ["Pulse", "Uninetwork", "ReadyDonate"];
-var projectPictureList = [Pulse, Uninetwork, ReadyDonate];
+var projectNameList = ["Microsoft Imagine Cup 2020", 
+"Best IT Project Poland 2018", "Microsoft Imagine Cup 2018",
+"Microsoft Imagine Hack", "Hackathon+ MIiR.GOV 2018",
+"Best Hacking League 2019 CZIiTT PW"
+];
+var projectPictureList = [Ic, Kokon, Ic21,PZ, WAT,PZ];
 var projectLinkList = [
-    "https://www.w3schools.com",
-    "https://www.w3schools.com",
-    "https://www.chess.com/home"
+    "https://www.youtube.com/watch?v=l9aqH1sXtks",
+    "https://www.wat.edu.pl/aktualnosci/sukces-projektu-health-point-w-konkursie-kol-naukowych-kokon/",
+    "https://www.youtube.com/watch?v=xqpJttzJ9fc&t=16s",
+    "http://polska-zbrojna.pl/home/articleshow/28269?title=Programisci-z-WAT-zwyciezcami-Best-Hacking-League&fbclid=IwAR3ozcbCVuGH8D3f2kKe5seKrl2S7Q0TxxkLtNIqpz5PMJu7MDRouJPDibY",
+    "https://www.wat.edu.pl/aktualnosci/drugie-miejsce-dla-programistow-z-wat-w-hackatonie/?fbclid=IwAR0_Rppv37Fqd5ClarPS5oQQjFCLGRUKaXeWM1K1VM5Bw_wJIjmo6AakF-8",
+    "http://polska-zbrojna.pl/home/articleshow/28269?title=Programisci-z-WAT-zwyciezcami-Best-Hacking-League&fbclid=IwAR3ozcbCVuGH8D3f2kKe5seKrl2S7Q0TxxkLtNIqpz5PMJu7MDRouJPDibY"
 ]
 
 const AboutUS = () => {
@@ -53,12 +62,10 @@ const AboutUS = () => {
         centerPadding: 0,
         centerMode: true,
         cssEase: 'cubic-bezier(0,.67,1,.34)',
-        autoplay: true,
         speed: 2000,
-        autoplaySpeed: 4000,
         infinite: true,
         dots: true,
-        slidesToShow: 7,
+        slidesToShow: 4,
         slidesToScroll: 1,
         prevArrow: <PrevArrow />,
         nextArrow: <NextArrow />,
@@ -66,7 +73,7 @@ const AboutUS = () => {
             {
                 breakpoint: 1124,
                 settings: {
-                    slidesToShow: 5,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                 }
             },
@@ -116,29 +123,17 @@ const AboutUS = () => {
                 <div onClick={() => { setProjectInfo(3) }}>
                     {setProject(3)}
                 </div>
-                <div onClick={() => { setProjectInfo(1) }}>
-                    {setProject(1)}
+                <div onClick={() => { setProjectInfo(4) }}>
+                    {setProject(4)}
                 </div>
 
-                <div onClick={() => { setProjectInfo(2) }}>
-                    {setProject(2)}
+                <div onClick={() => { setProjectInfo(5) }}>
+                    {setProject(5)}
                 </div>
 
-                <div onClick={() => { setProjectInfo(3) }}>
-                    {setProject(3)}
+                <div onClick={() => { setProjectInfo(6) }}>
+                    {setProject(6)}
                 </div>
-                <div onClick={() => { setProjectInfo(1) }}>
-                    {setProject(1)}
-                </div>
-
-                <div onClick={() => { setProjectInfo(2) }}>
-                    {setProject(2)}
-                </div>
-
-                <div onClick={() => { setProjectInfo(3) }}>
-                    {setProject(3)}
-                </div>
-
             </Slider>
             <RedLine></RedLine>
         </ CaruselBack>
@@ -155,14 +150,17 @@ const About = styled.div`
 const HeaderTitle = styled.h1`
     text-align:center;
     color:black;
-    font-size: 3em;
+    padding-bottom:2vw;
+    font-family: IBM Plex Mono;
+    font-size:3vw;
 `
 
 const ProjectName = styled.h1`
-    font-size: 0.8em;
+    font-size: 1em;
     margin: auto;
     text-align: center;
     color:black;
+    font-family: IBM Plex Mono;
     
 `
 const CARD = styled.div`

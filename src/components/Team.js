@@ -27,6 +27,12 @@ import PrevArrowImg from "../images/prevarrow.png"
 import NextArrowImg from "../images/nextarrow.png"
 import Fade from 'react-reveal/Fade';
 
+import Patryk from "../images/persons/patryk.png";
+import Sebastian from "../images/persons/sebastian.png";
+import Piotrek from "../images/persons/piotr.png";
+import Aga from "../images/persons/aga.png";
+import Kuba from "../images/persons/kuba.png";
+
 var projectNameList = ["Health Point", "Vuer", "Teddy", "Pulse", "EduMatch", "Ready?Donate!", "InTouch", "UniNetwork"];
 var projectPictureList = [HealthPoint, Vuer, Teddy, Pulse, EduMatch, ReadyDonate, InTouch, Uninetwork];
 var projectDescList = [
@@ -75,11 +81,18 @@ const TeamBackground = styled.div`
 
 const HeaderTitle = styled.h1`
     text-align:center;
-    color:white;
+    color:black;
+    padding-bottom:2vw;
     font-family: IBM Plex Mono;
     font-size:3vw;
 `
-
+const HeaderTitleWhite = styled.h1`
+    text-align:center;
+    color:white;
+    padding-bottom:2vw;
+    font-family: IBM Plex Mono;
+    font-size:3vw;
+`
 const HeaderTitleBack = styled.div`
     align-self:center;
     flex:1;
@@ -315,22 +328,21 @@ const Team = () => {
                 <EmptySpace />
 
                 <HeaderTitleBack>
-                    <HeaderTitle>
+                    <HeaderTitleWhite>
                         Meet Our Team
-                    </HeaderTitle>
+                    </HeaderTitleWhite>
                 </HeaderTitleBack>
                 <Persons>
                     <Row>
-                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo} />
-                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo} />
-                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo} />
+                        <PersonCard name="Patryk" surname="Ostrowski" role="Software Engineer" photo={Patryk} />
+                        <PersonCard name="Sebastian" surname="Szczepański" role="CMO " photo={Sebastian} />
+                        <PersonCard name="Piotr" surname="Filochowski" role="Software Engineer" photo={Piotrek} />
                     </Row>
                 </Persons>
                 <Persons>
                     <Row>
-                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo} />
-                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo} />
-                        <PersonCard name="Jan" surname="Ostrowski" role="Mentor" photo={Photo} />
+                        <PersonCard name="Jakub" surname="Krukowski" role="Frontend Developer" photo={Kuba} />
+                        <PersonCard name="Agnieszka" surname="Pawełek" role="UX Designer" photo={Aga} />
                     </Row>
                 </Persons>
 
