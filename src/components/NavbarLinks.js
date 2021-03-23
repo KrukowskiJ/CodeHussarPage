@@ -20,14 +20,14 @@ const NavLink = styled(Link)`
     width: 0%;
     content: ".";
     color: transparent;
-    background: goldenrod;
-    height: 1px;
+    background: white;
+    height: 2px;
     transition: all 0.4s ease-in;
   }
 
   :hover {
     text-decoration: none;
-    color: goldenrod;
+    color: white;
     ::after {
       width: 100%;
     }

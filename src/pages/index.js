@@ -15,22 +15,22 @@ import { css } from "@emotion/core";
 // markup
 
 class IndexPage extends Component {
-  state = { loading: true };
-  sleep = milliseconds => {
-    return new Promise(resolve => setTimeout(resolve, milliseconds));
-  };
-  wait = async (milliseconds = 2000) => {
-    await this.sleep(milliseconds);
-    this.setState({
-      loading: false
-    });
-  };
-  componentDidMount() {
-    this.wait(2000);
-  }
+  // state = { loading: true };
+  // sleep = milliseconds => {
+  //   return new Promise(resolve => setTimeout(resolve, milliseconds));
+  // };
+  // wait = async (milliseconds = 2000) => {
+  //   await this.sleep(milliseconds);
+  //   this.setState({
+  //     loading: false
+  //   });
+  // };
+  // componentDidMount() {
+  //   this.wait(2000);
+  // }
 
   render() {
-    if (this.state.loading) return <Loader color={"red"} css={override} size={100} />;
+    // if (this.state.loading) return <Loader color={"red"} css={override} size={100} />;
 
     return (
       <>
