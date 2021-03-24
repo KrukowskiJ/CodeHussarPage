@@ -33,6 +33,7 @@ import Sebastian from "../images/persons/sebastian.png";
 import Piotrek from "../images/persons/piotr.png";
 import Aga from "../images/persons/aga.png";
 import Kuba from "../images/persons/kuba.png";
+import Carusel from "../components/Carusel"
 
 var projectNameList = ["Health Point", "Vuer", "Teddy", "Pulse", "EduMatch", "Ready?Donate!", "InTouch", "UniNetwork"];
 var projectPictureList = [HealthPoint, Vuer, Teddy, Pulse, EduMatch, ReadyDonate, InTouch, Uninetwork];
@@ -246,8 +247,8 @@ const Team = () => {
                     Our Projects
                 </HeaderTitle>
             </HeaderTitleBack>
-
-            <CaruselBack>
+            <Carusel setState={(p)=>{setProjectInfo(p)}} />
+            {/* <CaruselBack>
                 <Slider {...settings}>
 
                     <div onClick={() => { setProjectInfo(1) }}>
@@ -283,7 +284,7 @@ const Team = () => {
                     </div>
 
                 </Slider>
-            </CaruselBack>
+            </CaruselBack> */}
 
             <TeamBackground>
                 <Container fluid>
