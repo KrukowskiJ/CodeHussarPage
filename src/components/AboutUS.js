@@ -19,7 +19,7 @@ var projectNameList = ["Microsoft Imagine Cup 2020",
 "Best Hacking League 2019 CZIiTT PW",
 "EduHack 2021"
 ];
-var projectPictureList = [Ic, Kokon, Ic21,PW, WAT,PZ,Czworka];
+var projectPictureList = [Ic, Kokon, Ic21,PZ, WAT,PW,Czworka];
 var projectLinkList = [
     "https://www.youtube.com/watch?v=l9aqH1sXtks",
     "https://www.wat.edu.pl/aktualnosci/sukces-projektu-health-point-w-konkursie-kol-naukowych-kokon/",
