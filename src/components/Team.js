@@ -202,7 +202,10 @@ const ProjectDescriptionCard = styled.div`
                     Our Projects
                 </HeaderTitle>
             </HeaderTitleBack>
-            <Carusel setState={(p)=>{setProjectInfo(p)}} />
+            <div>
+                 <Carusel setState={(p)=>{setProjectInfo(p)}} />
+            </div>
+
 
             <TeamBackground>
                 <Container fluid>

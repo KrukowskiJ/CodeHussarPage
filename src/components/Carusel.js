@@ -18,6 +18,14 @@ import ProjectCard from '../components/micros/ProjectCard.js'
 export default(props)=>{
 
 
+    const [test,setTest]=useState(0);
+
+    const Testowa=(index)=>{
+        console.log("Test");
+        setTest(index);
+        props.setState(index)
+    }
+
     const settings = {
         centerPadding: 0,
         centerMode: true,
@@ -26,9 +34,11 @@ export default(props)=>{
         infinite: true,
         speed: 500,
         slidesToShow: 3,
+        initialSlide:test,
         prevArrow: <PrevArrow />,
         nextArrow: <NextArrow />,
-        afterChange:(index)=>{props.setState(index)},
+        onInit:()=>{console.log("Init")},
+        beforeChange:(t,index)=>{Testowa(index)},
     };
 
 
