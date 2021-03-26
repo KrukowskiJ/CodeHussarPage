@@ -76,7 +76,7 @@ export default () => {
     const [projectName, setProjectName] = useState(projectNameList[0]);
     const [projectDesc, setProjectDesc] = useState(projectDescList[0]);
     const [projectAward, setProjectAward] = useState(projectAwardList[0]);
-    const [projectAwardCup, setProjectAwardCup] = useState(Cup1);
+    const [projectAwardCup, setProjectAwardCup] = useState(projectAwardIcon[0]);
     const TeamBackground = styled.div`
     width: 100%; 
     height: 100%;

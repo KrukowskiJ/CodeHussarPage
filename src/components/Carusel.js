@@ -14,90 +14,93 @@ import Slider from "react-slick";
 import PrevArrowImg from "../images/prevarrow.png"
 import NextArrowImg from "../images/nextarrow.png"
 import ProjectCard from '../components/micros/ProjectCard.js'
-
-export default(props)=>{
-
-
-    const [test,setTest]=useState(0);
-
-    const Testowa=(index)=>{
-        console.log("Test");
-        setTest(index);
-        props.setState(index)
-    }
-
-    const settings = {
-        centerPadding: 0,
-        centerMode: true,
-        focusOnSelect:true,
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        initialSlide:test,
-        prevArrow: <PrevArrow />,
-        nextArrow: <NextArrow />,
-        onInit:()=>{console.log("Init")},
-        beforeChange:(t,index)=>{Testowa(index)},
-    };
+import props from 'prop-types';
+import { Component } from "react"
 
 
-    const CaruselBack = styled.div`
-        margin:auto;
-        width: 90%;
-        justify-content:center;
-        align-items: center;
-    `
-
-    const setProject = (prjNumber) => {
-        return (
-            <ProjectCard img={projectPictureList[prjNumber - 1]} />
-        );
-    }
-
-    var projectPictureList = [HealthPoint, Vuer, Teddy, Pulse, EduMatch, ReadyDonate, InTouch, Uninetwork];
-
-    const ArrowBox = styled.img`
-    margin:0px;
+const CaruselBack = styled.div`
+    margin:auto;
+    width: 90%;
+    justify-content:center;
+    align-items: center;
 `
-function PrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            onClick={onClick}
-        >
-            <ArrowBox src={PrevArrowImg} />
-        </div>
-    );
-}
-
-function NextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            onClick={onClick}
-        >
-            <ArrowBox src={NextArrowImg} />
-        </div>
-    );
-}
 
 
+var projectPictureList = [HealthPoint, Vuer, Teddy, Pulse, EduMatch, ReadyDonate, InTouch, Uninetwork];
+
+const ArrowBox = styled.img`
+margin:0px;
+`
+
+export default class Carusel extends Component{
+
+    constructor(props) {
+        super(props);
+      }
+
+      shouldComponentUpdate(nextProps, nextState){
+        return false;
+     }
+
+
+    render(){
+        const Testowa=(index)=>{
+            console.log("Test");
+            this.props.setState(index)
+        }
+        
+        const settings = {
+            centerPadding: 0,
+            centerMode: true,
+            focusOnSelect:true,
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            // initialSlide:test,
+            prevArrow: <PrevArrow />,
+            nextArrow: <NextArrow />,
+            onInit:()=>{console.log("Init")},
+            beforeChange:(t,index)=>{Testowa(index)},
+        };
+        
+        function PrevArrow(props) {
+            const { className, style, onClick } = props;
+            return (
+                <div
+                    className={className}
+                    onClick={onClick}
+                >
+                    <ArrowBox src={PrevArrowImg} />
+                </div>
+            );
+        }
+        
+        function NextArrow(props) {
+            const { className, style, onClick } = props;
+            return (
+                <div
+                    className={className}
+                    onClick={onClick}
+                >
+                    <ArrowBox src={NextArrowImg} />
+                </div>
+            );
+        }
+        
     return(
-        <CaruselBack>
-        <Slider {...settings}>
-              <ProjectCard img={projectPictureList[0] } index={1}/>
-              <ProjectCard img={projectPictureList[1] } index={2}/>
-              <ProjectCard img={projectPictureList[2] } index={3}/>
-              <ProjectCard img={projectPictureList[3] } index={4}/>
-              <ProjectCard img={projectPictureList[4] } index={5}/>
-              <ProjectCard img={projectPictureList[5] } index={6}/>
-              <ProjectCard img={projectPictureList[6] } index={7}/>
-              <ProjectCard img={projectPictureList[7] } index={8}/>
-        </Slider>
-    </CaruselBack>
-
+            <CaruselBack>
+            <Slider {...settings}>
+                <ProjectCard img={projectPictureList[0] } index={1}/>
+                <ProjectCard img={projectPictureList[1] } index={2}/>
+                <ProjectCard img={projectPictureList[2] } index={3}/>
+                <ProjectCard img={projectPictureList[3] } index={4}/>
+                <ProjectCard img={projectPictureList[4] } index={5}/>
+                <ProjectCard img={projectPictureList[5] } index={6}/>
+                <ProjectCard img={projectPictureList[6] } index={7}/>
+                <ProjectCard img={projectPictureList[7] } index={8}/>
+            </Slider>
+        </CaruselBack>
     );
+    }
 }
