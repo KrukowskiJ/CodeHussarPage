@@ -135,18 +135,10 @@ const RedIcon = styled.img`
 margin-bottom:10px;
 margin:auto;
 display:block;
-width:${props => props.size.width}px;
-height:${props => props.size.height}px;
+width:5vw;
+height:5vw;
 
-@media (max-width: 1324px) {
-    width:${props => props.size.width / 2}px;
-    height:${props => props.size.height / 2}px; 
-    }
 
-    @media (max-width: 830px) {
-        width:${props => props.size.width / 4}px;
-        height:${props => props.size.height / 4}px; 
-    }
 `
 
 const ExpertiseIcon = styled.div`
@@ -154,30 +146,28 @@ const ExpertiseIcon = styled.div`
     left:400px;
     padding:40px;
 
-    width: 177px;
-    height: 179px;
+    width: 15vw;
+    height: 12vw;
     background: #FFFFFF;
     box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 45px;
 
     font-family: IBM Plex Mono;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1vw;
     line-height: 23px;
     text-align: center;    
 
     
     @media (max-width: 1324px) {
-        width: 120px;
-        height: 120px;
+  
         border-radius: 20px;
         padding:20px;
         font-size:12px;
     }
 
     @media (max-width: 830px) {
-        width: 70px;
-        height: 70px;
+    
         border-radius: 10px;
         padding:10px;
         font-size:10px;
