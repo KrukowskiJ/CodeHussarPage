@@ -17,16 +17,18 @@ import ProjectCard from '../components/micros/ProjectCard.js'
 
 export default(props)=>{
 
+
     const settings = {
         centerPadding: 0,
         centerMode: true,
+        focusOnSelect:true,
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 1,
         prevArrow: <PrevArrow />,
-        nextArrow: <NextArrow />
+        nextArrow: <NextArrow />,
+        afterChange:(index)=>{props.setState(index)},
     };
 
 
@@ -76,39 +78,14 @@ function NextArrow(props) {
     return(
         <CaruselBack>
         <Slider {...settings}>
-
-            <div onClick={() => { props.setState(1) }}>
-                {setProject(1)}
-            </div>
-
-            <div onClick={() => { props.setState(2) }}>
-                {setProject(2)}
-            </div>
-
-            <div onClick={() => {props.setState(3)  }}>
-                {setProject(3)}
-            </div>
-
-            <div onClick={() => { props.setState(4)  }}>
-                {setProject(4)}
-            </div>
-
-            <div onClick={() => { props.setState(5) }}>
-                {setProject(5)}
-            </div>
-
-            <div onClick={() => { props.setState(5) }}>
-                {setProject(6)}
-            </div>
-
-            <div onClick={() => { props.setState(5)}}>
-                {setProject(7)}
-            </div>
-
-            <div onClick={() => { props.setState(5) }}>
-                {setProject(8)}
-            </div>
-
+              <ProjectCard img={projectPictureList[0] } index={1}/>
+              <ProjectCard img={projectPictureList[1] } index={2}/>
+              <ProjectCard img={projectPictureList[2] } index={3}/>
+              <ProjectCard img={projectPictureList[3] } index={4}/>
+              <ProjectCard img={projectPictureList[4] } index={5}/>
+              <ProjectCard img={projectPictureList[5] } index={6}/>
+              <ProjectCard img={projectPictureList[6] } index={7}/>
+              <ProjectCard img={projectPictureList[7] } index={8}/>
         </Slider>
     </CaruselBack>
 

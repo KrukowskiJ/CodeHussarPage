@@ -35,41 +35,49 @@ import Aga from "../images/persons/aga.png";
 import Kuba from "../images/persons/kuba.png";
 import Carusel from "../components/Carusel"
 
-var projectNameList = ["Health Point", "Vuer", "Teddy", "Pulse", "EduMatch", "Ready?Donate!", "InTouch", "UniNetwork"];
-var projectPictureList = [HealthPoint, Vuer, Teddy, Pulse, EduMatch, ReadyDonate, InTouch, Uninetwork];
-var projectDescList = [
-    "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
-    "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
-    "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
-    "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
-    "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
-    "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
-    "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
-    "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space"
-]
-var projectAwardList = [
-    "Microsoft Imagine Hack",
-    "Hackathon + 2018",
-    "nMedycyna 2018",
-    "HackOne 2019",
-    "Best Hacking League 2019",
-    "Hacking Carrots",
-    "HackYeah 2020",
-    "eduHack 2021"
-]
 
-var projectAwardIcon = [
-    MultiCup,
-    Cup2,
-    Cup1,
-    Cup1,
-    Cup1,
-    SpecialAward,
-    Top5,
-    Cup1
-]
 
-const TeamBackground = styled.div`
+
+
+export default () => {
+    const projectNameList = ["Health Point", "Vuer", "Teddy", "Pulse", "EduMatch", "Ready?Donate!", "InTouch", "UniNetwork"];
+    const projectPictureList = [HealthPoint, Vuer, Teddy, Pulse, EduMatch, ReadyDonate, InTouch, Uninetwork];
+    const projectDescList = [
+        "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
+        "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
+        "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
+        "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
+        "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
+        "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
+        "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
+        "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space"
+    ]
+    const projectAwardList = [
+        "Microsoft Imagine Hack",
+        "Hackathon + 2018",
+        "nMedycyna 2018",
+        "HackOne 2019",
+        "Best Hacking League 2019",
+        "Hacking Carrots",
+        "HackYeah 2020",
+        "eduHack 2021"
+    ]
+    
+    const projectAwardIcon = [
+        MultiCup,
+        Cup2,
+        Cup1,
+        Cup1,
+        Cup1,
+        SpecialAward,
+        Top5,
+        Cup1
+    ]
+    const [projectName, setProjectName] = useState(projectNameList[0]);
+    const [projectDesc, setProjectDesc] = useState(projectDescList[0]);
+    const [projectAward, setProjectAward] = useState(projectAwardList[0]);
+    const [projectAwardCup, setProjectAwardCup] = useState(Cup1);
+    const TeamBackground = styled.div`
     width: 100%; 
     height: 100%;
     margin: 0;
@@ -161,84 +169,31 @@ const CenterAwardName = styled.div`
 const ArrowBox = styled.img`
     margin:0px;
 `
-function PrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            onClick={onClick}
-        >
-            <ArrowBox src={PrevArrowImg} />
-        </div>
-    );
+
+
+
+const setProjectInfo = (prjNumber) => {
+    console.log(prjNumber);
+    setProjectName(projectNameList[prjNumber]);
+    setProjectDesc(projectDescList[prjNumber]);
+    setProjectAward(projectAwardList[prjNumber]);
+    setProjectAwardCup(projectAwardIcon[prjNumber]);
 }
 
-function NextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            onClick={onClick}
-        >
-            <ArrowBox src={NextArrowImg} />
-        </div>
-    );
-}
 
-const Team = () => {
+const EmptySpace = styled.div`
+    height:5vw; 
+`
 
+const Persons = styled.div`
+      display:flex;
+      align-items:center;
+      justify-content:center;
+  `
 
-    const [projectName, setProjectName] = useState(projectNameList[0]);
-    const [projectDesc, setProjectDesc] = useState(projectDescList[0]);
-    const [projectAward, setProjectAward] = useState(projectAwardList[0]);
-    const [projectAwardCup, setProjectAwardCup] = useState(Cup1)
-
-    const setProjectInfo = (prjNumber) => {
-        console.log(prjNumber);
-        setProjectName(projectNameList[prjNumber - 1]);
-        setProjectDesc(projectDescList[prjNumber - 1]);
-        setProjectAward(projectAwardList[prjNumber - 1])
-        setProjectAwardCup(projectAwardIcon[prjNumber - 1])
-    }
-
-    const settings = {
-        centerPadding: 0,
-        centerMode: true,
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        prevArrow: <PrevArrow />,
-        nextArrow: <NextArrow />
-    };
-
-
-    const CaruselBack = styled.div`
-    margin:auto;
-        width: 90%;
-        justify-content:center;
-        align-items: center;
-    `
-
-    const EmptySpace = styled.div`
-        height:5vw; 
-    `
-
-    const Persons = styled.div`
-          display:flex;
-          align-items:center;
-          justify-content:center;
-      `
-
-    const ProjectDescriptionCard = styled.div`
-        height:10vw;
-    `
-    const setProject = (prjNumber) => {
-        return (
-            <ProjectCard img={projectPictureList[prjNumber - 1]} />
-        );
-    }
+const ProjectDescriptionCard = styled.div`
+    height:10vw;
+`
 
     return (
         <>
@@ -248,43 +203,6 @@ const Team = () => {
                 </HeaderTitle>
             </HeaderTitleBack>
             <Carusel setState={(p)=>{setProjectInfo(p)}} />
-            {/* <CaruselBack>
-                <Slider {...settings}>
-
-                    <div onClick={() => { setProjectInfo(1) }}>
-                        {setProject(1)}
-                    </div>
-
-                    <div onClick={() => { setProjectInfo(2) }}>
-                        {setProject(2)}
-                    </div>
-
-                    <div onClick={() => { setProjectInfo(3) }}>
-                        {setProject(3)}
-                    </div>
-
-                    <div onClick={() => { setProjectInfo(4) }}>
-                        {setProject(4)}
-                    </div>
-
-                    <div onClick={() => { setProjectInfo(5) }}>
-                        {setProject(5)}
-                    </div>
-
-                    <div onClick={() => { setProjectInfo(6) }}>
-                        {setProject(6)}
-                    </div>
-
-                    <div onClick={() => { setProjectInfo(7) }}>
-                        {setProject(7)}
-                    </div>
-
-                    <div onClick={() => { setProjectInfo(8) }}>
-                        {setProject(8)}
-                    </div>
-
-                </Slider>
-            </CaruselBack> */}
 
             <TeamBackground>
                 <Container fluid>
@@ -356,6 +274,4 @@ const Team = () => {
         </>
     );
 }
-
-export default Team;
 
