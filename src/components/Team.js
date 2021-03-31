@@ -62,7 +62,7 @@ export default () => {
         "HackYeah 2020",
         "eduHack 2021"
     ]
-    
+
     const projectAwardIcon = [
         MultiCup,
         Cup2,
@@ -89,46 +89,46 @@ export default () => {
     padding-bottom:30vw;
 `
 
-const HeaderTitle = styled.h1`
+    const HeaderTitle = styled.h1`
     text-align:center;
     color:black;
     padding-bottom:2vw;
     font-family: IBM Plex Mono;
     font-size:3vw;
 `
-const HeaderTitleWhite = styled.h1`
+    const HeaderTitleWhite = styled.h1`
     text-align:center;
     color:white;
     padding-bottom:2vw;
     font-family: IBM Plex Mono;
     font-size:3vw;
 `
-const HeaderTitleBack = styled.div`
+    const HeaderTitleBack = styled.div`
     align-self:center;
     flex:1;
     font-family: IBM Plex Mono;
     justify-content: "center";
 `
 
-const ProjectTitle = styled.h1`
+    const ProjectTitle = styled.h1`
     color:white;
     text-align:center;
     font-family: IBM Plex Mono;
     font-size:3vw;
 `
 
-const ProjectDescription = styled.h5`
+    const ProjectDescription = styled.h5`
     text-align:center;
     color:white;
     font-family: IBM Plex Mono;
     font-size:1.7vw;
 `
 
-const Project = styled.div`
+    const Project = styled.div`
 
 `
 
-const Award = styled.img`
+    const Award = styled.img`
     padding:3.5vw;
     padding-bottom:0px;
     padding-top:2vw;
@@ -140,13 +140,13 @@ const Award = styled.img`
     width:100%;
     height:100%;
 `
-const TitleBar = styled.div`
+    const TitleBar = styled.div`
     margin-top:2vw;
     align-self:center;
     flex:1;
     justify-content: "center";
 `
-const AwardName = styled.h6`
+    const AwardName = styled.h6`
     margin-top:1vw;
     color:white;
     text-align:center;
@@ -154,56 +154,56 @@ const AwardName = styled.h6`
     font-size:1.5vw;
 `
 
-const AwardField = styled.div`
+    const AwardField = styled.div`
     margin-top:1vw;
     padding:2vw;
     max-height:10vw;
 `
 
-const CenterAwardName = styled.div`
+    const CenterAwardName = styled.div`
     align-self:center;
     flex:1;
     justify-content: "center";
 `
 
-const ArrowBox = styled.img`
+    const ArrowBox = styled.img`
     margin:0px;
 `
 
 
 
-const setProjectInfo = (prjNumber) => {
-    console.log(prjNumber);
-    setProjectName(projectNameList[prjNumber]);
-    setProjectDesc(projectDescList[prjNumber]);
-    setProjectAward(projectAwardList[prjNumber]);
-    setProjectAwardCup(projectAwardIcon[prjNumber]);
-}
+    const setProjectInfo = (prjNumber) => {
+        console.log(prjNumber);
+        setProjectName(projectNameList[prjNumber]);
+        setProjectDesc(projectDescList[prjNumber]);
+        setProjectAward(projectAwardList[prjNumber]);
+        setProjectAwardCup(projectAwardIcon[prjNumber]);
+    }
 
 
-const EmptySpace = styled.div`
+    const EmptySpace = styled.div`
     height:5vw; 
 `
 
-const Persons = styled.div`
+    const Persons = styled.div`
       display:flex;
       align-items:center;
       justify-content:center;
   `
 
-const ProjectDescriptionCard = styled.div`
+    const ProjectDescriptionCard = styled.div`
     height:10vw;
 `
 
     return (
         <>
-            <HeaderTitleBack>
+            <HeaderTitleBack id="projects">
                 <HeaderTitle>
                     Our Projects
                 </HeaderTitle>
             </HeaderTitleBack>
             <div>
-                 <Carusel setState={(p)=>{setProjectInfo(p)}} />
+                <Carusel setState={(p) => { setProjectInfo(p) }} />
             </div>
 
 
@@ -250,7 +250,7 @@ const ProjectDescriptionCard = styled.div`
 
                 <EmptySpace />
 
-                <HeaderTitleBack>
+                <HeaderTitleBack id="team">
                     <HeaderTitleWhite>
                         Meet Our Team
                     </HeaderTitleWhite>
@@ -258,7 +258,7 @@ const ProjectDescriptionCard = styled.div`
                 <Persons>
                     <Row>
                         <PersonCard name="Patryk" surname="Ostrowski" role="Software Engineer" photo={Patryk} url="https://www.linkedin.com/in/patryk-ostrowski/" />
-                        <PersonCard name="Sebastian" surname="Szczepański" role="CMO " photo={Sebastian} url="https://www.linkedin.com/in/sebastian-piotr-szczepanski/"/>
+                        <PersonCard name="Sebastian" surname="Szczepański" role="CMO " photo={Sebastian} url="https://www.linkedin.com/in/sebastian-piotr-szczepanski/" />
                         <PersonCard name="Piotr" surname="Filochowski" role="Software Engineer" photo={Piotrek} url="https://www.linkedin.com/in/piotr-filochowski/" />
                     </Row>
                 </Persons>
