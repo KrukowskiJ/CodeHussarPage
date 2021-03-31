@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import { Container, Row, Col } from "react-bootstrap";
 import Image1 from '../images/fut.jpg';
 import Image2 from '../images/hac.jpg';
@@ -52,7 +51,7 @@ export default () => {
     return (
         <>
             <Container fluid>
-                <PhotoContainer>
+                <PhotoContainer id="gallery">
                     <Row>
                         <Col md="7">
                             <Row>

@@ -2,14 +2,15 @@ import React from "react"
 import styled from "styled-components"
 
 const ProjectCardBack = styled.div`
-    height:30vh;
+    height:25vh;
     padding:2vw;
+    padding-bottom:1vw;
     justify-content:center;
     `
 
 const Project = styled.img`
     margin: auto;
-    height:100%;
+    height:90%;
     width:auto;
     text-align:center;
 `

@@ -1,10 +1,8 @@
 import styled from "styled-components"
 import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
 import Team_pic from "../images/team1.svg"
 import Logo_pic from "../images/Logo.png"
 import BackNav from "../images/navbackground.svg"
-import BackNav2 from "../images/navbackground2.svg"
 import NavbarLinks from "./NavbarLinks"
 import Fade from 'react-reveal/Flip';
 
@@ -37,7 +35,7 @@ const NavBar = () => {
   return (
     <>
 
-      <BackImg
+      <BackImg id="home"
         alt="CodeHussarLogo"
         src={BackNav}
       />
@@ -171,17 +169,18 @@ const Toggle = styled.div`
 const Navbox = styled.div`
   display: flex;
   align-items: center;
+  height:100%;
 
   @media (max-width: 768px) {
     color: black;
     flex-direction: column;
     position: fixed;
-    width: 100%;
+    width: 30%;
     justify-content: flex-start;
     padding-top: 10vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
-    top: 8vh;
+    top: 10vh;
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `

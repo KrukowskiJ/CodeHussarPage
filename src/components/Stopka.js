@@ -46,7 +46,7 @@ const ContactBox = styled.div`
 
 export default () => {
     return (
-        <Background>
+        <Background id="contact">
             <ContactBox>
                 <Logo>
                     <ImagePortal src={Fb} onClick={() => window.open('https://www.facebook.com/codehussar/', '_blank')} />

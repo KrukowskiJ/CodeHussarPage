@@ -12,14 +12,15 @@ import "./slick.css";
 import PrevArrowImg from "../images/prevarrow.png"
 import NextArrowImg from "../images/nextarrow.png"
 import Czworka from "../images/czworka.jpg"
+import { Title } from "../components/micros/index"
 
-var projectNameList = ["Microsoft Imagine Cup 2020", 
-"Best IT Project Poland 2018", "Microsoft Imagine Cup 2018",
-"Microsoft Imagine Hack", "Hackathon+ MIiR.GOV 2018",
-"Best Hacking League 2019 CZIiTT PW",
-"EduHack 2021"
+var projectNameList = ["Microsoft Imagine Cup 2020",
+    "Best IT Project Poland 2018", "Microsoft Imagine Cup 2018",
+    "Microsoft Imagine Hack", "Hackathon+ MIiR.GOV 2018",
+    "Best Hacking League 2019 CZIiTT PW",
+    "EduHack 2021"
 ];
-var projectPictureList = [Ic, Kokon, Ic21,PZ, WAT,PW,Czworka];
+var projectPictureList = [Ic, Kokon, Ic21, PZ, WAT, PW, Czworka];
 var projectLinkList = [
     "https://www.youtube.com/watch?v=l9aqH1sXtks",
     "https://www.wat.edu.pl/aktualnosci/sukces-projektu-health-point-w-konkursie-kol-naukowych-kokon/",
@@ -74,14 +75,14 @@ const AboutUS = () => {
         nextArrow: <NextArrow />,
         responsive: [
             {
-                breakpoint: 1124,
+                breakpoint: 1624,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 5,
                     slidesToScroll: 1,
                 }
             },
             {
-                breakpoint: 900,
+                breakpoint: 1300,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
@@ -106,11 +107,11 @@ const AboutUS = () => {
     }
 
 
-    return (<About>
+    return (<About id="about">
 
-        <HeaderTitle>
+        <Title>
             About Us
-        </HeaderTitle>
+        </Title>
 
         < CaruselBack>
             <Slider {...settings}>
@@ -154,17 +155,8 @@ const About = styled.div`
     margin-bottom: 20vh;
 `
 
-const HeaderTitle = styled.h1`
-    text-align:center;
-    color:black;
-    padding-bottom:2vw;
-    font-family: IBM Plex Mono;
-    font-size:3vw;
-`
-
 const ProjectName = styled.h1`
-    font-size: 1em;
-    padding:10px;
+    font-size: 0.8em;
     margin: auto;
     text-align: center;
     color:black;

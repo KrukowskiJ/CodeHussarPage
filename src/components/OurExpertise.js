@@ -11,8 +11,8 @@ import Fade from 'react-reveal/Fade';
 
 const OurExpertise = () => {
 
-    return (<Wrapper>
-        <Title id="expertise">Our Expertise</Title>
+    return (<Wrapper id="expertise" >
+        <Title >Our Expertise</Title>
         <Fade right>
             <BgRight
                 alt="backgoundImg"
@@ -79,7 +79,7 @@ const OurExpertise = () => {
 
             </IconsWraper>
         </Fade>
-    </Wrapper>)
+    </Wrapper >)
 
 }
 
