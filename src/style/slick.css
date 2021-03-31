@@ -11,7 +11,7 @@
     padding-bottom: 3px;
 
 }
-.slick-slide.slick-center  {    
+#car .slick-slide.slick-center  {    
     background-color: rgb(167, 39, 39,0.05);
     border-left:5px  solid #A72727;    
     /* border-radius: 8% 8% 0 0; */

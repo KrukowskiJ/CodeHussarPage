@@ -8,7 +8,7 @@ import ProjectCard from '../components/micros/ArticleCard.js'
 import Ic from "../images/ic20.png"
 import PZ from "../images/pz.jpg"
 import PW from "../images/pw.jpg"
-import "./slick.css";
+import "../style/slick.css";
 import PrevArrowImg from "../images/prevarrow.png"
 import NextArrowImg from "../images/nextarrow.png"
 import Czworka from "../images/czworka.jpg"
@@ -113,8 +113,8 @@ const AboutUS = () => {
             About Us
         </Title>
 
-        < CaruselBack>
-            <Slider {...settings}>
+        < CaruselBack id="car">
+            <Slider  {...settings}>
 
                 <div onClick={() => { setProjectInfo(1) }}>
                     {setProject(1)}

@@ -18,7 +18,7 @@ import Teddy from '../images/projects/teddy.jpg'
 import Vuer from '../images/projects/vuer.jpg'
 
 import Photo from "../images/photo.png"
-import "./slick.css";
+import "../style/slick.css";
 import Cup1 from '../images/awards/firstcup.png'
 import Cup2 from '../images/awards/secondcup.png'
 import MultiCup from '../images/awards/firstcuphp.png'
