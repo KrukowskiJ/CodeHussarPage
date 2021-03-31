@@ -34,48 +34,38 @@ const OurExpertise = () => {
             <IconsWraper>
                 <ExpertiseIcon style={{
                     left: "65%",
-                    top: "10%;"
+                    top: "-100px"
                 }}>
                     <RedIcon
-                        size={{
-                            width: 104,
-                            height: 86
-                        }} src={WebDevRed} />
-                            Web Dev
-                    </ExpertiseIcon>
+                        src={WebDevRed} />
+                    <Text>Web Dev</Text>
+                </ExpertiseIcon>
                 <ExpertiseIcon style={{
-                    left: "80%",
-                    top: "-30px"
+                    left: "82%",
+                    top: "-180px"
                 }}>
                     <RedIcon
-                        size={{
-                            width: 104,
-                            height: 86
-                        }} src={Cyber} />
-                            Cybersecurity
-                    </ExpertiseIcon>
+                        src={Cyber} />
+                    <Text>Cybersecurity</Text>
+
+                </ExpertiseIcon>
                 <ExpertiseIcon style={{
                     left: "65%",
-                    top: "-60px"
+                    top: "-180px"
                 }}>
                     <RedIcon
-                        size={{
-                            width: 104,
-                            height: 86
-                        }} src={Mobile} />
-                            Mobile Dev
-                    </ExpertiseIcon>
+                        src={Mobile} />
+                    <Text>Mobile Dev</Text>
+                </ExpertiseIcon>
                 <ExpertiseIcon style={{
-                    left: "80%",
-                    top: "-90px"
+                    left: "82%",
+                    top: "-240px"
                 }}>
                     <RedIcon
-                        size={{
-                            width: 104,
-                            height: 86
-                        }} src={Ai} />
-                            Aritifical Intelligence
-                    </ExpertiseIcon>
+                        src={Ai} />
+                    <Text>Artificial</Text>
+                    <Text>Intelligence</Text>
+                </ExpertiseIcon>
 
             </IconsWraper>
         </Fade>
@@ -102,6 +92,7 @@ const LeftText = styled.div`
     font-style: normal;
     font-weight: 600;
     color:#fff;
+   
 
     font-size: 1.5vw;
 
@@ -132,33 +123,42 @@ const BgRight = styled.img`
 `
 
 const RedIcon = styled.img`
-margin-bottom:10px;
 margin:auto;
 display:block;
 width:5vw;
-height:5vw;
+height:5vh;
 
+
+`
+const Text = styled.div`
+    font-family: IBM Plex Mono;
+    font-weight: 500;
+    font-size: 1vw;
+    text-align: center;    
+   
+    
+    @media (max-width: 1324px) {
+        font-size:12px;
+    }
+
+    @media (max-width: 830px) {
+        font-size:10px;
+    }
 
 `
 
 const ExpertiseIcon = styled.div`
+display:flex;
+flex-direction:column;
     position:relative;
-    left:400px;
-    padding:40px;
-
-    width: 15vw;
-    height: 12vw;
+    align-items: center;
+    padding-bottom: 20px;
+    width: 12vw;
+    height: 15vh;
     background: #FFFFFF;
     box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 45px;
 
-    font-family: IBM Plex Mono;
-    font-weight: 500;
-    font-size: 1vw;
-    line-height: 23px;
-    text-align: center;    
-
-    
     @media (max-width: 1324px) {
   
         border-radius: 20px;
