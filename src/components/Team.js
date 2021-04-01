@@ -26,14 +26,9 @@ import SpecialAward from '../images/awards/specialaward.png'
 import Top5 from '../images/awards/top5.png'
 import PrevArrowImg from "../images/prevarrow.png"
 import NextArrowImg from "../images/nextarrow.png"
-import Fade from 'react-reveal/Fade';
-
-import Patryk from "../images/persons/patryk.png";
-import Sebastian from "../images/persons/sebastian.png";
-import Piotrek from "../images/persons/piotr.png";
-import Aga from "../images/persons/aga.png";
-import Kuba from "../images/persons/kuba.png";
+import Fade from 'react-reveal/Fade'
 import Carusel from "../components/Carusel"
+import TeamSection from "./TeamSection"
 
 
 
@@ -185,11 +180,6 @@ export default () => {
     height:5vw; 
 `
 
-    const Persons = styled.div`
-      display:flex;
-      align-items:center;
-      justify-content:center;
-  `
 
     const ProjectDescriptionCard = styled.div`
     height:10vw;
@@ -255,19 +245,7 @@ export default () => {
                         Meet Our Team
                     </HeaderTitleWhite>
                 </HeaderTitleBack>
-                <Persons>
-                    <Row>
-                        <PersonCard name="Patryk" surname="Ostrowski" role="Software Engineer" photo={Patryk} url="https://www.linkedin.com/in/patryk-ostrowski/" />
-                        <PersonCard name="Sebastian" surname="Szczepański" role="CMO " photo={Sebastian} url="https://www.linkedin.com/in/sebastian-piotr-szczepanski/" />
-                        <PersonCard name="Piotr" surname="Filochowski" role="Software Engineer" photo={Piotrek} url="https://www.linkedin.com/in/piotr-filochowski/" />
-                    </Row>
-                </Persons>
-                <Persons>
-                    <Row>
-                        <PersonCard name="Jakub" surname="Krukowski" role="Frontend Developer" photo={Kuba} url="https://www.linkedin.com/in/jakub-krukowski-b4a066187/" />
-                        <PersonCard name="Agnieszka" surname="Pawełek" role="UX Designer" photo={Aga} />
-                    </Row>
-                </Persons>
+                <TeamSection /> 
 
 
 
