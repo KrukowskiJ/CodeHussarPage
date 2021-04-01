@@ -19,7 +19,7 @@ const awards=[
     },
     {
         title:"Microsoft Imagine Cup 2018",
-        cup:CupEmpty,
+        cup:CupFull,
         place:"TOP 3"
     },
     {
@@ -29,7 +29,7 @@ const awards=[
     },
     {
         title:"Project of Military University of Technology 2018",
-        cup:CupEmpty,
+        cup:CupFull,
         place:"Second place"
     },
     {
@@ -49,12 +49,12 @@ const awards=[
     },
     {
         title:"Hacking Carrots",
-        cup:CupEmpty,
+        cup:CupFull,
         place:"Special Award of"
     },
     {
         title:"HackYeah 2020",
-        cup:CupEmpty,
+        cup:CupFull,
         place:"TOP 3"
     },
     {
@@ -65,26 +65,31 @@ const awards=[
 ]
 
 const ImageCup = styled.img`
-    width:100%;
+    height:50%;
     padding:30%;
     padding-bottom:5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 `
 
 const AwardBox=styled.div`
-    padding:10%;
+    padding:0;
+    padding-left:10%;
+    padding-right:10%;
 `
 
 const TitleAward = styled.h2`
     text-align:center;
     color: #BDBABA;
-    font-size: 20px;
+    font-size: 15px;
     font-family: IBM Plex Mono;
 `
 
 
 const CompetitionsName=styled.h2`
     text-align:center;
-    font-size: 20px;
+    font-size: 15px;
     font-family: IBM Plex Mono;
 `
 
@@ -98,7 +103,7 @@ export default()=>{
                     <Row>
                         {awards.map((award)=>{
                             return(
-                                <Col md="4">
+                                <Col md="3">
                                     <AwardBox>
                                         <ImageCup src={award.cup} />
                                         <TitleAward>
