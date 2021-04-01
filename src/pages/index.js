@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Gallery from "../components/Gallery"
 import Stopka from "../components/Stopka"
 import { css } from "@emotion/core";
+import Awards from '../components/Awards'
 
 class IndexPage extends Component {
 
@@ -20,6 +21,7 @@ class IndexPage extends Component {
         <NavBar />
         <OurExpertise />
         <Team />
+        <Awards />
         <AboutUS />
         <Gallery />
         <Stopka />

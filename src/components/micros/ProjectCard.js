@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 export default function ProjectCard(props) {
     const ProjectCardBack = styled.div`
-        padding:3vw;
+        padding:1vw;
     `
 
     const Project = styled.img`

@@ -80,7 +80,7 @@ export default () => {
     background-repeat: no-repeat;
     background-size: contain;
     background-image:url(${TeamBack});
-    padding-top:13vw;
+    padding-top:10vw;
     padding-bottom:30vw;
 `
 
@@ -109,14 +109,36 @@ export default () => {
     color:white;
     text-align:center;
     font-family: IBM Plex Mono;
-    font-size:3vw;
+    @media (min-width: 400px) {
+        font-size: 1.4em;
+    }
+
+    @media (min-width: 850px) {
+        font-size: 1.8em;
+    }
+
+    @media (min-width: 1900px) {
+    font-size: 4em;
+    }
 `
 
     const ProjectDescription = styled.h5`
     text-align:center;
     color:white;
     font-family: IBM Plex Mono;
-    font-size:1.7vw;
+
+    @media (min-width: 600px) {
+        font-size: 1em;
+    }
+
+    @media (min-width: 1000px) {
+        font-size: 1.4em;
+    }
+
+    @media (min-width: 1900px) {
+    font-size: 1.8em;
+    }
+    /* font-size:1.7vw; */
 `
 
     const Project = styled.div`
@@ -125,8 +147,8 @@ export default () => {
 
     const Award = styled.img`
     padding:3.5vw;
+
     padding-bottom:0px;
-    padding-top:2vw;
     background-repeat: no-repeat;
     background-size: contain;
     background-position:center;
@@ -134,9 +156,22 @@ export default () => {
     margin-right: auto;
     width:100%;
     height:100%;
+
+    @media (min-width: 300px) {
+        padding-top:15%;
+    }
+
+    @media (min-width: 800px) {
+        padding-top:15%;
+    }
+
+    @media (min-width: 1900px) {
+        padding-top:0;
+    }
 `
     const TitleBar = styled.div`
     margin-top:2vw;
+    margin-bottom:1vw;
     align-self:center;
     flex:1;
     justify-content: "center";
@@ -146,7 +181,17 @@ export default () => {
     color:white;
     text-align:center;
     font-family: IBM Plex Mono;
-    font-size:1.5vw;
+    @media (min-width: 400px) {
+        font-size: 0.8em;
+    }
+
+    @media (min-width: 850px) {
+        font-size: 1.0em;
+    }
+
+    @media (min-width: 1900px) {
+    font-size: 1.4em;
+    }
 `
 
     const AwardField = styled.div`
@@ -245,7 +290,7 @@ export default () => {
                         Meet Our Team
                     </HeaderTitleWhite>
                 </HeaderTitleBack>
-                <TeamSection /> 
+                <TeamSection />
 
 
 
