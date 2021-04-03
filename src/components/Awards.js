@@ -4,65 +4,67 @@ import { Title } from "../components/micros/index"
 import { Container, Row, Col } from "react-bootstrap";
 import CupEmpty from '../images/awards/cupempty.svg'
 import CupFull from '../images/awards/cupfull.svg'
+import Flip from 'react-reveal/Flip'
+import jsonData from '../settings/awards.json';
 
-
-const awards=[
-    {
-        title:"Microsoft Imagine Hack 2018",
-        cup:CupFull,
-        place:"Winner of"
-    },
-    {
-        title:"Best IT Project 2018",
-        cup:CupFull,
-        place:"Forum of Technical Universities"
-    },
-    {
-        title:"Microsoft Imagine Cup 2018",
-        cup:CupFull,
-        place:"TOP 3"
-    },
-    {
-        title:"nMedycyna+ 2018",
-        cup:CupFull,
-        place:"Winner of"
-    },
-    {
-        title:"Project of Military University of Technology 2018",
-        cup:CupFull,
-        place:"Second place"
-    },
-    {
-        title:"Hackathon + GOV",
-        cup:CupFull,
-        place:"Second place"
-    },
-    {
-        title:"HackOne 2019",
-        cup:CupFull,
-        place:"Winner of"
-    },
-    {
-        title:"Best Hacking League",
-        cup:CupFull,
-        place:"Winner of"
-    },
-    {
-        title:"Hacking Carrots",
-        cup:CupFull,
-        place:"Special Award of"
-    },
-    {
-        title:"HackYeah 2020",
-        cup:CupFull,
-        place:"TOP 3"
-    },
-    {
-        title:"EduHack 2021",
-        cup:CupFull,
-        place:"Winner of"
-    }
-]
+const awards = [...jsonData];
+// const awards=[
+//     {
+//         title:"Microsoft Imagine Hack 2018",
+//         cup:CupFull,
+//         place:"Winner of"
+//     },
+//     {
+//         title:"Best IT Project 2018",
+//         cup:CupFull,
+//         place:"Forum of Technical Universities"
+//     },
+//     {
+//         title:"Microsoft Imagine Cup 2018",
+//         cup:CupFull,
+//         place:"TOP 3"
+//     },
+//     {
+//         title:"nMedycyna+ 2018",
+//         cup:CupFull,
+//         place:"Winner of"
+//     },
+//     {
+//         title:"Project of Military University of Technology 2018",
+//         cup:CupFull,
+//         place:"Second place"
+//     },
+//     {
+//         title:"Hackathon + GOV",
+//         cup:CupFull,
+//         place:"Second place"
+//     },
+//     {
+//         title:"HackOne 2019",
+//         cup:CupFull,
+//         place:"Winner of"
+//     },
+//     {
+//         title:"Best Hacking League",
+//         cup:CupFull,
+//         place:"Winner of"
+//     },
+//     {
+//         title:"Hacking Carrots",
+//         cup:CupFull,
+//         place:"Special Award of"
+//     },
+//     {
+//         title:"HackYeah 2020",
+//         cup:CupFull,
+//         place:"TOP 3"
+//     },
+//     {
+//         title:"EduHack 2021",
+//         cup:CupFull,
+//         place:"Winner of"
+//     }
+// ]
 
 const ImageCup = styled.img`
     height:50%;
@@ -93,9 +95,13 @@ const CompetitionsName=styled.h2`
     font-family: IBM Plex Mono;
 `
 
+const AwardBack=styled.div`
+    margin-bottom:5vw;
+`
+
 export default()=>{
     return(
-        <>
+        <AwardBack>
                 <Title>
                      Our Achievements
                 </Title>
@@ -104,20 +110,22 @@ export default()=>{
                         {awards.map((award)=>{
                             return(
                                 <Col md="3">
-                                    <AwardBox>
-                                        <ImageCup src={award.cup} />
-                                        <TitleAward>
-                                            {award.place}               
-                                        </TitleAward>
-                                        <CompetitionsName>
-                                            {award.title}
-                                        </CompetitionsName>
-                                    </AwardBox>
+                                    <Flip left>
+                                        <AwardBox>
+                                            <ImageCup src={CupFull} />
+                                            <TitleAward>
+                                                {award.place}               
+                                            </TitleAward>
+                                            <CompetitionsName>
+                                                {award.title}
+                                            </CompetitionsName>
+                                        </AwardBox>
+                                    </Flip>
                                 </Col>
                             );
                         })}
                     </Row> 
                 </Container>            
-        </>
+        </AwardBack>
     );
 }

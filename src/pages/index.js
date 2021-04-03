@@ -12,7 +12,7 @@ import Gallery from "../components/Gallery"
 import Stopka from "../components/Stopka"
 import { css } from "@emotion/core";
 import Awards from '../components/Awards'
-
+import Projects from '../components/Projects'
 class IndexPage extends Component {
 
   render() {
@@ -20,6 +20,7 @@ class IndexPage extends Component {
       <>
         <NavBar />
         <OurExpertise />
+        <Projects />
         <Team />
         <Awards />
         <AboutUS />

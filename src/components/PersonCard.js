@@ -42,7 +42,7 @@ export default (props)=>{
     `
     
     const Linkedin=styled.img`
-        height:20px;
+        height:2vw;
     `
     
     const LinkedinBack=styled.div`
