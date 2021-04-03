@@ -8,7 +8,6 @@ import { Component } from "react"
 
 export default (props)=>{
 
-    let refresh = useRef(1);
     const CardBackground=styled.div`
         background: #FFFFFF;
         box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
@@ -21,6 +20,9 @@ export default (props)=>{
     
     const PersonPhoto=styled.img`
         height:10vw;
+        @media (max-width: 760px) {
+            height:20vw;
+        }
         margin-right:2vw;
         margin-left:2vw;
         margin-bottom:1vw;
@@ -60,7 +62,6 @@ export default (props)=>{
             transform:scale(1.05);
         }
     `   
-        console.log(refresh)
 
             return(
                 <AnimationDiv>

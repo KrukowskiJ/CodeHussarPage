@@ -5,10 +5,6 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import TeamBack from '../images/svg/topbacktmp.png'
 import TeamBackMobile from '../images/svg/backgroundMobileTop.png'
-import Slider from "react-slick";
-import { Container, Row, Col } from "react-bootstrap";
-import PersonCard from '../components/PersonCard'
-import ProjectCard from '../components/micros/ProjectCard.js'
 
 import Pulse from '../images/projects/pulse.jpg'
 import ReadyDonate from '../images/projects/readydonate.png'
@@ -18,22 +14,14 @@ import HealthPoint from '../images/projects/healthpoint.jpg'
 import InTouch from '../images/projects/intouch.png'
 import Teddy from '../images/projects/teddy.jpg'
 import Vuer from '../images/projects/vuer.jpg'
-
-import Photo from "../images/photo.png"
-import "../style/slick.css";
 import Cup1 from '../images/awards/firstcup.png'
 import Cup2 from '../images/awards/secondcup.png'
 import MultiCup from '../images/awards/firstcuphp.png'
 import SpecialAward from '../images/awards/specialaward.png'
 import Top5 from '../images/awards/top5.png'
-import PrevArrowImg from "../images/prevarrow.png"
-import NextArrowImg from "../images/nextarrow.png"
-import Fade from 'react-reveal/Fade'
-import Carusel from "../components/Carusel"
-import TeamSection from "./TeamSection"
-import Flip from 'react-reveal/Flip';
+import Carusel from "./Carusel"
 import { useMediaQuery } from 'react-responsive';
-import ProjectsMobile from './ProjectsMobile'
+
 
 const projectNameList = ["Health Point", "Vuer", "Teddy", "Pulse", "EduMatch", "Ready?Donate!", "InTouch", "UniNetwork"];
 const projectPictureList = [HealthPoint, Vuer, Teddy, Pulse, EduMatch, ReadyDonate, InTouch, Uninetwork];
@@ -81,6 +69,18 @@ background-image:url(${TeamBack});
 padding-top:10vw;
 `
 
+const ProjectBackgroundMobile = styled.div`
+width: 100%; 
+height: 100%;
+margin:0;
+margin-top: 3vw;
+padding:0;
+background-repeat: no-repeat;
+background-size: cover;
+background-image:url(${TeamBackMobile});
+padding-top:10vw;
+`
+
 const HeaderTitle = styled.h1`
 text-align:center;
 color:black;
@@ -102,70 +102,12 @@ font-family: IBM Plex Mono;
 justify-content: "center";
 `
 
-const ProjectTitle = styled.h1`
-color:white;
-text-align:center;
-font-family: IBM Plex Mono;
-@media (min-width: 400px) {
-    font-size: 1.4em;
-}
 
-@media (min-width: 850px) {
-    font-size: 1.8em;
-}
-
-@media (min-width: 1900px) {
-font-size: 4em;
-}
-`
-
-const ProjectDescription = styled.h5`
-text-align:center;
-color:white;
-font-family: IBM Plex Mono;
-
-@media (min-width: 600px) {
-    font-size: 1em;
-}
-
-@media (min-width: 1000px) {
-    font-size: 1.4em;
-}
-
-@media (min-width: 1900px) {
-font-size: 1.8em;
-}
-/* font-size:1.7vw; */
-`
 
 const Project = styled.div`
 
 `
 
-const Award = styled.img`
-padding:3.5vw;
-
-padding-bottom:0px;
-background-repeat: no-repeat;
-background-size: contain;
-background-position:center;
-margin-left: auto;
-margin-right: auto;
-width:100%;
-height:100%;
-
-@media (min-width: 300px) {
-    padding-top:15%;
-}
-
-@media (min-width: 800px) {
-    padding-top:15%;
-}
-
-@media (min-width: 1900px) {
-    padding-top:0;
-}
-`
 const TitleBar = styled.div`
 margin-top:2vw;
 margin-bottom:1vw;
@@ -173,23 +115,7 @@ align-self:center;
 flex:1;
 justify-content: "center";
 `
-const AwardName = styled.h6`
-margin-top:1vw;
-color:white;
-text-align:center;
-font-family: IBM Plex Mono;
-@media (min-width: 400px) {
-    font-size: 0.8em;
-}
 
-@media (min-width: 850px) {
-    font-size: 1.0em;
-}
-
-@media (min-width: 1900px) {
-font-size: 1.4em;
-}
-`
 
 const AwardField = styled.div`
 margin-top:1vw;
@@ -217,7 +143,21 @@ const ProjectDescriptionCard = styled.div`
 height:10vw;
 `
 
+const ProjectDescriptionMobile = styled.h2`
+    text-align:center;
+    color:white;
+    font-family: IBM Plex Mono;
+    font-size: 1em;
+    padding-left:5%;
+    padding-right:5%;
+`
 
+const ProjectTitleMobile = styled.h2`
+    text-align:center;
+    color:white;
+    font-family: IBM Plex Mono;
+    font-size: 1.5em;
+`
 
 export default () => {
 
@@ -235,11 +175,6 @@ export default () => {
         setProjectAwardCup(projectAwardIcon[prjNumber]);
     }
 
-    if(isMobile==true){
-        return(
-            <ProjectsMobile />
-        );
-    }else{
         return(
             <>
                 <HeaderTitleBack id="projects">
@@ -251,49 +186,19 @@ export default () => {
                     <Carusel setState={(p) => { setProjectInfo(p) }} />
                 </div>
 
+                <ProjectBackgroundMobile>
+                        <TitleBar>
+                            <ProjectTitleMobile >
+                                {projectName}
+                            </ProjectTitleMobile>
+                        </TitleBar>
 
-                <ProjectBackground>
-                    <Container fluid>
-                        <Row>
-                            <Col md="1">
-
-                            </Col>
-                            <Col md="7">
-                                <Row>
-                                    <TitleBar>
-                                        <ProjectTitle>
-                                            {projectName}
-                                        </ProjectTitle>
-                                    </TitleBar>
-                                </Row>
-                                <Row>
-                                    <ProjectDescriptionCard>
-                                        <ProjectDescription>
-                                            {projectDesc}
-                                        </ProjectDescription>
-                                    </ProjectDescriptionCard>
-                                </Row>
-                            </Col>
-                            <Col md="2">
-                                <AwardField>
-                                    <Row>
-                                        <CenterAwardName>
-                                            <Award src={projectAwardCup} />
-                                        </CenterAwardName>
-                                    </Row>
-                                    <Row>
-                                        <CenterAwardName>
-                                            <AwardName>
-                                                {projectAward}
-                                            </AwardName>
-                                        </CenterAwardName>
-                                    </Row>
-                                </AwardField>
-                            </Col>
-                        </Row>
-                    </Container>
-            </ProjectBackground>
+                        <ProjectDescriptionCard>
+                            <ProjectDescriptionMobile>
+                                {projectDesc}
+                            </ProjectDescriptionMobile>
+                        </ProjectDescriptionCard>
+                </ProjectBackgroundMobile>
             </>
         );
-    }
 }

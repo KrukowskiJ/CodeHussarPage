@@ -8,63 +8,6 @@ import Flip from 'react-reveal/Flip'
 import jsonData from '../settings/awards.json';
 
 const awards = [...jsonData];
-// const awards=[
-//     {
-//         title:"Microsoft Imagine Hack 2018",
-//         cup:CupFull,
-//         place:"Winner of"
-//     },
-//     {
-//         title:"Best IT Project 2018",
-//         cup:CupFull,
-//         place:"Forum of Technical Universities"
-//     },
-//     {
-//         title:"Microsoft Imagine Cup 2018",
-//         cup:CupFull,
-//         place:"TOP 3"
-//     },
-//     {
-//         title:"nMedycyna+ 2018",
-//         cup:CupFull,
-//         place:"Winner of"
-//     },
-//     {
-//         title:"Project of Military University of Technology 2018",
-//         cup:CupFull,
-//         place:"Second place"
-//     },
-//     {
-//         title:"Hackathon + GOV",
-//         cup:CupFull,
-//         place:"Second place"
-//     },
-//     {
-//         title:"HackOne 2019",
-//         cup:CupFull,
-//         place:"Winner of"
-//     },
-//     {
-//         title:"Best Hacking League",
-//         cup:CupFull,
-//         place:"Winner of"
-//     },
-//     {
-//         title:"Hacking Carrots",
-//         cup:CupFull,
-//         place:"Special Award of"
-//     },
-//     {
-//         title:"HackYeah 2020",
-//         cup:CupFull,
-//         place:"TOP 3"
-//     },
-//     {
-//         title:"EduHack 2021",
-//         cup:CupFull,
-//         place:"Winner of"
-//     }
-// ]
 
 const ImageCup = styled.img`
     height:50%;
