@@ -3,8 +3,8 @@ import React, { useState } from "react"
 import ImageBackground from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import TeamBack from '../images/svg/topbacktmp.png'
-import TeamBackMobile from '../images/svg/backgroundMobileTop.png'
+import TeamBack from '../images/svg/ourprojects2.svg'
+import TeamBackMobile from '../images/svg/ourprojects2.svg'
 import Slider from "react-slick";
 import { Container, Row, Col } from "react-bootstrap";
 import PersonCard from '../components/PersonCard'

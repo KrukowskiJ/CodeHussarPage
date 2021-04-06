@@ -3,9 +3,7 @@ import React, { useState } from "react"
 import ImageBackground from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import TeamBack from '../images/svg/topbacktmp.png'
-import TeamBackMobile from '../images/svg/backgroundMobileTop.png'
-
+import TeamBackMobile from '../images/svg/ourprojectsMobile.svg'
 import Pulse from '../images/projects/pulse.jpg'
 import ReadyDonate from '../images/projects/readydonate.png'
 import Uninetwork from '../images/projects/uniconnect.png'
@@ -57,17 +55,6 @@ const projectAwardIcon = [
     Cup1
 ]
 
-const ProjectBackground = styled.div`
-width: 100%; 
-height: 100%;
-margin:0;
-margin-top: 3vw;
-padding:0;
-background-repeat: no-repeat;
-background-size: cover;
-background-image:url(${TeamBack});
-padding-top:10vw;
-`
 
 const ProjectBackgroundMobile = styled.div`
 width: 100%; 

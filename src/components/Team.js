@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import ImageBackground from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import TeamBack from '../images/svg/bottombacktmp.png'
+import TeamBack from '../images/svg/ourteam.svg'
 import Slider from "react-slick";
 import { Container, Row, Col } from "react-bootstrap";
 import PersonCard from '../components/PersonCard'
@@ -41,8 +41,8 @@ padding:0;
 background-repeat: no-repeat;
 background-size: cover;
 background-image:url(${TeamBack});
-padding-top:10vw;
-padding-bottom:30vw;
+padding-top:2vw;
+padding-bottom:8vw;
 `
 
 const HeaderTitleWhite = styled.h1`
