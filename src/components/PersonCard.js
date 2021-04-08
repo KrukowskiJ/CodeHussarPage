@@ -19,7 +19,7 @@ export default (props)=>{
     `
     
     const PersonPhoto=styled.img`
-        height:10vw;
+        height:8vw;
         @media (max-width: 760px) {
             height:20vw;
         }

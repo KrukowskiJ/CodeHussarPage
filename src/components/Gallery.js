@@ -11,6 +11,7 @@ import Image7 from '../images/pekao.jpg';
 import Image8 from '../images/bhl.jpg';
 import Zoom from 'react-reveal/Zoom';
 import { useMediaQuery } from 'react-responsive';
+import { Title } from "../components/micros/index"
 
 const ImagePhotoFull = styled.img`
     width:100%; 
@@ -57,6 +58,7 @@ export default () => {
     if(isMobile==true){
         return(
             <Container>
+                <Title>Gallery</Title>
                 <PhotoContainer id="gallery">
                     <Row>
                         <Col xs="6" style={styles.col}>
@@ -94,6 +96,7 @@ export default () => {
         return (
             <>
                 <Container fluid>
+                <Title>Gallery</Title>
                     <PhotoContainer id="gallery">
                         <Row>
                             <Col md="7">

@@ -42,7 +42,27 @@ background-repeat: no-repeat;
 background-size: cover;
 background-image:url(${TeamBack});
 padding-top:2vw;
-padding-bottom:8vw;
+padding-bottom:14vw;
+
+@media (max-width: 1900px) {
+    padding-bottom:14vw;
+}
+
+@media (max-width: 1600px) {
+    padding-bottom:14vw;
+    }
+
+@media (max-width: 1400px) {
+    padding-bottom:13vw;
+    }
+
+@media (max-width: 1100px) {
+    padding-bottom:12vw;
+}
+
+@media (max-width: 800px){
+    padding-bottom:10vw;
+}
 `
 
 const HeaderTitleWhite = styled.h1`
@@ -58,6 +78,37 @@ flex:1;
 font-family: IBM Plex Mono;
 justify-content: "center";
 `
+const Title = styled.div`
+    text-align:center;
+    font-size:2rem;
+    font-weight: 500;
+    font-family: IBM Plex Mono;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size:40px;
+    margin-bottom:3vh;
+
+    @media (max-width: 1900px) {
+        font-size:40px;
+    }
+
+    @media (max-width: 1600px) {
+        font-size:35px;
+        }
+
+    @media (max-width: 1400px) {
+        font-size:30px;
+        }
+
+    @media (max-width: 1100px) {
+        font-size:30px;
+    }
+
+    @media (max-width: 800px){
+        font-size:30px;
+    }
+`
 
 
 export default () => {
@@ -72,11 +123,9 @@ export default () => {
         return (
             <>
                 <TeamBackground>
-                    <HeaderTitleBack id="team">
-                        <HeaderTitleWhite>
+                    <Title id="team">
                             Meet Our Team
-                        </HeaderTitleWhite>
-                    </HeaderTitleBack>
+                    </Title>
                     <TeamSection />
                 </TeamBackground>
             </>

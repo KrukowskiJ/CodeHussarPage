@@ -19,7 +19,7 @@ import SpecialAward from '../images/awards/specialaward.png'
 import Top5 from '../images/awards/top5.png'
 import Carusel from "./Carusel"
 import { useMediaQuery } from 'react-responsive';
-
+import { Title } from "../components/micros/index"
 
 const projectNameList = ["Health Point", "Vuer", "Teddy", "Pulse", "EduMatch", "Ready?Donate!", "InTouch", "UniNetwork"];
 const projectPictureList = [HealthPoint, Vuer, Teddy, Pulse, EduMatch, ReadyDonate, InTouch, Uninetwork];
@@ -66,6 +66,7 @@ background-repeat: no-repeat;
 background-size: cover;
 background-image:url(${TeamBackMobile});
 padding-top:10vw;
+padding-bottom:15vw;
 `
 
 const HeaderTitle = styled.h1`
@@ -73,7 +74,7 @@ text-align:center;
 color:black;
 padding-bottom:2vw;
 font-family: IBM Plex Mono;
-font-size:3vw;
+font-size:2px;
 `
 const HeaderTitleWhite = styled.h1`
 text-align:center;
@@ -134,7 +135,7 @@ const ProjectDescriptionMobile = styled.h2`
     text-align:center;
     color:white;
     font-family: IBM Plex Mono;
-    font-size: 1em;
+    font-size: 0.8em;
     padding-left:5%;
     padding-right:5%;
 `
@@ -143,7 +144,10 @@ const ProjectTitleMobile = styled.h2`
     text-align:center;
     color:white;
     font-family: IBM Plex Mono;
-    font-size: 1.5em;
+    font-size: 1.0em;
+`
+const CaruselMobile=styled.div`
+    margin: 15px;
 `
 
 export default () => {
@@ -164,14 +168,12 @@ export default () => {
 
         return(
             <>
-                <HeaderTitleBack id="projects">
-                    <HeaderTitle>
+                <Title id="projects">
                         Our Projects
-                    </HeaderTitle>
-                </HeaderTitleBack>
-                <div>
+                </Title>
+                <CaruselMobile>
                     <Carusel setState={(p) => { setProjectInfo(p) }} />
-                </div>
+                </CaruselMobile>
 
                 <ProjectBackgroundMobile>
                         <TitleBar>

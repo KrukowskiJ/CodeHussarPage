@@ -34,7 +34,7 @@ import TeamSection from "./TeamSection"
 import Flip from 'react-reveal/Flip';
 import { useMediaQuery } from 'react-responsive';
 import ProjectsMobile from './ProjectsMobile'
-
+import { Title } from "../components/micros/index"
 const projectNameList = ["Health Point", "Vuer", "Teddy", "Pulse", "EduMatch", "Ready?Donate!", "InTouch", "UniNetwork"];
 const projectPictureList = [HealthPoint, Vuer, Teddy, Pulse, EduMatch, ReadyDonate, InTouch, Uninetwork];
 const projectDescList = [
@@ -73,19 +73,34 @@ const ProjectBackground = styled.div`
 width: 100%; 
 height: 100%;
 margin:0;
-margin-top: 3vw;
+margin-top: 5vw;
 padding:0;
 background-repeat: no-repeat;
 background-size: cover;
 background-image:url(${TeamBack});
-padding-top:10vw;
+padding-top:8vw;
+padding-bottom:3vw;
 
-@media (min-width: 768px) {
-    padding-bottom:1vw;
+@media (max-width: 1900px) {
+    padding-bottom:3vw;
 }
-@media (min-width: 1900px) {
-    padding-bottom:0.2vw;
+
+@media (max-width: 1600px) {
+    padding-bottom:2.8vw;
+    }
+
+@media (max-width: 1400px) {
+    padding-bottom:3vw;
+    }
+
+@media (max-width: 1200px) {
+    padding-bottom:3.0vw;
 }
+
+@media (max-width: 800px){
+    padding-bottom:3vw;
+}
+
 `
 
 const HeaderTitle = styled.h1`
@@ -103,7 +118,6 @@ font-family: IBM Plex Mono;
 font-size:3vw;
 `
 const HeaderTitleBack = styled.div`
-align-self:center;
 flex:1;
 font-family: IBM Plex Mono;
 justify-content: "center";
@@ -113,17 +127,28 @@ const ProjectTitle = styled.h1`
 color:white;
 text-align:center;
 font-family: IBM Plex Mono;
-@media (min-width: 400px) {
-    font-size: 1.4em;
+font-size: 2.4em;
+
+@media (max-width: 1900px) {
+    font-size: 2.0em;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1600px) {
     font-size: 1.8em;
 }
 
-@media (min-width: 1900px) {
-font-size: 4em;
+@media (max-width: 1400px) {
+        font-size: 1.4em;
+    }
+
+@media (max-width: 1100px) {
+    font-size: 1.2em;
 }
+
+@media (max-width: 800px){
+    font-size: 1.0em;   
+}
+
 `
 
 const ProjectDescription = styled.h5`
@@ -131,20 +156,27 @@ text-align:center;
 color:white;
 font-family: IBM Plex Mono;
 height:10vw;
+font-size: 2em;
+
 @media (max-width: 1900px) {
     font-size: 1.8em;
-    }
+}
+
 @media (max-width: 1600px) {
         font-size: 1.6em;
     }
+
 @media (max-width: 1400px) {
         font-size: 1.4em;
     }
+
 @media (max-width: 1100px) {
-    font-size: 1.2em;
+    font-size: 1.0em;
 }
 
-
+@media (max-width: 800px){
+    font-size: 1em;   
+}
 /* font-size:1.7vw; */
 `
 
@@ -154,7 +186,6 @@ const Project = styled.div`
 
 const Award = styled.img`
 padding:3.5vw;
-
 padding-bottom:0px;
 background-repeat: no-repeat;
 background-size: contain;
@@ -163,16 +194,29 @@ margin-left: auto;
 margin-right: auto;
 width:100%;
 height:100%;
+padding-top:0;
 
-@media (min-width: 300px) {
-    padding-top:15%;
+@media (max-width: 1900px) {
+    padding-top:0;
 }
 
-@media (min-width: 768px) {
-    padding-top:15%;
+@media (max-width: 1900px) {
+    padding-top:0;
 }
 
-@media (min-width: 1900px) {
+@media (max-width: 1600px) {
+    padding-top:0;
+    }
+
+@media (max-width: 1400px) {
+    padding-top:0;
+    }
+
+@media (max-width: 1100px) {
+    padding-top:5%;
+}
+
+@media (max-width: 800px){
     padding-top:0;
 }
 `
@@ -188,17 +232,28 @@ margin-top:1vw;
 color:white;
 text-align:center;
 font-family: IBM Plex Mono;
-@media (min-width: 400px) {
+font-size: 1.8em;
+
+@media (max-width: 1900px) {
+    font-size: 1.6em;
+}
+
+@media (max-width: 1600px) {
+        font-size: 1.4em;
+    }
+
+@media (max-width: 1400px) {
+        font-size: 1.2em;
+    }
+
+@media (max-width: 1100px) {
     font-size: 0.8em;
 }
 
-@media (min-width: 768px) {
-    font-size: 1.0em;
+@media (max-width: 800px){
+    font-size: 0.8em;   
 }
 
-@media (min-width: 1900px) {
-font-size: 1.4em;
-}
 `
 
 const AwardField = styled.div`
@@ -253,10 +308,11 @@ export default () => {
         return (
             <>
                 <HeaderTitleBack id="projects">
-                    <HeaderTitle>
+                    <Title>
                         Our Projects
-                    </HeaderTitle>
+                    </Title>
                 </HeaderTitleBack>
+
                 <div>
                     <Carusel setState={(p) => { setProjectInfo(p) }} />
                 </div>

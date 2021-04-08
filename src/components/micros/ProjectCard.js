@@ -13,6 +13,11 @@ export default function ProjectCard(props) {
         width:80%;
         background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0.25) 51.55%, rgba(255, 255, 255, 0) 100%);
         border-radius: 31px;
+        margin-left: auto;
+        margin-right: auto }
+        @media (max-width: 760px) {
+            border-radius: 11px;
+        }
 `
     return (
         <ProjectCardBack >

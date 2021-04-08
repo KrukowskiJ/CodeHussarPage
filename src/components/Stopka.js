@@ -33,12 +33,12 @@ const ImagePortal = styled.img`
 `
 
 const Logo = styled.div`
+    margin-top:80px;
 `
 const ContactBox = styled.div`
-    padding-top:4vw;
-    display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 `
 
 

@@ -11,15 +11,14 @@ const awards = [...jsonData];
 
 const ImageCup = styled.img`
     height:50%;
-    padding:30%;
-    padding-bottom:5%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    padding:10%;
+    padding-bottom:10%;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
 `
 
 const AwardBox = styled.div`
-    padding:0;
     padding-left:10%;
     padding-right:10%;
 `
@@ -29,6 +28,9 @@ const TitleAward = styled.h2`
     color: #BDBABA;
     font-size: 15px;
     font-family: IBM Plex Mono;
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
 `
 
 
@@ -36,6 +38,9 @@ const CompetitionsName = styled.h2`
     text-align:center;
     font-size: 15px;
     font-family: IBM Plex Mono;
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
 `
 
 const AwardBack = styled.div`

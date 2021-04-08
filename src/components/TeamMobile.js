@@ -15,15 +15,19 @@ export default () => {
     background-size: cover;
     background-image:url(${TeamBack});
     padding-top:10vw;
-    padding-bottom:30vw;
+    padding-bottom:60vw;
 `
 
     const HeaderTitleWhite = styled.h1`
     text-align:center;
-    color:white;
-    padding-bottom:2vw;
+    font-size:2rem;
+    font-weight: 500;
     font-family: IBM Plex Mono;
-    font-size:3vw;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size:15px;
+    margin-bottom:3vh;
 `
     const HeaderTitleBack = styled.div`
     align-self:center;
@@ -31,9 +35,6 @@ export default () => {
     font-family: IBM Plex Mono;
     justify-content: "center";
 `
-
-
-
 
     return (
         <>
