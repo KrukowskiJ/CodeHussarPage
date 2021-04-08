@@ -52,7 +52,7 @@ const PhotoContainer = styled.div`
 
 export default () => {
 
-    const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+    const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
     if(isMobile==true){
         return(

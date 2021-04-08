@@ -79,6 +79,13 @@ background-repeat: no-repeat;
 background-size: cover;
 background-image:url(${TeamBack});
 padding-top:10vw;
+
+@media (min-width: 768px) {
+    width:100%
+}
+@media (min-width: 1900px) {
+    width:100%
+}
 `
 
 const HeaderTitle = styled.h1`
@@ -110,7 +117,7 @@ font-family: IBM Plex Mono;
     font-size: 1.4em;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 768px) {
     font-size: 1.8em;
 }
 
@@ -123,6 +130,7 @@ const ProjectDescription = styled.h5`
 text-align:center;
 color:white;
 font-family: IBM Plex Mono;
+
 
 @media (min-width: 600px) {
     font-size: 1em;
@@ -158,7 +166,7 @@ height:100%;
     padding-top:15%;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
     padding-top:15%;
 }
 
@@ -182,7 +190,7 @@ font-family: IBM Plex Mono;
     font-size: 0.8em;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 768px) {
     font-size: 1.0em;
 }
 
@@ -225,7 +233,7 @@ export default () => {
     const [projectDesc, setProjectDesc] = useState(projectDescList[0]);
     const [projectAward, setProjectAward] = useState(projectAwardList[0]);
     const [projectAwardCup, setProjectAwardCup] = useState(projectAwardIcon[0]);
-    const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+    const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
     const setProjectInfo = (prjNumber) => {
         console.log(prjNumber);
@@ -235,12 +243,12 @@ export default () => {
         setProjectAwardCup(projectAwardIcon[prjNumber]);
     }
 
-    if(isMobile==true){
-        return(
+    if (isMobile == true) {
+        return (
             <ProjectsMobile />
         );
-    }else{
-        return(
+    } else {
+        return (
             <>
                 <HeaderTitleBack id="projects">
                     <HeaderTitle>
@@ -292,7 +300,7 @@ export default () => {
                             </Col>
                         </Row>
                     </Container>
-            </ProjectBackground>
+                </ProjectBackground>
             </>
         );
     }
