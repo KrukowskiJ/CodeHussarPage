@@ -131,18 +131,20 @@ text-align:center;
 color:white;
 font-family: IBM Plex Mono;
 height:10vw;
-
-@media (min-width: 600px) {
-    font-size: 1em;
+@media (max-width: 1900px) {
+    font-size: 1.8em;
+    }
+@media (max-width: 1600px) {
+        font-size: 1.6em;
+    }
+@media (max-width: 1400px) {
+        font-size: 1.4em;
+    }
+@media (max-width: 1100px) {
+    font-size: 1.2em;
 }
 
-@media (min-width: 1000px) {
-    font-size: 1.4em;
-}
 
-@media (min-width: 1900px) {
-font-size: 1.8em;
-}
 /* font-size:1.7vw; */
 `
 
