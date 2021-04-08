@@ -18,7 +18,7 @@ const ImageCup = styled.img`
     display: block;
 `
 
-const AwardBox=styled.div`
+const AwardBox = styled.div`
     padding:0;
     padding-left:10%;
     padding-right:10%;
@@ -32,43 +32,43 @@ const TitleAward = styled.h2`
 `
 
 
-const CompetitionsName=styled.h2`
+const CompetitionsName = styled.h2`
     text-align:center;
     font-size: 15px;
     font-family: IBM Plex Mono;
 `
 
-const AwardBack=styled.div`
+const AwardBack = styled.div`
     margin-bottom:5vw;
 `
 
-export default()=>{
-    return(
+export default () => {
+    return (
         <AwardBack>
-                <Title>
-                     Our Achievements
+            <Title>
+                Our Achievements
                 </Title>
-                <Container>
-                    <Row>
-                        {awards.map((award)=>{
-                            return(
-                                <Col md="3">
-                                    <Flip left>
-                                        <AwardBox>
-                                            <ImageCup src={CupFull} />
-                                            <TitleAward>
-                                                {award.place}               
-                                            </TitleAward>
-                                            <CompetitionsName>
-                                                {award.title}
-                                            </CompetitionsName>
-                                        </AwardBox>
-                                    </Flip>
-                                </Col>
-                            );
-                        })}
-                    </Row> 
-                </Container>            
+            <Container>
+                <Row>
+                    {awards.map((award) => {
+                        return (
+                            <Col md="3" xs="6">
+                                <Flip left>
+                                    <AwardBox>
+                                        <ImageCup src={CupFull} />
+                                        <TitleAward>
+                                            {award.place}
+                                        </TitleAward>
+                                        <CompetitionsName>
+                                            {award.title}
+                                        </CompetitionsName>
+                                    </AwardBox>
+                                </Flip>
+                            </Col>
+                        );
+                    })}
+                </Row>
+            </Container>
         </AwardBack>
     );
 }
