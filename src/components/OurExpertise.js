@@ -11,76 +11,85 @@ import Fade from 'react-reveal/Fade';
 
 const OurExpertise = () => {
 
-    return (<Wrapper id="expertise" >
-        <Title >Our Expertise</Title>
-        <Fade right>
-            <BgRight
-                alt="backgoundImg"
-                src={BackRight} />
-        </Fade>
-        <Fade left>
-            <>
-                <LeftText>
-                    We are a team of programming enthusiasts. The goal of which is to create projects that will change the world around us
-                    </LeftText>
-
-                <BgLeft
+    return (
+        <Wrapper id="expertise" >
+            <Title >Our Expertise</Title>
+            <Fade right>
+                <BgRight
                     alt="backgoundImg"
-                    src={BackLeft} />
-            </>
-        </Fade>
+                    src={BackRight} />
+            </Fade>
+            <Fade left>
+                <>
+                    <LeftText>
+                        We are a team of programming enthusiasts. The goal of which is to create projects that will change the world around us
+                </LeftText>
+                    <BgLeft
+                        alt="backgoundImg"
+                        src={BackLeft} />
+                </>
+            </Fade>
 
-        <Fade right>
-            <IconsWraper>
-                <ExpertiseIcon style={{
-                    left: "65%",
-                    top: "-100px"
-                }}>
-                    <RedIcon
-                        src={WebDevRed} />
-                    <Text>Web Dev</Text>
-                </ExpertiseIcon>
-                <ExpertiseIcon style={{
-                    left: "82%",
-                    top: "-180px"
-                }}>
-                    <RedIcon
-                        src={Cyber} />
-                    <Text>Cybersecurity</Text>
+            <Fade right>
+                <IconsWraper>
+                    <ExpertiseIcon style={{
+                        left: "65%",
+                        top: "-100px"
+                    }}>
+                        <RedIcon
+                            src={WebDevRed} />
+                        <Text>Web Dev</Text>
+                    </ExpertiseIcon>
+                    <ExpertiseIcon style={{
+                        left: "82%",
+                        top: "-180px"
+                    }}>
+                        <RedIcon
+                            src={Cyber} />
+                        <Text>Cybersecurity</Text>
 
-                </ExpertiseIcon>
-                <ExpertiseIcon style={{
-                    left: "65%",
-                    top: "-180px"
-                }}>
-                    <RedIcon
-                        src={Mobile} />
-                    <Text>Mobile Dev</Text>
-                </ExpertiseIcon>
-                <ExpertiseIcon style={{
-                    left: "82%",
-                    top: "-240px"
-                }}>
-                    <RedIcon
-                        src={Ai} />
-                    <Text>Artificial</Text>
-                    <Text>Intelligence</Text>
-                </ExpertiseIcon>
+                    </ExpertiseIcon>
+                    <ExpertiseIcon style={{
+                        left: "65%",
+                        top: "-180px"
+                    }}>
+                        <RedIcon
+                            src={Mobile} />
+                        <Text>Mobile Dev</Text>
+                    </ExpertiseIcon>
+                    <ExpertiseIcon style={{
+                        left: "82%",
+                        top: "-240px"
+                    }}>
+                        <RedIcon
+                            src={Ai} />
+                        <Text>Artificial</Text>
+                        <Text>Intelligence</Text>
+                    </ExpertiseIcon>
 
-            </IconsWraper>
-        </Fade>
-    </Wrapper >)
+                </IconsWraper>
+            </Fade>
+        </Wrapper >)
 
 }
 
 const IconsWraper = styled.div`
-/* position: relative; */
 margin-top:-35%;
+@media (max-width: 768px) {
+    position: relative;
+    margin-top:-10%;
+    margin-left:-150%;
+    margin-bottom:-40%;
+     /* display:none; */
+    }
 `
 
 const Wrapper = styled.div`
     margin-top:20em;
     margin-bottom:5em;
+    @media (max-width: 768px) {
+        margin-top:6em;
+  }
 `
 
 const LeftText = styled.div`
@@ -92,7 +101,6 @@ const LeftText = styled.div`
     font-style: normal;
     font-weight: 600;
     color:#fff;
-   
 
     font-size: 1.5vw;
 
@@ -101,6 +109,9 @@ const LeftText = styled.div`
     }
     @media (max-width: 700px) {
         top:17em;
+    }
+     @media (max-width: 768px) {
+     display:none;
     }
 
 
@@ -113,6 +124,9 @@ const BgLeft = styled.img`
     z-index: -5;
     left:0px;
     /* top:3em; */
+    @media (max-width: 768px) {
+        width:45%;
+    }
 `
 const BgRight = styled.img`
     position: relative;
@@ -120,12 +134,16 @@ const BgRight = styled.img`
     float:right;
     z-index: -5;
     top:-10em;
+    @media (max-width: 768px) {
+     top:-2em;
+     /* width:60% */
+    }
 `
 
 const RedIcon = styled.img`
 margin:auto;
 display:block;
-width:5vw;
+width:50px;
 height:5vh;
 
 
@@ -171,6 +189,10 @@ flex-direction:column;
         border-radius: 10px;
         padding:10px;
         font-size:10px;
+    }
+    @media (max-width: 768px) {
+        width: 100px;
+
     }
 
 `
