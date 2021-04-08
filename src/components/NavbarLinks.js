@@ -1,13 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from 'react-scroll';
 import "./nav.css";
 
 const NavbarLinks = () => {
-
   return (
     <>
-      <NavLink activeClass={"active"} spy={true} offset={-100} to="home" smooth duration={1000}>HOME</NavLink>
+      <NavLink activeClass={"active"} spy={true} offset={-100} to="home" smooth duration={1000} >HOME</NavLink>
       <NavLink activeClass="active" spy={true} offset={-100} to="expertise" smooth duration={1000}>EXPERTISE</NavLink>
       <NavLink activeClass="active" spy={true} offset={-100} to="projects" smooth duration={1000}>PROJECTS</NavLink>
       <NavLink activeClass="active" spy={true} offset={-100} to="team" smooth duration={1000}>TEAM</NavLink>

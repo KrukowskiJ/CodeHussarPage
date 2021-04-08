@@ -6,9 +6,36 @@ import LinkedinIcon from "../images/linkedin.png"
 import Flip from 'react-reveal/Flip';
 import { Component } from "react"
 
-export default (props)=>{
+export default (props) => {
 
-    const CardBackground=styled.div`
+
+
+    return (
+        <AnimationDiv>
+            <Flip left cascade>
+                <CardBackground>
+                    <PersonPhoto src={props.photo} />
+                    <PersonName>
+                        {props.name}
+                    </PersonName>
+                    <PersonName>
+                        {props.surname}
+                    </PersonName>
+                    <Title>
+                        {props.role}
+                    </Title>
+                    <LinkedinBack>
+                        <Linkedin src={LinkedinIcon} onClick={() => window.open(props.url, '_blank')} />
+                    </LinkedinBack>
+                </CardBackground>
+            </Flip>
+        </AnimationDiv>
+    );
+
+}
+
+
+const CardBackground = styled.div`
         background: #FFFFFF;
         box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
         border-radius: 45px;
@@ -17,8 +44,8 @@ export default (props)=>{
         margin-bottom:0vw;
     
     `
-    
-    const PersonPhoto=styled.img`
+
+const PersonPhoto = styled.img`
         height:10vw;
         @media (max-width: 760px) {
             height:20vw;
@@ -27,32 +54,32 @@ export default (props)=>{
         margin-left:2vw;
         margin-bottom:1vw;
     `
-    
-    const PersonName=styled.h4`
+
+const PersonName = styled.h4`
         text-align:center;
         font-size:1.8vw;
         margin:0;
         font-family: IBM Plex Mono;
     `
-    
-    const Title = styled.h5`
+
+const Title = styled.h5`
         margin-top:10px;
         color: #C03535;
         text-align:center;
         font-size:1.2vw;
         font-family: IBM Plex Mono;
     `
-    
-    const Linkedin=styled.img`
+
+const Linkedin = styled.img`
         height:2vw;
     `
-    
-    const LinkedinBack=styled.div`
+
+const LinkedinBack = styled.div`
         display:flex;
         align-items:center;
         justify-content:center;
     `
-    const AnimationDiv = styled.div`
+const AnimationDiv = styled.div`
         -webkit-transition: 0.3s ease-in-out, -webkit-transform: 0.3s ease-in-out;
         -moz-transition: 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
         transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -61,31 +88,6 @@ export default (props)=>{
         {
             transform:scale(1.05);
         }
-    `   
-
-            return(
-                <AnimationDiv>
-                    <Flip left cascade>
-                        <CardBackground>
-                            <PersonPhoto src={props.photo} />
-                            <PersonName>
-                                {props.name}
-                            </PersonName>
-                            <PersonName>
-                                {props.surname}
-                            </PersonName>
-                            <Title>
-                                {props.role}
-                            </Title>
-                            <LinkedinBack>
-                                <Linkedin src={LinkedinIcon} onClick={() => window.open(props.url, '_blank')}/>
-                            </LinkedinBack>
-                        </CardBackground>
-                    </Flip>
-                </AnimationDiv>
-         );
-
-     }
-
+    `
 
 

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react"
 import Team_pic from "../images/team1.svg"
 import Logo_pic from "../images/Logo.png"
 import BackNav from "../images/navbackground.svg"
+import BackNavMobile from "../images/navbackgroundmobile.svg"
 import NavbarLinks from "./NavbarLinks"
 import Fade from 'react-reveal/Flip';
 
@@ -13,6 +14,7 @@ const NavBar = () => {
 
 
   const [NavbarStatus, changeNavbarStatus] = useState('top')
+  const [MobileStatus, changeMobileStatus] = useState(1)
   const navRef = React.useRef()
 
   navRef.current = NavbarStatus
@@ -24,10 +26,18 @@ const NavBar = () => {
       else
         changeNavbarStatus('top')
     }
+    const handleWidth = () => {
+      if (window.innerWidth <= 768)
+        changeMobileStatus(1)
+      else
+        changeMobileStatus(0)
+    }
     document.addEventListener('scroll', handleScroll)
-    console.log(window.scrollY)
+    document.addEventListener('resize', handleWidth)
+    handleWidth();
     return () => {
       document.removeEventListener('scroll', handleScroll)
+      document.removeEventListener('resize', handleWidth)
     }
 
   })
@@ -35,52 +45,77 @@ const NavBar = () => {
   return (
     <>
 
-      <BackImg id="home"
-        alt="CodeHussarLogo"
-        src={BackNav}
-      />
 
-      <Nav >
-        {NavbarStatus === 'top' ? <BackImgTransparent /> :
-          <BackImg2 />}
-        <Logo
+      {MobileStatus ? <>
+        <BackImg id="home"
           alt="CodeHussarLogo"
-          src={Logo_pic}
-          width="73px"
-          height="82px"
+          src={BackNav}
         />
+        <Nav >
+          {NavbarStatus === 'top' ? <BackImgTransparent /> :
+            <BackImg2 />}
+
+          <Toggle
+            navbarOpen={navbarOpen}
+            onClick={() => setNavbarOpen(!navbarOpen)}
+          >
+            {navbarOpen ? <Hamburger open /> : <Hamburger />}
+          </Toggle>
 
 
-        <Toggle
-          navbarOpen={navbarOpen}
-          onClick={() => setNavbarOpen(!navbarOpen)}
-        >
-          {navbarOpen ? <Hamburger open /> : <Hamburger />}
-        </Toggle>
-        {navbarOpen ? (
-          <Navbox>
-            <NavbarLinks />
-          </Navbox>
-        ) : (
-          <Navbox open>
-            <NavbarLinks />
-          </Navbox>
-        )}
 
-
-      </Nav>
-      <Row>
-        <Team1
-          alt="CodeHussar"
-          src={Team_pic}
+        </Nav></>
+        :
+        <> <BackImg id="home"
+          alt="CodeHussarLogo"
+          src={BackNav}
         />
-        <Fade left>
-          <QuoteText>
-            <BigText>WORKING FOR A <b>BETTER</b> TOMMOROW</BigText>
-            <SmallText>SOFTWARE DEVELOPMENT TEAM</SmallText>
-          </QuoteText>
-        </Fade>
-      </Row>
+          <Nav >
+            {NavbarStatus === 'top' ? <BackImgTransparent /> :
+              <BackImg2 />}
+            <Logo
+              alt="CodeHussarLogo"
+              src={Logo_pic}
+              width="73px"
+              height="82px"
+            />
+
+            <Navbox>
+              <NavbarLinks />
+            </Navbox>
+
+
+          </Nav></>}
+
+      {MobileStatus ?
+        <Col>
+          <Logo
+            alt="CodeHussarLogo"
+            src={Logo_pic}
+            width="73px"
+            height="82px"
+          />
+          <Fade left>
+            <QuoteText>
+              <BigText>WORKING FOR A <b>BETTER</b> TOMMOROW</BigText>
+            </QuoteText>
+          </Fade>
+        </Col>
+
+        :
+        <Row>
+          <Team1
+            alt="CodeHussar"
+            src={Team_pic}
+          />
+          <Fade left>
+            <QuoteText>
+              <BigText>WORKING FOR A <b>BETTER</b> TOMMOROW</BigText>
+              <SmallText>SOFTWARE DEVELOPMENT TEAM</SmallText>
+            </QuoteText>
+          </Fade>
+        </Row>
+      }
     </>
   )
 }
@@ -92,7 +127,7 @@ const BackImg = styled.img`
 position: absolute;
 height: auto; 
 z-index:-10;
-width: 100%;
+width: 100vw;
 `
 const BackImg2 = styled.div`
 background: rgb(83,9,22);
@@ -132,7 +167,7 @@ width: 37%;  //735/1980*100
   margin-top: 2%;
 }
 @media (max-width: 1100px) {
-  margin-top: -2%;
+  margin-top: 0%;
 }
 `
 const Nav = styled.nav`
@@ -221,7 +256,7 @@ display: flex;
 flex-direction: column;
 color: white;
 padding: 0px 20px;
-
+text-align: center;
 @media (max-width: 768px) {
     padding: 0px 20px;
   }
