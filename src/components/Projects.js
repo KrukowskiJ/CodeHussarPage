@@ -81,10 +81,10 @@ background-image:url(${TeamBack});
 padding-top:10vw;
 
 @media (min-width: 768px) {
-    width:100%
+    padding-bottom:1vw;
 }
 @media (min-width: 1900px) {
-    width:100%
+    padding-bottom:0.2vw;
 }
 `
 
@@ -130,7 +130,7 @@ const ProjectDescription = styled.h5`
 text-align:center;
 color:white;
 font-family: IBM Plex Mono;
-
+height:10vw;
 
 @media (min-width: 600px) {
     font-size: 1em;
