@@ -87,6 +87,13 @@ const AboutUS = () => {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                 }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
             }
         ]
     };

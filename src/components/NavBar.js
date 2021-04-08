@@ -132,7 +132,7 @@ width: 37%;  //735/1980*100
   margin-top: 2%;
 }
 @media (max-width: 1100px) {
-  margin-top: 0%;
+  margin-top: -2%;
 }
 `
 const Nav = styled.nav`
@@ -233,13 +233,19 @@ font-size: 2rem;
 @media (max-width: 768px) {
     font-size: 1rem;
   }
+  @media (max-width: 500px) {
+    font-size: 0.5rem;
+  }
   `
 
 const SmallText = styled.text`
 font-size: 1.5rem;
-/* margin: 5%; */
+margin: 1%;
 @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 0.4rem;
   }
 `
 
