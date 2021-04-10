@@ -5,13 +5,13 @@ import Logo_pic from "../images/Logo.png"
 import BackNav from "../images/navbackground.svg"
 import NavbarLinks from "./NavbarLinks"
 import Fade from 'react-reveal/Flip';
-
+import { useMediaQuery } from 'react-responsive';
 
 const NavBar = () => {
   const [NavbarStatus, changeNavbarStatus] = useState('top')
-  const [MobileStatus, changeMobileStatus] = useState(1)
   const navRef = React.useRef()
-
+  const MobileStatus = useMediaQuery({ query: `(max-width: 768px)` });
+  console.log(MobileStatus)
   navRef.current = NavbarStatus
   useEffect(() => {
     const handleScroll = () => {
@@ -21,18 +21,11 @@ const NavBar = () => {
       else
         changeNavbarStatus('top')
     }
-    const handleWidth = () => {
-      if (window.innerWidth <= 768)
-        changeMobileStatus(1)
-      else
-        changeMobileStatus(0)
-    }
+
     document.addEventListener('scroll', handleScroll)
-    document.addEventListener('resize', handleWidth)
-    handleWidth();
+
     return () => {
       document.removeEventListener('scroll', handleScroll)
-      document.removeEventListener('resize', handleWidth)
     }
 
   })

@@ -11,38 +11,21 @@ import Gallery from "../components/Gallery"
 import Stopka from "../components/Stopka"
 import Awards from '../components/Awards'
 import Projects from '../components/Projects'
-import { elastic as Menu } from 'react-burger-menu'
+import { push as Menu } from 'react-burger-menu'
 import NavbarLinksMobile from "../components/NavbarLinksMobile"
-
+import { useMediaQuery } from 'react-responsive';
 
 
 
 export default () => {
 
-  const [MobileStatus, changeMobileStatus] = useState(1)
-
-  useEffect(() => {
-    const handleWidth = () => {
-      if (window.innerWidth <= 768)
-        changeMobileStatus(1)
-      else
-        changeMobileStatus(0)
-    }
-    document.addEventListener('scroll', handleWidth)
-    document.addEventListener('resize', handleWidth)
-    handleWidth();
-    return () => {
-      document.removeEventListener('scroll', handleWidth)
-      document.removeEventListener('resize', handleWidth)
-    }
-
-  })
+  const MobileStatus = useMediaQuery({ query: `(max-width: 768px)` });
 
 
   return (
     <>
       <div id="outer-container">
-        {MobileStatus ? <Menu right pageWrapId={"page-wrap"} styles={styles} width={'30%'}><NavbarLinksMobile /></Menu> : null}
+        {MobileStatus ? <Menu right pageWrapId={"page-wrap"} styles={styles} width={'50%'}><NavbarLinksMobile /></Menu> : null}
         <main id="page-wrap">
           <NavBar />
           <OurExpertise />
@@ -82,12 +65,12 @@ var styles = {
     height: '100%'
   },
   bmMenu: {
-    background: 'red',
+    background: '#d72b2b',
     padding: '1em 2em 0',
     fontSize: '1.15em',
   },
   bmMorphShape: {
-    fill: 'red'
+    fill: '#d72b2b'
   },
   bmItemList: {
     padding: '1em'
@@ -96,7 +79,7 @@ var styles = {
     display: 'block'
   },
   bmOverlay: {
-    background: 'blue'
+    background: 'transparent'
   }
 }
 

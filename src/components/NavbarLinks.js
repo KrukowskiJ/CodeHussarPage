@@ -58,10 +58,7 @@ const NavLink = styled(Link)`
     font-size: 0.7em;
   }
   @media (max-width: 768px) {
-    color: black;
-    padding: 20px 0;
-    font-size: 1.5em;
-    z-index: 6;
+    display:none;
   }
 
 `

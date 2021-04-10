@@ -19,6 +19,7 @@ const NavbarLinks = () => {
 export default NavbarLinks
 
 const Nav = styled.div`
+width:100%;
 display: flex;
 flex-direction: column;
 align-content: space-between;
@@ -27,15 +28,15 @@ const NavLink = styled(Link)`
   text-decoration: none;
   color: white;
   white-space: nowrap;
-  margin: 0 -40vw;
   z-index:666;
+  margin-right: -100px;
   transition: all 0.2s ease-in;
   position: relative;
   font-size: 1em;
   padding: 3px;
   font-size: 1em;
   cursor: pointer;
-
+  min-width:150px;
   :after {
     position: absolute;
     bottom: 0;
@@ -48,12 +49,7 @@ const NavLink = styled(Link)`
     transition: all 0.4s ease-in;
   }
 
-  :hover {
-    text-decoration: none;
-    color: white;
-    ::after {
-      width: 100%;
-    }
-  }
+  
+  
 
 `
