@@ -5,7 +5,8 @@ import Linkedin from '../images/linkedin.png'
 import Fb from '../images/fb.png'
 const Background = styled.div`
     margin: 0;
-    padding: 6vw;
+    padding-top: 200px;
+    padding-bottom:100px;
     background-repeat: no-repeat;
     background-size: cover;
     background-image:url(${BackgroundRed});
@@ -14,13 +15,22 @@ const Background = styled.div`
 const ContactText = styled.h3`
     font-family: IBM Plex Mono;
     font-style: normal;
-    font-size: 2vw;
+    font-size:2.0em;
+    @media (max-width: 1600px) {
+            font-size:1.4em;
+            margin-top:10px;
+        }
+    @media (max-width: 760px) {
+            font-size:2em;
+        }
     color:#fff;
     text-align:center;
 `
 const ImagePortal = styled.img`
-    margin:2vw;
     height:4vw;
+    margin:2vw;
+    margin-bottom:0;
+    
 
     
 :hover{
@@ -32,6 +42,7 @@ const ImagePortal = styled.img`
 
 const Logo = styled.div`
     margin-top:80px;
+    margin:1vw;
 `
 const ContactBox = styled.div`
   display: flex;

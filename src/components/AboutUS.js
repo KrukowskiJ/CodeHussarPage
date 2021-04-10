@@ -68,7 +68,7 @@ const AboutUS = () => {
         centerMode: true,
         speed: 600,
         infinite: true,
-        dots: true,
+        dots: false,
         slidesToShow: 5,
         slidesToScroll: 1,
         prevArrow: <PrevArrow />,
@@ -163,7 +163,7 @@ const About = styled.div`
 `
 
 const ProjectName = styled.h1`
-    font-size: 0.8em;
+    font-size: 1.0em;
     margin: auto;
     text-align: center;
     color:black;

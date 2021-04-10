@@ -12,14 +12,14 @@ import { Title } from "../components/micros/index"
 
 const projectNameList = ["Health Point", "Vuer", "Teddy", "Pulse", "EduMatch", "Ready?Donate!", "InTouch", "UniNetwork"];
 const projectDescList = [
-    "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
+    "The project under the name Health Point meets the needs of medical services providing assistance to victims of accidents, disasters or even terrorist attacks. Our application displays holograms informing about the basic life parameters of the victim. The goal of the project is to improve the effectiveness of first aid.",
+    "The Vuer project, which supports and helps blind and deaf people. The application automates audio description processes using WiFi networks. The system allows the use of QR codes for quick and ergonomic connection to WiFi networks, and then launching the functionality of smartphones - the text-to-speech module.",
+    "The growing number of neurological problems forces modern society to involve new technology in the care of these diseases. The Teddy project is based on sensory data collected from a biomedical band to detect anxiety and respond accordingly",
+    "The Pulse project was presented during the Katowice hackathon. It is a response to the growing demand for the involvement of new technologies in the treatment process. The application monitors the patient's condition by recording life parameters and specialized surveys. Then these data are correlated so that the doctor can tailor the medication to the patient",
+    "The EduMatch project aims to associate and focus environments of engineers and enthusiasts of various technologies studying at any universities. It is a great way to find people willing to participate in innovative projects implemented by scientific clubs, start-ups and it is mainly for these entities that the application is addressed",
     "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
-    "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
-    "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
-    "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
-    "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
-    "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
-    "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space"
+    "Oncological diagnosis can be a drastic experience. Therefore, an interactive chatbot has been prepared for the Rak'n Roll Foundation to support people fighting cancer.",
+    "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world"
 ]
 const projectAwardList = [
     "Microsoft Imagine Hack",
