@@ -77,8 +77,8 @@ const IconsWraper = styled.div`
 margin-top:-35%;
 @media (max-width: 768px) {
     position: relative;
-    margin-top:-10%;
-    margin-left:-150%;
+    margin-top:-20%;
+    margin-left:-120%;
     margin-bottom:-40%;
      /* display:none; */
     }
@@ -88,7 +88,7 @@ const Wrapper = styled.div`
     margin-top:20em;
     margin-bottom:5em;
     @media (max-width: 768px) {
-        margin-top:6em;
+        margin-top:12em;
   }
 `
 
@@ -192,6 +192,7 @@ flex-direction:column;
     }
     @media (max-width: 768px) {
         width: 100px;
+        height:100px;
 
     }
 
