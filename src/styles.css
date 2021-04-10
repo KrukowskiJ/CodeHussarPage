@@ -4,3 +4,48 @@ body{
     overflow-x: hidden;
 }
 
+.slick-dots {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 0px;
+    list-style: none;
+    list-style-type: none;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.slick-dots li button:before{
+    margin:2vh;
+    color:rgb(128, 1, 1);
+
+    @media (max-width: 1900px) {
+        margin:2vh;
+    }
+    
+    @media (max-width: 1600px) {
+        margin:1vh;
+        }
+    
+    @media (max-width: 1400px) {
+        margin:2vh;
+        }
+    
+    @media (max-width: 1200px) {
+        margin:2vh;
+    }
+    
+    @media (max-width: 800px){
+        margin:2vh;
+    }
+  }
+
+.slick-dots li.slick-active button:before{
+      font-size:15px;
+      color:rgb(128, 1, 1);
+    }
+
+    .slick-dotted.slick-slider {
+        margin-bottom: 0px; /* Should be removed */ 
+    }
