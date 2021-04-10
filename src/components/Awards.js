@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { Title } from "../components/micros/index"
 import { Container, Row, Col } from "react-bootstrap";
-import CupEmpty from '../images/awards/cupempty.svg'
 import CupFull from '../images/awards/cupfull.svg'
 import Flip from 'react-reveal/Flip'
 import jsonData from '../settings/awards.json';

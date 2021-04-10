@@ -1,10 +1,7 @@
-import React, { useRef, useState } from "react"
-import ImageBackground from "react"
+import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 import LinkedinIcon from "../images/linkedin.png"
 import Flip from 'react-reveal/Flip';
-import { Component } from "react"
 
 export default (props) => {
 
@@ -44,8 +41,8 @@ const CardBackground = styled.div`
         margin-bottom:0vw;
     
     `
-    
-    const PersonPhoto=styled.img`
+
+const PersonPhoto = styled.img`
         height:8vw;
         @media (max-width: 760px) {
             height:20vw;

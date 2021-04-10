@@ -1,42 +1,18 @@
-
 import React, { useState } from "react"
-import ImageBackground from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 import TeamBack from '../images/svg/ourprojects2.svg'
-import TeamBackMobile from '../images/svg/ourprojects2.svg'
-import Slider from "react-slick";
 import { Container, Row, Col } from "react-bootstrap";
-import PersonCard from '../components/PersonCard'
-import ProjectCard from '../components/micros/ProjectCard.js'
-
-import Pulse from '../images/projects/pulse.jpg'
-import ReadyDonate from '../images/projects/readydonate.png'
-import Uninetwork from '../images/projects/uniconnect.png'
-import EduMatch from '../images/projects/edumatch.jpg'
-import HealthPoint from '../images/projects/healthpoint.jpg'
-import InTouch from '../images/projects/intouch.png'
-import Teddy from '../images/projects/teddy.jpg'
-import Vuer from '../images/projects/vuer.jpg'
-
-import Photo from "../images/photo.png"
 import "../style/slick.css";
 import Cup1 from '../images/awards/firstcup.png'
 import Cup2 from '../images/awards/secondcup.png'
 import MultiCup from '../images/awards/firstcuphp.png'
 import SpecialAward from '../images/awards/specialaward.png'
 import Top5 from '../images/awards/top5.png'
-import PrevArrowImg from "../images/prevarrow.png"
-import NextArrowImg from "../images/nextarrow.png"
-import Fade from 'react-reveal/Fade'
 import Carusel from "../components/Carusel"
-import TeamSection from "./TeamSection"
-import Flip from 'react-reveal/Flip';
 import { useMediaQuery } from 'react-responsive';
 import ProjectsMobile from './ProjectsMobile'
 import { Title } from "../components/micros/index"
 const projectNameList = ["Health Point", "Vuer", "Teddy", "Pulse", "EduMatch", "Ready?Donate!", "InTouch", "UniNetwork"];
-const projectPictureList = [HealthPoint, Vuer, Teddy, Pulse, EduMatch, ReadyDonate, InTouch, Uninetwork];
 const projectDescList = [
     "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
     "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
@@ -103,20 +79,6 @@ padding-bottom:3vw;
 
 `
 
-const HeaderTitle = styled.h1`
-text-align:center;
-color:black;
-padding-bottom:2vw;
-font-family: IBM Plex Mono;
-font-size:3vw;
-`
-const HeaderTitleWhite = styled.h1`
-text-align:center;
-color:white;
-padding-bottom:2vw;
-font-family: IBM Plex Mono;
-font-size:3vw;
-`
 const HeaderTitleBack = styled.div`
 flex:1;
 font-family: IBM Plex Mono;
@@ -178,10 +140,6 @@ font-size: 2em;
     font-size: 1em;   
 }
 /* font-size:1.7vw; */
-`
-
-const Project = styled.div`
-
 `
 
 const Award = styled.img`
@@ -267,16 +225,6 @@ align-self:center;
 flex:1;
 justify-content: "center";
 `
-
-const ArrowBox = styled.img`
-margin:0px;
-`
-
-
-const EmptySpace = styled.div`
-height:5vw; 
-`
-
 
 const ProjectDescriptionCard = styled.div`
 height:10vw;

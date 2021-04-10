@@ -1,18 +1,13 @@
 import styled from "styled-components"
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Team_pic from "../images/team1.svg"
 import Logo_pic from "../images/Logo.png"
 import BackNav from "../images/navbackground.svg"
-import BackNavMobile from "../images/navbackgroundmobile.svg"
 import NavbarLinks from "./NavbarLinks"
 import Fade from 'react-reveal/Flip';
 
 
 const NavBar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false)
-  const [navbarHide, setNavbarHide] = useState(false)
-
-
   const [NavbarStatus, changeNavbarStatus] = useState('top')
   const [MobileStatus, changeMobileStatus] = useState(1)
   const navRef = React.useRef()
@@ -46,26 +41,36 @@ const NavBar = () => {
     <>
 
 
-      {MobileStatus ? <>
-        <BackImg id="home"
-          alt="CodeHussarLogo"
-          src={BackNav}
-        />
-        <Nav >
-          {NavbarStatus === 'top' ? <BackImgTransparent /> :
-            <BackImg2 />}
+      { MobileStatus ?
+        <>
+          <BackImg id="home"
+            alt="CodeHussarLogo"
+            src={BackNav}
+          />
 
-          <Toggle
-            navbarOpen={navbarOpen}
-            onClick={() => setNavbarOpen(!navbarOpen)}
-          >
-            {navbarOpen ? <Hamburger open /> : <Hamburger />}
-          </Toggle>
+          <Nav >
+            {NavbarStatus === 'top' ? <BackImgTransparent /> :
+              <BackImg2 />}
+          </Nav>
 
+          <Col>
+            <Logo
+              alt="CodeHussarLogo"
+              src={Logo_pic}
+              width="73px"
+              height="82px"
+            />
+            <Fade left>
+              <QuoteText>
+                <BigText>WORKING FOR A <b>BETTER</b> TOMMOROW</BigText>
+              </QuoteText>
+            </Fade>
+          </Col>
 
+        </>
 
-        </Nav></>
         :
+
         <> <BackImg id="home"
           alt="CodeHussarLogo"
           src={BackNav}
@@ -85,37 +90,24 @@ const NavBar = () => {
             </Navbox>
 
 
-          </Nav></>}
+          </Nav>
 
-      {MobileStatus ?
-        <Col>
-          <Logo
-            alt="CodeHussarLogo"
-            src={Logo_pic}
-            width="73px"
-            height="82px"
-          />
-          <Fade left>
-            <QuoteText>
-              <BigText>WORKING FOR A <b>BETTER</b> TOMMOROW</BigText>
-            </QuoteText>
-          </Fade>
-        </Col>
-
-        :
-        <Row>
-          <Team1
-            alt="CodeHussar"
-            src={Team_pic}
-          />
-          <Fade left>
-            <QuoteText>
-              <BigText>WORKING FOR A <b>BETTER</b> TOMMOROW</BigText>
-              <SmallText>SOFTWARE DEVELOPMENT TEAM</SmallText>
-            </QuoteText>
-          </Fade>
-        </Row>
+          <Row>
+            <Team1
+              alt="CodeHussar"
+              src={Team_pic}
+            />
+            <Fade left>
+              <QuoteText>
+                <BigText>WORKING FOR A <b>BETTER</b> TOMMOROW</BigText>
+                <SmallText>SOFTWARE DEVELOPMENT TEAM</SmallText>
+              </QuoteText>
+            </Fade>
+          </Row>
+        </>
       }
+
+
     </>
   )
 }
@@ -189,18 +181,6 @@ const Nav = styled.nav`
     left: 0;
   }
 `
-
-const Toggle = styled.div`
-  display: none;
-  height: 100%;
-  cursor: pointer;
-  padding: 0 10vw;
-
-
-  @media (max-width: 768px) {
-    display: flex;
-  }
-`
 const Navbox = styled.div`
   display: flex;
   align-items: center;
@@ -219,38 +199,6 @@ const Navbox = styled.div`
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `
-const Hamburger = styled.div`
-  background-color: white;
-  width: 30px;
-  height: 3px;
-  transition: all .3s linear;
-  align-self: center;
-  position: relative;
-  transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
-
-  ::before,
-  ::after {
-    width: 30px;
-    height: 3px;
-    content: "";
-    position: absolute;
-    transition: all 0.3s linear;
-  }
-
-  ::before {
-  background-color: white;
-    transform: ${props =>
-    props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
-    top: -10px;
-  }
-
-  ::after {
-  background-color: white;
-    opacity: ${props => (props.open ? "0" : "1")};
-    transform: ${props => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
-    top: 10px;
-  }
-`
 const QuoteText = styled.div`
 display: flex;
 flex-direction: column;
@@ -265,6 +213,9 @@ text-align: center;
 
 const BigText = styled.text`
 font-size: 2rem;
+@media (max-width: 1000px) {
+  font-size: 1.5rem;
+}
 @media (max-width: 768px) {
     font-size: 1rem;
   }
@@ -276,6 +227,9 @@ font-size: 2rem;
 const SmallText = styled.text`
 font-size: 1.5rem;
 margin: 1%;
+@media (max-width: 1000px) {
+  font-size: 1.2rem;
+}
 @media (max-width: 768px) {
     font-size: 0.9rem;
   }
@@ -283,8 +237,6 @@ margin: 1%;
     font-size: 0.4rem;
   }
 `
-
-
 const Row = styled.div`
 display: flex;
 flex-direction: row;

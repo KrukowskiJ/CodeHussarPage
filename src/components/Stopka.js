@@ -1,7 +1,5 @@
 import styled from "styled-components"
-import React, { useState } from "react"
-import { Link } from "gatsby"
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
 import BackgroundRed from '../images/svg/stopkanew.svg'
 import Linkedin from '../images/linkedin.png'
 import Fb from '../images/fb.png'

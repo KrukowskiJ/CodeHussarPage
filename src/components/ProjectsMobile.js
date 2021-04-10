@@ -1,17 +1,6 @@
-
 import React, { useState } from "react"
-import ImageBackground from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 import TeamBackMobile from '../images/svg/ourprojectsMobile.svg'
-import Pulse from '../images/projects/pulse.jpg'
-import ReadyDonate from '../images/projects/readydonate.png'
-import Uninetwork from '../images/projects/uniconnect.png'
-import EduMatch from '../images/projects/edumatch.jpg'
-import HealthPoint from '../images/projects/healthpoint.jpg'
-import InTouch from '../images/projects/intouch.png'
-import Teddy from '../images/projects/teddy.jpg'
-import Vuer from '../images/projects/vuer.jpg'
 import Cup1 from '../images/awards/firstcup.png'
 import Cup2 from '../images/awards/secondcup.png'
 import MultiCup from '../images/awards/firstcuphp.png'
@@ -22,7 +11,6 @@ import { useMediaQuery } from 'react-responsive';
 import { Title } from "../components/micros/index"
 
 const projectNameList = ["Health Point", "Vuer", "Teddy", "Pulse", "EduMatch", "Ready?Donate!", "InTouch", "UniNetwork"];
-const projectPictureList = [HealthPoint, Vuer, Teddy, Pulse, EduMatch, ReadyDonate, InTouch, Uninetwork];
 const projectDescList = [
     "UniConnect is an innovative application supporting scientific circles during an epidemic. It allows the creation of multidisciplinary teams of scientists from around the world.",
     "An application supporting local communities to raise funds for small initiatives. The project allows for the implementation of small ideas in urban space",
@@ -69,33 +57,6 @@ padding-top:10vw;
 padding-bottom:15vw;
 `
 
-const HeaderTitle = styled.h1`
-text-align:center;
-color:black;
-padding-bottom:2vw;
-font-family: IBM Plex Mono;
-font-size:2px;
-`
-const HeaderTitleWhite = styled.h1`
-text-align:center;
-color:white;
-padding-bottom:2vw;
-font-family: IBM Plex Mono;
-font-size:3vw;
-`
-const HeaderTitleBack = styled.div`
-align-self:center;
-flex:1;
-font-family: IBM Plex Mono;
-justify-content: "center";
-`
-
-
-
-const Project = styled.div`
-
-`
-
 const TitleBar = styled.div`
 margin-top:2vw;
 margin-bottom:1vw;
@@ -103,29 +64,6 @@ align-self:center;
 flex:1;
 justify-content: "center";
 `
-
-
-const AwardField = styled.div`
-margin-top:1vw;
-padding:2vw;
-max-height:10vw;
-`
-
-const CenterAwardName = styled.div`
-align-self:center;
-flex:1;
-justify-content: "center";
-`
-
-const ArrowBox = styled.img`
-margin:0px;
-`
-
-
-const EmptySpace = styled.div`
-height:5vw; 
-`
-
 
 const ProjectDescriptionCard = styled.div`
 height:10vw;
@@ -146,7 +84,7 @@ const ProjectTitleMobile = styled.h2`
     font-family: IBM Plex Mono;
     font-size: 1.0em;
 `
-const CaruselMobile=styled.div`
+const CaruselMobile = styled.div`
     margin: 15px;
 `
 
@@ -166,28 +104,28 @@ export default () => {
         setProjectAwardCup(projectAwardIcon[prjNumber]);
     }
 
-        return(
-            <>
-                <Title id="projects">
-                        Our Projects
+    return (
+        <>
+            <Title id="projects">
+                Our Projects
                 </Title>
-                <CaruselMobile>
-                    <Carusel setState={(p) => { setProjectInfo(p) }} />
-                </CaruselMobile>
+            <CaruselMobile>
+                <Carusel setState={(p) => { setProjectInfo(p) }} />
+            </CaruselMobile>
 
-                <ProjectBackgroundMobile>
-                        <TitleBar>
-                            <ProjectTitleMobile >
-                                {projectName}
-                            </ProjectTitleMobile>
-                        </TitleBar>
+            <ProjectBackgroundMobile>
+                <TitleBar>
+                    <ProjectTitleMobile >
+                        {projectName}
+                    </ProjectTitleMobile>
+                </TitleBar>
 
-                        <ProjectDescriptionCard>
-                            <ProjectDescriptionMobile>
-                                {projectDesc}
-                            </ProjectDescriptionMobile>
-                        </ProjectDescriptionCard>
-                </ProjectBackgroundMobile>
-            </>
-        );
+                <ProjectDescriptionCard>
+                    <ProjectDescriptionMobile>
+                        {projectDesc}
+                    </ProjectDescriptionMobile>
+                </ProjectDescriptionCard>
+            </ProjectBackgroundMobile>
+        </>
+    );
 }
