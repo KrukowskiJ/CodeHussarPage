@@ -6,7 +6,7 @@ import Cup2 from '../images/awards/secondcup.png'
 import MultiCup from '../images/awards/firstcuphp.png'
 import SpecialAward from '../images/awards/specialaward.png'
 import Top5 from '../images/awards/top5.png'
-import Carusel from "./Carusel"
+import Carusel from "./CaruselMobile"
 import { useMediaQuery } from 'react-responsive';
 import { Title } from "../components/micros/index"
 
@@ -54,7 +54,7 @@ background-repeat: no-repeat;
 background-size: cover;
 background-image:url(${TeamBackMobile});
 padding-top:10vw;
-padding-bottom:15vw;
+padding-bottom:30vw;
 `
 
 const TitleBar = styled.div`
