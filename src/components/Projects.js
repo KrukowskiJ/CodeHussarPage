@@ -56,7 +56,9 @@ background-size: cover;
 background-image:url(${TeamBack});
 padding-top:5vw;
 padding-bottom:6vw;
-
+@media (max-width: 2000px) {
+    padding-bottom:6.5vw;
+}
 @media (max-width: 1900px) {
     padding-bottom:6vw;
 }
