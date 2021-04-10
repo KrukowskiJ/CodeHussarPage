@@ -77,7 +77,7 @@ const IconsWraper = styled.div`
 margin-top:-35%;
 @media (max-width: 768px) {
     position: relative;
-    margin-top:-20%;
+    margin-top:-10%;
     margin-left:-120%;
     margin-bottom:-40%;
      /* display:none; */
