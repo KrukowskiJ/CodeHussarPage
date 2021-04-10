@@ -6,6 +6,10 @@ const ProjectCardBack = styled.div`
     padding:2vw;
     padding-bottom:1vw;
     justify-content:center;
+    @media (max-width: 780px) {
+  margin-top: 2%;
+}
+
     `
 
 const Project = styled.img`

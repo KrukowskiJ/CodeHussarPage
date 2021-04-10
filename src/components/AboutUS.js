@@ -176,6 +176,7 @@ align-items: center;
 `
 const CaruselBack = styled.div`
 margin:auto;
+padding: 20px;
 width: 90%;
 `
 const ArrowBox = styled.img`

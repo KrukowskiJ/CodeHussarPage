@@ -11,7 +11,7 @@ import Gallery from "../components/Gallery"
 import Stopka from "../components/Stopka"
 import Awards from '../components/Awards'
 import Projects from '../components/Projects'
-import { push as Menu } from 'react-burger-menu'
+import { slide as Menu } from 'react-burger-menu'
 import NavbarLinksMobile from "../components/NavbarLinksMobile"
 import { useMediaQuery } from 'react-responsive';
 

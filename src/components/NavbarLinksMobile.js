@@ -49,7 +49,13 @@ const NavLink = styled(Link)`
     transition: all 0.4s ease-in;
   }
 
-  
+  :hover {
+    text-decoration: none;
+    color: white;
+    ::after {
+      width: 100%;
+    }
+  }
   
 
 `

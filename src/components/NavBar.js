@@ -140,6 +140,28 @@ max-width: 209px;
 max-height: 90px;
 margin: auto;
 z-index: 5;
+
+@media (max-width: 1320px) {
+  margin-top: 2%;
+}
+@media (max-width: 1100px) {
+  margin-top: 0%;
+}
+@media (max-width: 500px) {
+  height: 78px;
+}
+@media (max-width: 450px) {
+  height: 64px;
+}
+@media (max-width: 400px) {
+  height: 50px;
+}
+@media (max-width: 360px) {
+  height:45px;
+}
+@media (max-width: 320px) {
+  height:30px;
+}
 `
 
 const Team1 = styled.img`
@@ -213,8 +235,20 @@ font-size: 2rem;
     font-size: 1rem;
   }
   @media (max-width: 500px) {
+    font-size: 0.8rem;
+  }
+  @media (max-width: 450px) {
+    font-size: 0.7rem;
+  }
+  @media (max-width: 400px) {
+    font-size: 0.6rem;
+  }
+  @media (max-width: 360px) {
     font-size: 0.5rem;
   }
+  @media (max-width: 320px) {
+    font-size: 0.3rem;
+}
   `
 
 const SmallText = styled.text`
