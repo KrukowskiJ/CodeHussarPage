@@ -5,13 +5,12 @@ import Logo_pic from "../images/Logo.png"
 import BackNav from "../images/navbackground.svg"
 import NavbarLinks from "./NavbarLinks"
 import Fade from 'react-reveal/Flip';
-import { useMediaQuery } from 'react-responsive';
 
 const NavBar = () => {
   const [NavbarStatus, changeNavbarStatus] = useState('top')
   const navRef = React.useRef()
-  const MobileStatus = useMediaQuery({ query: `(max-width: 768px)` });
-  console.log(MobileStatus)
+  const [MobileStatus, changeMobileStatus] = useState(1)
+
   navRef.current = NavbarStatus
   useEffect(() => {
     const handleScroll = () => {
@@ -21,20 +20,25 @@ const NavBar = () => {
       else
         changeNavbarStatus('top')
     }
-
-    document.addEventListener('scroll', handleScroll)
-
-    return () => {
-      document.removeEventListener('scroll', handleScroll)
+    const handleWidth = () => {
+      const show = window.innerWidth <= 768
+      if (show)
+        changeMobileStatus(1)
+      else
+        changeMobileStatus(0)
     }
 
+    document.addEventListener('scroll', handleScroll)
+    handleWidth()
   })
+
+
 
   return (
     <>
 
 
-      { MobileStatus ?
+      { MobileStatus ? (
         <>
           <BackImg id="home"
             alt="CodeHussarLogo"
@@ -60,15 +64,16 @@ const NavBar = () => {
             </Fade>
           </Col>
 
-        </>
+        </>)
 
         :
 
-        <> <BackImg id="home"
+        (<> <BackImg id="home"
           alt="CodeHussarLogo"
           src={BackNav}
         />
           <Nav >
+
             {NavbarStatus === 'top' ? <BackImgTransparent /> :
               <BackImg2 />}
             <Logo
@@ -86,10 +91,11 @@ const NavBar = () => {
           </Nav>
 
           <Row>
-            <Team1
-              alt="CodeHussar"
-              src={Team_pic}
-            />
+            {MobileStatus ? console.log('working') :
+              <Team1
+                alt="CodeHussar"
+                src={Team_pic}
+              />}
             <Fade left>
               <QuoteText>
                 <BigText>WORKING FOR A <b>BETTER</b> TOMMOROW</BigText>
@@ -97,7 +103,7 @@ const NavBar = () => {
               </QuoteText>
             </Fade>
           </Row>
-        </>
+        </>)
       }
 
 
