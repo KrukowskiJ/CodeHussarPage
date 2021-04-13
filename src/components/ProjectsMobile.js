@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import TeamBackMobile from '../images/svg/ourprojectsMobile.svg'
+import TeamBackMobile from '../images/svg/mobiletest.png'
 import Cup1 from '../images/awards/firstcup.png'
 import Cup2 from '../images/awards/secondcup.png'
 import MultiCup from '../images/awards/firstcuphp.png'
@@ -9,6 +9,7 @@ import Top5 from '../images/awards/top5.png'
 import Carusel from "./CaruselMobile"
 import { useMediaQuery } from 'react-responsive';
 import { Title } from "../components/micros/index"
+import TeamMobile from "./TeamMobile"
 
 const projectNameList = ["Health Point", "Vuer", "Teddy", "Pulse", "EduMatch", "Ready?Donate!", "InTouch", "UniNetwork"];
 const projectDescList = [
@@ -44,29 +45,23 @@ const projectAwardIcon = [
 ]
 
 
-const ProjectBackgroundMobile = styled.div`
-width: 100%; 
-height: 100%;
-margin:0;
-margin-top: 3vw;
-padding:0;
-background-repeat: no-repeat;
-background-size: cover;
-background-image:url(${TeamBackMobile});
-padding-top:10vw;
-padding-bottom:30vw;
+const ProjectBackgroundMobile = styled.img`
+padding-top:50px;
+width:100%;
+height:auto;
+position: absolute;
+z-index:0;
 `
 
 const TitleBar = styled.div`
-margin-top:2vw;
-margin-bottom:1vw;
-align-self:center;
-flex:1;
-justify-content: "center";
+
 `
 
 const ProjectDescriptionCard = styled.div`
-height:10vw;
+padding-top:150px;
+position: absolute;
+z-index:1;
+
 `
 
 const ProjectDescriptionMobile = styled.h2`
@@ -79,13 +74,23 @@ const ProjectDescriptionMobile = styled.h2`
 `
 
 const ProjectTitleMobile = styled.h2`
+    padding-top:100px;
     text-align:center;
     color:white;
     font-family: IBM Plex Mono;
     font-size: 1.0em;
+    position:absolute;
+    left:0;
+    right:0;
 `
-const CaruselMobile = styled.div`
-    margin: 15px;
+const CaruselMobileBox = styled.div`
+    margin-left: 30px;
+    margin-right: 30px;
+`
+
+const Content = styled.div`
+
+
 `
 
 export default () => {
@@ -109,11 +114,12 @@ export default () => {
             <Title id="projects">
                 Our Projects
                 </Title>
-            <CaruselMobile>
+            <CaruselMobileBox>
                 <Carusel setState={(p) => { setProjectInfo(p) }} />
-            </CaruselMobile>
+            </CaruselMobileBox>
 
-            <ProjectBackgroundMobile>
+            <ProjectBackgroundMobile src={TeamBackMobile} />
+            <Content>
                 <TitleBar>
                     <ProjectTitleMobile >
                         {projectName}
@@ -125,7 +131,7 @@ export default () => {
                         {projectDesc}
                     </ProjectDescriptionMobile>
                 </ProjectDescriptionCard>
-            </ProjectBackgroundMobile>
+            </Content>
         </>
     );
 }

@@ -51,7 +51,7 @@ export default () => {
         <AwardBack>
             <Title>
                 Our Achievements
-                </Title>
+            </Title>
             <Container>
                 <Row>
                     {awards.map((award) => {
