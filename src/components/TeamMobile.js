@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import TeamBack from '../images/svg/ourteamMobile.svg'
 import TeamSection from "../components/TeamSection"
 
 
