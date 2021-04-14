@@ -17,7 +17,7 @@ import { Component } from "react"
 
 const CaruselBack = styled.div`
     margin:auto;
-    width: 90%;
+    width: 100%;
     justify-content:center;
     align-items: center;
 `
@@ -54,24 +54,24 @@ export default class CaruselMobile extends Component {
             infinite: true,
             speed: 500,
             slidesToShow: 5,
-            // initialSlide:test,
             prevArrow: <PrevArrow />,
             nextArrow: <NextArrow />,
             onInit: () => { console.log("Init") },
             beforeChange: (t, index) => { Testowa(index) },
             responsive: [
                 {
-                    breakpoint: 1624,
+                    breakpoint: 768,
                     settings: {
-                        slidesToShow: 5,
+                        slidesToShow: 3,
                         slidesToScroll: 1,
                     }
                 },
                 {
-                    breakpoint: 800,
+                    breakpoint: 468,
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 1,
+                        arrows: false,
                     }
                 }
             ]

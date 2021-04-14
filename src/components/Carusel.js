@@ -16,8 +16,8 @@ import { Component } from "react"
 
 
 const CaruselBack = styled.div`
-    margin:auto;
-    width: 90%;
+margin:auto;
+width:90%;
     justify-content:center;
     align-items: center;
 `
@@ -68,7 +68,7 @@ export default class Carusel extends Component {
                     }
                 },
                 {
-                    breakpoint: 800,
+                    breakpoint: 900,
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 1,

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import TeamBack from '../images/svg/ourprojects2.svg'
 import { Container, Row, Col } from "react-bootstrap";
@@ -235,12 +235,23 @@ height:10vw;
 
 
 export default () => {
+    const [isMobile, changeMobileStatus] = useState(1)
+
+    useEffect(() => {
+        const handleWidth = () => {
+            const show = window.innerWidth <= 768
+            if (show)
+                changeMobileStatus(1)
+            else
+                changeMobileStatus(0)
+        }
+        handleWidth()
+    })
 
     const [projectName, setProjectName] = useState(projectNameList[0]);
     const [projectDesc, setProjectDesc] = useState(projectDescList[0]);
     const [projectAward, setProjectAward] = useState(projectAwardList[0]);
     const [projectAwardCup, setProjectAwardCup] = useState(projectAwardIcon[0]);
-    const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
     const setProjectInfo = (prjNumber) => {
         console.log(prjNumber);

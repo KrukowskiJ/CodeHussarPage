@@ -119,40 +119,40 @@ const AboutUS = () => {
         <Title>
             About Us
         </Title>
+        <Center>
+            < CaruselBack id="car">
+                <Slider  {...settings}>
 
-        < CaruselBack id="car">
-            <Slider  {...settings}>
+                    <div onClick={() => { setProjectInfo(1) }}>
+                        {setProject(1)}
+                    </div>
 
-                <div onClick={() => { setProjectInfo(1) }}>
-                    {setProject(1)}
-                </div>
+                    <div onClick={() => { setProjectInfo(2) }}>
+                        {setProject(2)}
+                    </div>
 
-                <div onClick={() => { setProjectInfo(2) }}>
-                    {setProject(2)}
-                </div>
+                    <div onClick={() => { setProjectInfo(3) }}>
+                        {setProject(3)}
+                    </div>
+                    <div onClick={() => { setProjectInfo(4) }}>
+                        {setProject(4)}
+                    </div>
 
-                <div onClick={() => { setProjectInfo(3) }}>
-                    {setProject(3)}
-                </div>
-                <div onClick={() => { setProjectInfo(4) }}>
-                    {setProject(4)}
-                </div>
+                    <div onClick={() => { setProjectInfo(5) }}>
+                        {setProject(5)}
+                    </div>
 
-                <div onClick={() => { setProjectInfo(5) }}>
-                    {setProject(5)}
-                </div>
+                    <div onClick={() => { setProjectInfo(6) }}>
+                        {setProject(6)}
+                    </div>
 
-                <div onClick={() => { setProjectInfo(6) }}>
-                    {setProject(6)}
-                </div>
-
-                <div onClick={() => { setProjectInfo(7) }}>
-                    {setProject(7)}
-                </div>
-            </Slider>
-            <RedLine></RedLine>
-        </ CaruselBack>
-
+                    <div onClick={() => { setProjectInfo(7) }}>
+                        {setProject(7)}
+                    </div>
+                </Slider>
+                <RedLine></RedLine>
+            </ CaruselBack>
+        </Center>
     </About>)
 
 }
@@ -160,6 +160,13 @@ const AboutUS = () => {
 
 const About = styled.div`
     margin-bottom: 20vh;
+`
+
+
+const Center = styled.div`
+   justify-content:center;
+align-items: center;
+margin:auto;
 `
 
 const ProjectName = styled.h1`
@@ -175,9 +182,9 @@ justify-content:center;
 align-items: center;
 `
 const CaruselBack = styled.div`
+padding: 5vw;
 margin:auto;
-padding: 20px;
-width: 90%;
+width: 85%;
 `
 const ArrowBox = styled.img`
 margin:0px;

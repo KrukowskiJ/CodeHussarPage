@@ -26,6 +26,6 @@ const Project = styled.img`
     margin-left: auto;
     margin-right: auto }
     @media (max-width: 760px) {
-        border-radius: 11px;
+        border-radius: 21px;
     }
 `
