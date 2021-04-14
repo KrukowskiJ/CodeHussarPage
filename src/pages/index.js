@@ -14,33 +14,72 @@ import Projects from '../components/Projects'
 import { slide as Menu } from 'react-burger-menu'
 import NavbarLinksMobile from "../components/NavbarLinksMobile"
 import { useMediaQuery } from 'react-responsive';
-
+import ReactLoading from 'react-loading';
+import styled from "styled-components"
 
 
 export default () => {
 
   const MobileStatus = useMediaQuery({ query: `(max-width: 768px)` });
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2500)
+  }, [])
 
-  return (
-    <>
-      <div id="outer-container">
-        {MobileStatus ? <Menu right pageWrapId={"page-wrap"} styles={styles} width={'50%'}><NavbarLinksMobile /></Menu> : null}
-        <main id="page-wrap">
-          <NavBar />
-          <OurExpertise />
-          <Projects />
-          <Team />
-          <Awards />
-          <AboutUS />
-          <Gallery />
-          <Stopka />
-        </main>
-      </div>
+  if(MobileStatus===false){
+    return(
+      <>
+       {/* {loading===false  ? ( */}
+        <div id="outer-container">
+          {MobileStatus ? <Menu right pageWrapId={"page-wrap"} styles={styles} width={'50%'}><NavbarLinksMobile /></Menu> : null}
+          <main id="page-wrap">
+            <NavBar />
+            <OurExpertise />
+            <Projects />
+            <Team />
+            <Awards />
+            <AboutUS />
+            <Gallery />
+            <Stopka />
+          </main>
+        </div>
+      {/* // ):(
+      //   <LoadBox>
+      //      <ReactLoading type={"bars"} color={"#990000"} height={200} width={100} />
+      //   </LoadBox> */}
+
     </>
-  );
-
+    )}else{
+    return (
+        <div id="outer-container">
+        {MobileStatus ? <Menu right pageWrapId={"page-wrap"} styles={styles} width={'50%'}><NavbarLinksMobile /></Menu> : null}
+          <main id="page-wrap">
+            <NavBar />
+            <OurExpertise />
+            <Projects />
+            <Team />
+            <Awards />
+            <AboutUS />
+            <Gallery />
+            <Stopka />
+          </main>
+        </div>
+      );
+    }
 }
+
+const LoadBox=styled.div`
+  z-index:200;
+	width: 100px;
+	height: 100px;	
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+`
 
 var styles = {
   bmBurgerButton: {

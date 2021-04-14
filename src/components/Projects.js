@@ -121,7 +121,11 @@ color:white;
 font-family: IBM Plex Mono;
 height:10vw;
 font-size: 2em;
-
+animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
 @media (max-width: 1900px) {
     font-size: 1.8em;
 }

@@ -146,7 +146,7 @@ max-width: 209px;
 max-height: 90px;
 margin: auto;
 z-index: 5;
-margin-top: 0%;
+
 
 @media (max-width: 500px) {
   height: 78px;

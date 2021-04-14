@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import PersonCard from './PersonCard'
-import Patryk from "../images/persons/patryk.png";
-import Sebastian from "../images/persons/sebastian.png";
-import Piotrek from "../images/persons/piotr.png";
-import Aga from "../images/persons/aga.png";
-import Kuba from "../images/persons/kuba.png";
+import Patryk from "../images/persons/patryk-min.png";
+import Sebastian from "../images/persons/sebastian-min.png";
+import Piotrek from "../images/persons/piotr-min.png";
+import Aga from "../images/persons/aga-min.png";
+import Kuba from "../images/persons/kuba-min.png";
 import { Row } from "react-bootstrap";
 import { useMediaQuery } from 'react-responsive';
 
@@ -36,7 +36,7 @@ export default () => {
                 </Persons>
                 <Persons>
                     <Row>
-                        <PersonCard name="Agnieszka" surname="Pawełek" role="UX Designer" photo={Aga} />
+                        <PersonCard name="Agnieszka" surname="Pawełek" role="UX Designer" photo={Aga} url="https://www.linkedin.com/in/agnieszka-pawe%C5%82ek-8658a320b"/>
                     </Row>
                 </Persons>
             </>
@@ -54,7 +54,7 @@ export default () => {
                 <Persons>
                     <Row>
                         <PersonCard name="Jakub" surname="Krukowski" role="Frontend Developer" photo={Kuba} url="https://www.linkedin.com/in/jakub-krukowski-b4a066187/" />
-                        <PersonCard name="Agnieszka" surname="Pawełek" role="UX Designer" photo={Aga} />
+                        <PersonCard name="Agnieszka" surname="Pawełek" role="UX Designer" photo={Aga} url="https://www.linkedin.com/in/agnieszka-pawe%C5%82ek-8658a320b"/>
                     </Row>
                 </Persons>
             </>
