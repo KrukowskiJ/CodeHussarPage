@@ -16,20 +16,67 @@ import NavbarLinksMobile from "../components/NavbarLinksMobile"
 import { useMediaQuery } from 'react-responsive';
 import ReactLoading from 'react-loading';
 import styled from "styled-components"
-import MobileApp from '../components/MobileApp'
-import WebApp from '../components/WebApp'
+
 
 export default () => {
+    const MobileStatus = useMediaQuery({ query: `(max-width: 768px)` });
+    return(
+        <>
+          <div id="outer-container">
+            {MobileStatus ? <Menu right pageWrapId={"page-wrap"} styles={styles} width={'50%'}><NavbarLinksMobile /></Menu> : null}
+            <main id="page-wrap">
+              <NavBar />
+              <OurExpertise />
+              <Projects />
+              <Team />
+              <Awards />
+              <AboutUS />
+              <Gallery />
+              <Stopka />
+            </main>
+          </div>
+      </>
+    )}
 
-  const MobileStatus = useMediaQuery({ query: `(max-width: 768px)` });
 
-  if(MobileStatus===false){
-    return <WebApp />
-  }else{
-    return <MobileApp />
+var styles = {
+  bmBurgerButton: {
+    position: 'fixed',
+    width: '26px',
+    height: '22px',
+    left: '20px',
+    top: '20px',
+  },
+  bmBurgerBars: {
+    background: 'white'
+  },
+  bmCrossButton: {
+    height: '24px',
+    width: '24px'
+  },
+  bmCross: {
+    background: 'white'
+  },
+  bmMenuWrap: {
+    position: 'fixed',
+    height: '100%'
+  },
+  bmMenu: {
+    background: '#d72b2b',
+    padding: '1em 2em 0',
+    fontSize: '1.15em',
+  },
+  bmMorphShape: {
+    fill: '#d72b2b'
+  },
+  bmItemList: {
+    padding: '1em'
+  },
+  bmItem: {
+    display: 'block'
+  },
+  bmOverlay: {
+    background: 'transparent'
   }
 }
-
-
-
 
