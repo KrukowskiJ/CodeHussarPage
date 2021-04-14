@@ -44,6 +44,7 @@ const CompetitionsName = styled.h2`
 
 const AwardBack = styled.div`
     margin-bottom:5vw;
+    margin-top:1200px;
 `
 
 export default () => {

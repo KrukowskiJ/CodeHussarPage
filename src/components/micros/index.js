@@ -12,7 +12,6 @@ export const Title = styled.div`
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size:40px;
     margin-bottom:3vh;
-
     @media (max-width: 1900px) {
         font-size:40px;
     }
