@@ -12,6 +12,7 @@ import Image8 from '../images/bhl.jpg';
 import Zoom from 'react-reveal/Zoom';
 import { useMediaQuery } from 'react-responsive';
 import { Title } from "../components/micros/index"
+import { StaticImage } from "gatsby-plugin-image"
 
 const ImagePhotoFull = styled.img`
     width:100%; 
