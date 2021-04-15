@@ -1,18 +1,18 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import Slider from "react-slick";
-import WAT from '../images/articles/wat.png'
-import Ic21 from '../images/articles/ic 21.png'
-import Kokon from '../images/articles/kokon.png'
 import ProjectCard from '../components/micros/ArticleCard.js'
-import Ic from "../images/ic20.png"
-import PZ from "../images/pz.jpg"
-import PW from "../images/pw.jpg"
 import "../style/slick.css";
 import PrevArrowImg from "../images/prevarrow.png"
 import NextArrowImg from "../images/nextarrow.png"
-import Czworka from "../images/czworka.jpg"
 import { Title } from "../components/micros/index"
+import Ic from "../images/articles/ic20.png"
+import PZ from "../images/articles/pz.jpg"
+import PW from "../images/articles/pw.jpg"
+import Czworka from "../images/articles/czworka.jpg"
+import WAT from '../images/articles/wat.png'
+import Ic21 from '../images/articles/ic 21.png'
+import Kokon from '../images/articles/kokon.png'
 
 var projectNameList = ["Microsoft Imagine Cup 2020",
     "Best IT Project Poland 2018", "Microsoft Imagine Cup 2018",

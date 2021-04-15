@@ -1,14 +1,14 @@
 import styled from "styled-components"
 import React, { useState } from "react"
 import { Container, Row, Col } from "react-bootstrap";
-import Image1 from '../images/fut.jpg';
-import Image2 from '../images/hac.jpg';
-import Image3 from '../images/hackcarrots.jpg';
-import Image4 from '../images/hplus2019.jpg';
-import Image5 from '../images/imaginecup.jpg';
-import Image6 from '../images/imaginehack.jpg';
-import Image7 from '../images/pekao.jpg';
-import Image8 from '../images/bhl.jpg';
+import Image1 from '../images/gallery/fut.jpg';
+import Image2 from '../images/gallery/hac.jpg';
+import Image3 from '../images/gallery/hackcarrots.jpg';
+import Image4 from '../images/gallery/hplus2019.jpg';
+import Image5 from '../images/gallery/imaginecup.jpg';
+import Image6 from '../images/gallery/imaginehack.jpg';
+import Image7 from '../images/gallery/pekao.jpg';
+import Image8 from '../images/gallery/bhl.jpg';
 import Zoom from 'react-reveal/Zoom';
 import { useMediaQuery } from 'react-responsive';
 import { Title } from "../components/micros/index"
@@ -56,8 +56,8 @@ export default () => {
 
     const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
-    if(isMobile==true){
-        return(
+    if (isMobile == true) {
+        return (
             <Container>
                 <Title>Gallery</Title>
                 <PhotoContainer id="gallery">
@@ -65,39 +65,39 @@ export default () => {
                         <Col xs="6" style={styles.col}>
                             <Zoom>
                                 <ImagePhotoFull src={Image5} />
-                             </Zoom>   
+                            </Zoom>
                         </Col>
                         <Col xs="6" style={styles.col}>
                             <Zoom>
                                 <ImagePhotoFull src={Image1} />
-                             </Zoom>   
+                            </Zoom>
                         </Col>
                     </Row>
                     <Row>
                         <Col xs="6" style={styles.col}>
                             <Zoom>
                                 <ImagePhotoFull src={Image8} />
-                             </Zoom>   
+                            </Zoom>
                         </Col>
                         <Col xs="6" style={styles.col}>
                             <Zoom>
                                 <ImagePhotoFull src={Image6} />
-                             </Zoom>   
+                            </Zoom>
                         </Col>
                     </Row>
                     <Row>
-                            <Zoom>
-                                <ImagePhotoFull src={Image7} />
-                        </Zoom>  
+                        <Zoom>
+                            <ImagePhotoFull src={Image7} />
+                        </Zoom>
                     </Row>
                 </PhotoContainer>
             </Container>
         );
-    }else{
+    } else {
         return (
             <>
                 <Container fluid>
-                <Title>Gallery</Title>
+                    <Title>Gallery</Title>
                     <PhotoContainer id="gallery">
                         <Row>
                             <Col md="7">
