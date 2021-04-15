@@ -19,67 +19,61 @@ import styled from "styled-components"
 
 
 export default () => {
-    const MobileStatus = useMediaQuery({ query: `(max-width: 768px)` });
-    const [loading, setLoading] = useState(true);
+  const MobileStatus = useMediaQuery({ query: `(max-width: 768px)` });
+  const [loading, setLoading] = useState(true);
+  const [loading2, setLoading2] = useState(true);
 
-    useEffect(() => {
-      setTimeout(() => setLoading(false), 2500)
-    }, [])
-  
-    // if(MobileStatus===false){
-      return(
-        <>
-         {loading===false  ? (
-          <div id="outer-container">
-            {MobileStatus ? <Menu right pageWrapId={"page-wrap"} styles={styles} width={'50%'}><NavbarLinksMobile /></Menu> : null}
-            <main id="page-wrap">
-              <NavBar />
-              <OurExpertise />
-              <Projects />
-              <Team />
-              <Awards />
-              <AboutUS />
-              <Gallery />
-              <Stopka />
-            </main>
-          </div>
-         ):(
-         <LoadBox>
-             <ReactLoading type={"bars"} color={"#990000"} height={200} width={100} />
-        </LoadBox> 
-         )}
-      </>
-      // )}else{
-      // return (
-      //     <div id="outer-container">
-      //     {MobileStatus ? <Menu right pageWrapId={"page-wrap"} styles={styles} width={'50%'}><NavbarLinksMobile /></Menu> : null}
-      //       <main id="page-wrap">
-      //         <NavBar />
-      //         <OurExpertise />
-      //         <Projects />
-      //         <Team />
-      //         <Awards />
-      //         <AboutUS />
-      //         <Gallery />
-      //         <Stopka />
-      //       </main>
-      //     </div>
-      //   );
-      // }
-      )}
-  
-  const LoadBox=styled.div`
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1500)
+    setTimeout(() => setLoading2(false), 1)
+  }, [])
+
+  // if(MobileStatus===false){
+  return (
+    <>
+      {loading === false ?
+        null
+        :
+        <LoadBox>
+          <ReactLoading delay={1} type={"bars"} color={"#990000"} height={200} width={100} />
+        </LoadBox>
+      }
+      {loading2 === false ?
+        <div id="outer-container">
+          {MobileStatus ? <Menu right pageWrapId={"page-wrap"} styles={styles} width={'50%'}><NavbarLinksMobile /></Menu> : null}
+          <main id="page-wrap">
+            <NavBar />
+            <OurExpertise />
+            <Projects />
+            <Team />
+            <Awards />
+            <AboutUS />
+            <Gallery />
+            <Stopka />
+          </main>
+        </div> : null}
+
+    </>
+  )
+}
+
+const LoadBox = styled.div`
     z-index:200;
-    width: 100px;
-    height: 100px;	
+    width: 100vw;
+    height: 500px;	
     position: absolute;
     top:0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
+    background-color: white;
+    padding-bottom:500px;
+    padding-top:500px;
+    justify-content:center;
+    display:flex;
   `
-  
+
 
 
 var styles = {
