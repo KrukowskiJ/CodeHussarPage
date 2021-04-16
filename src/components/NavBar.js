@@ -125,7 +125,7 @@ background: rgb(83,9,22);
 background: linear-gradient(173deg, rgba(83,9,22,1) 0%, rgba(173,34,33,1) 45%, rgba(254,68,83,1) 100%);
 top:0;
 position: absolute;
-z-index: -1;
+z-index: -2;
 height: 10vh;
 width:100%;
 `
@@ -134,7 +134,7 @@ const BackImgTransparent = styled.div`
 background: transparent;
 top:0;
 position: absolute;
-z-index: -1;
+z-index: -2;
 height: 10vh;
 width:100%;
 `
@@ -145,7 +145,7 @@ width: auto;
 max-width: 209px; 
 max-height: 90px;
 margin: auto;
-z-index: 5;
+z-index: -1;
 
 
 @media (max-width: 500px) {
