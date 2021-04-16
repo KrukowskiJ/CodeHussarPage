@@ -87,6 +87,9 @@ margin-top:-35%;
 const Wrapper = styled.div`
     margin-top:20em;
     margin-bottom:5em;
+    @media (min-width: 1900px) {
+        margin-bottom:20em;
+  }
     @media (max-width: 768px) {
         margin-top:12em;
   }
