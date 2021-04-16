@@ -65,6 +65,12 @@ const AwardBack = styled.div`
     @media (max-width: 380px) {
         margin-top:1000px;
     }
+    @media (max-width: 350px) {
+        margin-top:900px;
+    }
+    @media (max-width: 320px) {
+        margin-top:800px;
+    }
 
 `
 
