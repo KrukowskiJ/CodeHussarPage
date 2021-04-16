@@ -24,7 +24,7 @@ export default () => {
   const [loading2, setLoading2] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1500)
+    setTimeout(() => setLoading(false), 2500)
     setTimeout(() => setLoading2(false), 1)
   }, [])
 

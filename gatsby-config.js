@@ -1,10 +1,19 @@
 module.exports = {
+  /* Your site config here */
   plugins: [
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`, // Needed for dynamic images
+      {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Code Hussar',
+        short_name: 'Code Hussar',
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#a2466c',
+        display: 'standalone',
+        icon: 'src/favicon.png',
+      },
+    }
+
+   // other plugins goes here
   ],
-  siteMetadata: {
-    title: "My Gatsby Site",
-  },
-};
+}

@@ -188,7 +188,7 @@ const Nav = styled.nav`
   justify-content: space-around;
   text-transform: uppercase;
   margin: 0 ;
-  z-index: 1;
+  z-index: 300;
 
   @media (max-width: 768px) {
     position: sticky;

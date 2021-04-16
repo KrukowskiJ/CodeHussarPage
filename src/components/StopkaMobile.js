@@ -17,15 +17,38 @@ const ContactText = styled.h3`
     color:#ffffff;
     text-align:center;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    padding-top:70px;
+    font-size:10px;
     z-index:2;
 `
-const ImagePortal = styled.img`
-    height:30px;
-    width: 30px;
+
+const ImagePortal2 = styled.img`
+    height:70px;
+    width: auto;
+    color:#ffffff;
+    text-align:center;
     position: absolute;
-    
+    z-index:2;
+    padding-top:40px;
+    left:45%;
+    right:55%;
+:hover{
+
+    transform: scale(1.05);
+
+}
+`
+
+const ImagePortal = styled.img`
+    height:70px;
+    width: auto;
+    color:#ffffff;
+    text-align:center;
+    position: absolute;
+    z-index:2;
+    padding-top:40px;
+    left:55%;
+    right:45%;
 :hover{
 
     transform: scale(1.05);
@@ -35,7 +58,7 @@ const ImagePortal = styled.img`
 const BackImg = styled.img`
 width:100%;
 height:auto;
-position: relative;
+position: absolute;
 z-index:0;
 `
 
@@ -56,11 +79,13 @@ export default () => {
     return (
         <>
             <BackImg src={BackgroundRed} id="contact" />
-            {/* <ImagePortal src={Fb} onClick={() => window.open('https://www.facebook.com/codehussar/', '_blank')} />
-            <ImagePortal src={Linkedin} onClick={() => window.open('https://pl.linkedin.com/company/code-hussar-wat', '_blank')} />
-            <ContactText>
+            <ImagePortal src={Fb} onClick={() => window.open('https://www.facebook.com/codehussar/', '_blank')} />
+            
+            <ImagePortal2 src={Linkedin} onClick={() => window.open('https://pl.linkedin.com/company/code-hussar-wat', '_blank')} />
+           
+            {/* <ContactText>
                 contact@codehussar.com
-            </ContactText>  */}
+            </ContactText>   */}
         </>
     );
 }

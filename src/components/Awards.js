@@ -45,7 +45,7 @@ const CompetitionsName = styled.h2`
 const AwardBack = styled.div`
     margin-bottom:5vw;
     @media (max-width: 768px) {
-        margin-top:1200px;
+        margin-top:1100px;
     }
 
 `

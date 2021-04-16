@@ -59,9 +59,6 @@ const TitleBar = styled.div`
 
 const ProjectDescriptionCard = styled.div`
 padding-top:150px;
-position: absolute;
-z-index:1;
-
 `
 
 const ProjectDescriptionMobile = styled.h2`
@@ -71,6 +68,9 @@ const ProjectDescriptionMobile = styled.h2`
     font-size: 0.8em;
     padding-left:5%;
     padding-right:5%;
+    position:absolute;
+    left:0;
+    right:0;
 `
 
 const ProjectTitleMobile = styled.h2`
@@ -113,7 +113,7 @@ export default () => {
         <>
             <Title id="projects">
                 Our Projects
-                </Title>
+            </Title>
             <CaruselMobileBox>
                 <Carusel setState={(p) => { setProjectInfo(p) }} />
             </CaruselMobileBox>

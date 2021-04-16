@@ -61,7 +61,7 @@ position:absolute;
     right:0;
 `
 const HeaderTitleBack = styled.div`
-padding-top:350px;
+padding-top:250px;
 align-self:center;
 flex:1;
 font-family: IBM Plex Mono;
