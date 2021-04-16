@@ -113,7 +113,6 @@ const NavBar = () => {
 
 export default NavBar
 
-// styles
 const BackImg = styled.img`
 position: absolute;
 height: auto; 
@@ -188,7 +187,7 @@ const Nav = styled.nav`
   justify-content: space-around;
   text-transform: uppercase;
   margin: 0 ;
-  z-index: 300;
+  z-index: 1;
 
   @media (max-width: 768px) {
     position: sticky;
@@ -277,3 +276,4 @@ display: flex;
 flex-direction: column;
 align-content: space-between;
 `
+

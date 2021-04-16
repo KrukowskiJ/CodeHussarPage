@@ -60,7 +60,7 @@ export default () => {
 const LoadBox = styled.div`
     z-index:200;
     width: 100vw;
-    height: 500px;	
+    height: 100vh;	
     position: absolute;
     top:0;
     bottom: 0;
