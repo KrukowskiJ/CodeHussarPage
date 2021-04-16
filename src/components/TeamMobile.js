@@ -30,21 +30,10 @@ const Content = styled.div`
   position: relative;
 `
 
-const BackImg = styled.img`
-margin-top:367px;
-max-width:100%;
-object-fit: cover;
-height:auto;
-position: absolute;
-z-index:0;
-`
-
-
 const TeamBackground = styled.div`
 width: 100%; 
 height: auto;
 position: absolute;
-z-index:1;
 `
 
 const HeaderTitleWhite = styled.h1`

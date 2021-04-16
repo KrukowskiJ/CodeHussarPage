@@ -45,7 +45,25 @@ const CompetitionsName = styled.h2`
 const AwardBack = styled.div`
     margin-bottom:5vw;
     @media (max-width: 768px) {
+        margin-top:2000px;
+    }
+    @media (max-width: 708px) {
+        margin-top:1800px;
+    }
+    @media (max-width: 640px) {
+        margin-top:1600px;
+    }
+    @media (max-width: 530px) {
+        margin-top:1400px;
+    }
+    @media (max-width: 480px) {
+        margin-top:1250px;
+    }
+    @media (max-width: 420px) {
         margin-top:1100px;
+    }
+    @media (max-width: 380px) {
+        margin-top:1000px;
     }
 
 `

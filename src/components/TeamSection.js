@@ -17,7 +17,7 @@ justify-content:center;
 
 export default () => {
 
-    const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+    const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
     if (isMobile == true) {
         return (
@@ -36,7 +36,7 @@ export default () => {
                 </Persons>
                 <Persons>
                     <Row>
-                        <PersonCard name="Agnieszka" surname="Pawełek" role="UX Designer" photo={Aga} url="https://www.linkedin.com/in/agnieszka-pawe%C5%82ek-8658a320b"/>
+                        <PersonCard name="Agnieszka" surname="Pawełek" role="UX Designer" photo={Aga} url="https://www.linkedin.com/in/agnieszka-pawe%C5%82ek-8658a320b" />
                     </Row>
                 </Persons>
             </>
@@ -54,7 +54,7 @@ export default () => {
                 <Persons>
                     <Row>
                         <PersonCard name="Jakub" surname="Krukowski" role="Frontend Developer" photo={Kuba} url="https://www.linkedin.com/in/jakub-krukowski-b4a066187/" />
-                        <PersonCard name="Agnieszka" surname="Pawełek" role="UX Designer" photo={Aga} url="https://www.linkedin.com/in/agnieszka-pawe%C5%82ek-8658a320b"/>
+                        <PersonCard name="Agnieszka" surname="Pawełek" role="UX Designer" photo={Aga} url="https://www.linkedin.com/in/agnieszka-pawe%C5%82ek-8658a320b" />
                     </Row>
                 </Persons>
             </>
